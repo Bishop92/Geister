@@ -1,0 +1,1071 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYSIS_IN_BACKGROUND" value="true" />
+  </component>
+  <component name="ChangeListManager">
+    <list id="6279669f-56c7-4672-8abb-2d18aff14ae2" name="Default" comment="" />
+    <list default="true" id="dc6e4fbf-0ac5-4017-a056-1b2b341c37e7" name="Corretta posizione del repository (cherry picked from commit 63962db)" comment="Corretta posizione del repository&#10;(cherry picked from commit 63962db)">
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetPartitaID.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetUtenteAdminResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\IsIA.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\ValutaPezzi.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\LogPartita.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\ModificaPartita.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\logica\Partita.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\ranker\RankerFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\IsUtenteIniziale.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\IA\Euristiche\EuristicheFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\IA\Euristiche\AttaccoAiBuoni.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\CancellaAmiciResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\logica\Giocatore.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetListaAmiciResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\CancellaPartitaResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\.idea\uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\LearnerExecutor.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\IsOnlineResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\WSDataSkeleton.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\WSDataMessageReceiverInOut.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\WSUtentiMessageReceiverInOut.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\SetUtenteNomeResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\SetCognomeResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\CancellaAmico.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetUtenteOnlineResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\features\MossaLaterale.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetPartite.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\GestisceFileProfilo.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\learner\MediaVettori.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\NuovoUtente.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\ListaMosseResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\NuovaPartitaResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\ModificaTipo.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\SetUtenteOnline.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\NuovoUtenteResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\ValutaPezziLog.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\GetCognome.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetPartitaIDResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\IsAmicoResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\InsertTurnoResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\WSGameSkeleton.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\ListaPosizioniInizialiResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\skeleton\MySkeleton.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\GetTurno.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\UpdateTipo.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\GetNomePartitaResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\ranker\Ranker.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\ExtensionMapper.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\CancellaAmico.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\IsPlaying.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\IA\IntelligenzaArtificiale.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\ModificaUtenteResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\IA\Strategie\MinMaxAB.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\SetEmailResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\NuovoAmicoResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\ModificaTipoResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\IA\Euristiche\BuoniInGioco.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\IA\Euristiche\BuoniSottoMinaccia.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\features\MossaResta.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\GetListaAmici.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\ListaPartiteResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\GetListaAmiciResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetNomePartitaResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\IA\Euristiche\CattiviInGioco.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\SetUtenteCognome.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\InsertPartitaResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\NuovoUtenteResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\SetIAResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\SetUtentePareggiate.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\CancellaAmici.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetIdtoken.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\logica\Pezzo.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\logica\Coordinata.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetUtenteVinteResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\SetNome.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\CancellaAmicoResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\features\FeatureCollector.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\GetTurnoResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\IA\Strategie\Strategia.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\CancellaPartita.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\learner\LearnerFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\features\MossaMinaccia.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetNomePartita.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\GetEmailResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetUtentePareggiate.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\InsertTurno.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetUtenteVinte.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetUtenteIA.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\NuovaPartita.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\CancellaUtente.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\DeletePartita.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetUtentePerseResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\ranker\DistanzaVettori.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\.idea\encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\SetPlayingResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\data\WSDataStub.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetMosse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetUtente.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetUtenteNome.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\ListaPartite.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\features\PrimaMossa.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\.idea\compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\CancellaAmiciResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetUtenteOnline.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\features\Controllore.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\SetOnlineResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\SetUtenteOnlineResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\IA\Euristiche\DistanzaBuoniUscitaAvversario.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\GetNomePartita.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetListaUtentiOnline.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\skeleton\MySkeleton.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\features\MossaIndietro.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\ModificaUtente.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetMosseResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\EseguiMossaResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetUtenteCognome.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\SetUtentePerseResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\InsertLOG.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetUtentePareggiateResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\SetPassword.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\SetUtenteIA.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\ModificaPartitaResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\SetUtenteEmailResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\ModificaUtente.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\data\WSDataStub.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\IsPlayingResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\features\MossaAvanti.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\UpdateTipoResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\UpdatePartita.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\NuovaPosizioneIniziale.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetUtenteAdmin.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\learner\Learner.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\GetNomeResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\SetEmail.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\SetOnline.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetUtenteCognomeResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\NuovoUtente.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\SetUtenteNome.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\SetUtenteCognomeResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\SetUtentePassword.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetUtenteResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetListaUtentiOnlineResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\InsertPosizioneInizialeResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\NuovoAmico.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\GetEmail.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\DeletePartitaResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\features\MossaScappa.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\NuovoAmico.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\CancellaAmici.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\CancellaUtente.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetUtenteNomeResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\IsOnline.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\InsertLOGResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\Login.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\features\MossaMangia.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\ListaMosse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\InsertPosizioneIniziale.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetListaAmici.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\NuovaPosizioneInizialeResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetUtentePerse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\EseguiMossa.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\SetUtentePasswordResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetPartiteResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetUtenteEmail.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\IsAmico.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetIdtokenResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\IA\Euristiche\BuoniMangiati.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\.idea\modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\SetPlaying.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\SetIA.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\.idea\vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\WSUtentiMessageReceiverInOnly.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\Geister.iml" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\CancellaAmicoResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\NuovoAmicoResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\IA\Euristiche\DistanzaBuoniUscita.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\SetUtenteIAResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetPosizioniInizialiResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\SetUtenteVinte.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\LoginResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\SetUtentePerse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\IA\Strategie\StrategieFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\IA\Euristiche\CattiviMangiati.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\SetUtenteAdminResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\features\PosizioneIniziale.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetUtenteIAResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\GestisceLogPartita.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\ModificaUtenteResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\LearnerServer.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\InsertPartita.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\GetCognomeResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\PezzoNascosto.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\ListaPosizioniIniziali.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\features\SecondaMossa.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\SetUtentePareggiateResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\IA\Euristiche\Euristica.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\logica\Mossa.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\SetCognome.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\GetNome.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\SetPasswordResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\data\WSDataCallbackHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\WSUtentiSkeleton.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\SetUtenteVinteResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\GeneraMossaIAResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\UpdatePartitaResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\logica\Tavolo.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\.idea\misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\logica\GestisceFile.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\SetUtenteAdmin.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\SetNomeResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\ExtensionMapper.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\GeneraMossaIA.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\InsertMossaResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\CancellaUtenteResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\InsertMossa.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\IA\IAFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetPosizioniIniziali.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\features\Feature.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\CancellaUtenteResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\data\WSDataCallbackHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\ExtensionMapper.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\.idea\.name" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\SetUtenteEmail.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\GetUtenteEmailResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\skeleton\MySkeleton.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSData\data\IsUtenteInizialeResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSUtenti\geister\IsIAResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Geister\WSGame\game\WSGameMessageReceiverInOut.java" afterPath="" />
+    </list>
+    <ignored path="Geister.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Geister" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="true" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Battistella Stefano &lt;stefano.battistella.92@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/WSGame/apprendimento/features/MossaMinaccia.java" />
+        <option value="$PROJECT_DIR$/WSGame/apprendimento/features/MossaResta.java" />
+        <option value="$PROJECT_DIR$/WSGame/apprendimento/features/MossaScappa.java" />
+        <option value="$PROJECT_DIR$/WSGame/apprendimento/features/MossaAvanti.java" />
+        <option value="$PROJECT_DIR$/WSGame/apprendimento/features/PosizioneIniziale.java" />
+        <option value="$PROJECT_DIR$/WSGame/apprendimento/features/PrimaMossa.java" />
+        <option value="$PROJECT_DIR$/WSGame/apprendimento/features/SecondaMossa.java" />
+        <option value="$PROJECT_DIR$/WSGame/IA/Euristiche/EuristicheFactory.java" />
+        <option value="$PROJECT_DIR$/WSGame/apprendimento/learner/LearnerFactory.java" />
+        <option value="$PROJECT_DIR$/WSGame/apprendimento/learner/Learner.java" />
+        <option value="$PROJECT_DIR$/WSGame/apprendimento/learner/MediaVettori.java" />
+        <option value="$PROJECT_DIR$/WSGame/apprendimento/ProvaLog.java" />
+        <option value="$PROJECT_DIR$/WSGame/apprendimento/features/FeatureCollector.java" />
+        <option value="$PROJECT_DIR$/WSGame/apprendimento/LearnerServer.java" />
+        <option value="$PROJECT_DIR$/WSGame/apprendimento/LearnerExecutor.java" />
+        <option value="$PROJECT_DIR$/WSUtenti/geister/CancellaAmici.java" />
+        <option value="$PROJECT_DIR$/WSData/data/CancellaAmici.java" />
+        <option value="$PROJECT_DIR$/WSData/data/CancellaAmiciResponse.java" />
+        <option value="$PROJECT_DIR$/WSUtenti/geister/CancellaAmico.java" />
+        <option value="$PROJECT_DIR$/WSData/data/CancellaAmico.java" />
+        <option value="$PROJECT_DIR$/WSUtenti/geister/CancellaAmicoResponse.java" />
+        <option value="$PROJECT_DIR$/WSData/data/CancellaAmicoResponse.java" />
+        <option value="$PROJECT_DIR$/WSGame/game/CancellaPartita.java" />
+        <option value="$PROJECT_DIR$/WSData/data/CancellaUtente.java" />
+        <option value="$PROJECT_DIR$/WSUtenti/geister/CancellaAmiciResponse.java" />
+        <option value="$PROJECT_DIR$/WSGame/apprendimento/features/Controllore.java" />
+        <option value="$PROJECT_DIR$/WSGame/logica/Partita.java" />
+        <option value="$PROJECT_DIR$/WSGame/apprendimento/GestisceFileProfilo.java" />
+        <option value="$PROJECT_DIR$/WSGame/apprendimento/Ranker.java" />
+        <option value="$PROJECT_DIR$/WSGame/IA/Strategie/Strategia.java" />
+        <option value="$PROJECT_DIR$/WSGame/IA/Strategie/MinMaxAB.java" />
+        <option value="$PROJECT_DIR$/WSGame/apprendimento/Profilo.java" />
+        <option value="$PROJECT_DIR$/WSGame/logica/Coordinata.java" />
+        <option value="$PROJECT_DIR$/WSGame/logica/Pezzo.java" />
+        <option value="$PROJECT_DIR$/WSGame/apprendimento/PezzoNascosto.java" />
+        <option value="$PROJECT_DIR$/WSGame/apprendimento/ranker/Ranker.java" />
+        <option value="$PROJECT_DIR$/WSGame/apprendimento/ranker/DistanzaVettori.java" />
+        <option value="$PROJECT_DIR$/WSGame/apprendimento/ranker/RankerFactory.java" />
+        <option value="$PROJECT_DIR$/WSGame/IA/Strategie/StrategieFactory.java" />
+        <option value="$PROJECT_DIR$/WSGame/apprendimento/ValutaTavolo.java" />
+        <option value="$PROJECT_DIR$/WSGame/logica/Tavolo.java" />
+        <option value="$PROJECT_DIR$/WSGame/apprendimento/ValutaPezzi.java" />
+        <option value="$PROJECT_DIR$/WSGame/game/ModificaTipo.java" />
+        <option value="$PROJECT_DIR$/WSGame/game/ModificaTipoResponse.java" />
+        <option value="$PROJECT_DIR$/WSGame/game/NuovaPartita.java" />
+        <option value="$PROJECT_DIR$/WSGame/game/WSGameMessageReceiverInOut.java" />
+        <option value="$PROJECT_DIR$/WSGame/IA/IntelligenzaArtificialeFactory.java" />
+        <option value="$PROJECT_DIR$/WSGame/IA/IntelligenzaArtificiale.java" />
+        <option value="$PROJECT_DIR$/WSGame/IA/IAFactory.java" />
+        <option value="$PROJECT_DIR$/WSGame/skeleton/MySkeleton.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>ActionScript specificJavaScript</id>
+          </State>
+          <State>
+            <id>Android</id>
+          </State>
+          <State>
+            <id>Android Lint</id>
+          </State>
+          <State>
+            <id>Ant inspections</id>
+          </State>
+          <State>
+            <id>Batch Applications Issues</id>
+          </State>
+          <State>
+            <id>CFML</id>
+          </State>
+          <State>
+            <id>CSS</id>
+          </State>
+          <State>
+            <id>Class structure</id>
+          </State>
+          <State>
+            <id>Code quality toolsJavaScript</id>
+          </State>
+          <State>
+            <id>CoffeeScript</id>
+          </State>
+          <State>
+            <id>Control flow issues</id>
+          </State>
+          <State>
+            <id>Cucumber</id>
+          </State>
+          <State>
+            <id>Declaration redundancy</id>
+          </State>
+          <State>
+            <id>Error handling</id>
+          </State>
+          <State>
+            <id>Faces Model</id>
+          </State>
+          <State>
+            <id>FreeMarker inspections</id>
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>GeneralCoffeeScript</id>
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>Google Web Toolkit issues</id>
+          </State>
+          <State>
+            <id>GrailsGroovy</id>
+          </State>
+          <State>
+            <id>Groovy</id>
+          </State>
+          <State>
+            <id>HTML</id>
+          </State>
+          <State>
+            <id>Hibernate Issues</id>
+          </State>
+          <State>
+            <id>Imports</id>
+          </State>
+          <State>
+            <id>Internationalization issues</id>
+          </State>
+          <State>
+            <id>J2ME issues</id>
+          </State>
+          <State>
+            <id>JSP Inspections</id>
+          </State>
+          <State>
+            <id>JavaFX</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>Javadoc issues</id>
+          </State>
+          <State>
+            <id>Manifest</id>
+          </State>
+          <State>
+            <id>Memory issues</id>
+          </State>
+          <State>
+            <id>OSGi</id>
+          </State>
+          <State>
+            <id>OtherGroovy</id>
+          </State>
+          <State>
+            <id>Pages Navigation Model</id>
+          </State>
+          <State>
+            <id>Plugin DevKit</id>
+          </State>
+          <State>
+            <id>Portability issues</id>
+          </State>
+          <State>
+            <id>Potentially confusing code constructsGroovy</id>
+          </State>
+          <State>
+            <id>Probable bugs</id>
+          </State>
+          <State>
+            <id>Properties Files</id>
+          </State>
+          <State>
+            <id>RELAX NG</id>
+          </State>
+          <State>
+            <id>RESTful Web Service</id>
+          </State>
+          <State>
+            <id>Resource management issues</id>
+          </State>
+          <State>
+            <id>SQL</id>
+          </State>
+          <State>
+            <id>Security issues</id>
+          </State>
+          <State>
+            <id>Spring Model</id>
+          </State>
+          <State>
+            <id>Struts</id>
+          </State>
+          <State>
+            <id>Struts 1Struts</id>
+          </State>
+          <State>
+            <id>Struts 2Struts</id>
+          </State>
+          <State>
+            <id>TestNG</id>
+          </State>
+          <State>
+            <id>Threading issues</id>
+          </State>
+          <State>
+            <id>Validity issuesGroovy</id>
+          </State>
+          <State>
+            <id>Velocity inspections</id>
+          </State>
+          <State>
+            <id>Web Services</id>
+          </State>
+          <State>
+            <id>XML</id>
+          </State>
+          <State>
+            <id>XPath</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Dependency issues</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <OptionsSetting value="true" id="Undo Check Out" />
+    <OptionsSetting value="true" id="Get Latest Version" />
+    <ConfirmationsSetting value="1" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Geister" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Confirmation" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="FullScreen" value="false" />
+    <property name="LayoutCode.rearrangeEntriesJava" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="151" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="151" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="151" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="826" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="151" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="150" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="152" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="826" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="IA" />
+      <recent name="apprendimento.ranker" />
+      <recent name="apprendimento.learner" />
+      <recent name="apprendimento.features" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Geister\WSGame\data" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="data" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <list size="0" />
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6279669f-56c7-4672-8abb-2d18aff14ae2" name="Default" comment="" />
+      <created>1405431148153</created>
+      <updated>1405431148153</updated>
+      <workItem from="1405431149416" duration="68000" />
+      <workItem from="1405431254298" duration="458000" />
+      <workItem from="1405433837680" duration="122000" />
+      <workItem from="1405434001360" duration="6390000" />
+      <workItem from="1405445773901" duration="4115000" />
+      <workItem from="1405450987917" duration="8878000" />
+      <workItem from="1405492043660" duration="13698000" />
+      <workItem from="1405508695219" duration="17184000" />
+      <workItem from="1405534173256" duration="11105000" />
+      <workItem from="1405587752171" duration="12145000" />
+      <workItem from="1405604015911" duration="2949000" />
+      <workItem from="1405610243631" duration="51000" />
+    </task>
+    <task id="LOCAL-00001" summary="Realizzata gerarchia delle euristiche">
+      <created>1405494145306</created>
+      <updated>1405494145306</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Realizzata gerarchia per le strategie">
+      <created>1405494213559</created>
+      <updated>1405494213559</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Creata classe Mossa">
+      <created>1405494252112</created>
+      <updated>1405494252112</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Pulizia del codice e utilizzo delle nuove gerarchie per le euristiche e le strategie">
+      <created>1405494367909</created>
+      <updated>1405494367909</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Corretta posizione del repository">
+      <created>1405497041756</created>
+      <updated>1405497041756</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Aggiornata architettura del modulo di Intelligenza Artificiale">
+      <created>1405608512972</created>
+      <updated>1405608512972</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Corretto README">
+      <created>1405608573482</created>
+      <updated>1405608573482</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="77163000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.9395425" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="92" y="92" width="1178" height="544" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32300162" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32789558" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6633987" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39869282" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="false" />
+    <MESSAGE value="Realizzata gerarchia delle euristiche" />
+    <MESSAGE value="Realizzata gerarchia per le strategie" />
+    <MESSAGE value="Creata classe Mossa" />
+    <MESSAGE value="Pulizia del codice e utilizzo delle nuove gerarchie per le euristiche e le strategie" />
+    <MESSAGE value="Corretta posizione del repository" />
+    <MESSAGE value="Aggiornata architettura del modulo di Intelligenza Artificiale" />
+    <MESSAGE value="Corretto README" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corretto README" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.8034682" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="uml://JAVA/apprendimento">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>apprendimento</OriginalElement>
+          <nodes>
+            <node x="" y="">apprendimento.features.Feature</node>
+            <node x="" y="">apprendimento.ranker.Ranker</node>
+            <node x="" y="">apprendimento.GestisceFileProfilo.MatricePezzi</node>
+            <node x="" y="">apprendimento.LearnerServer</node>
+            <node x="" y="">apprendimento.features.MossaMangia</node>
+            <node x="" y="">apprendimento.features.Controllore</node>
+            <node x="" y="">apprendimento.features.SecondaMossa</node>
+            <node x="" y="">apprendimento.features.PosizioneIniziale</node>
+            <node x="" y="">apprendimento.ranker.RankerFactory</node>
+            <node x="" y="">apprendimento.learner.MediaVettori</node>
+            <node x="" y="">apprendimento.learner.LearnerFactory.LEARNER</node>
+            <node x="" y="">apprendimento.ranker.DistanzaVettori</node>
+            <node x="" y="">apprendimento.features.MossaScappa</node>
+            <node x="" y="">apprendimento.features.MossaLaterale</node>
+            <node x="" y="">apprendimento.features.MossaAvanti</node>
+            <node x="" y="">apprendimento.GestisceLogPartita</node>
+            <node x="" y="">apprendimento.ranker.RankerFactory.RANKERS</node>
+            <node x="" y="">apprendimento.GestisceFileProfilo</node>
+            <node x="" y="">apprendimento.learner.Learner</node>
+            <node x="" y="">logica.Tavolo</node>
+            <node x="" y="">apprendimento.ValutaPezziLog</node>
+            <node x="" y="">apprendimento.features.FeatureCollector.FeaturePezzi</node>
+            <node x="" y="">apprendimento.ValutaPezzi</node>
+            <node x="" y="">apprendimento.LearnerExecutor</node>
+            <node x="" y="">apprendimento.LogPartita</node>
+            <node x="" y="">apprendimento.PezzoNascosto</node>
+            <node x="" y="">apprendimento.features.MossaMinaccia</node>
+            <node x="" y="">apprendimento.features.FeatureCollector</node>
+            <node x="" y="">apprendimento.features.MossaIndietro</node>
+            <node x="" y="">IA.IntelligenzaArtificiale</node>
+            <node x="" y="">apprendimento.features.PrimaMossa</node>
+            <node x="" y="">apprendimento.features.MossaResta</node>
+            <node x="" y="">apprendimento.learner.LearnerFactory</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="1045.0" y="421.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Program Files/Java/jdk1.7.0_51/src.zip!/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5142349" vertical-offset="5457" max-vertical-offset="18955">
+          <caret line="365" column="16" selection-start-line="365" selection-start-column="16" selection-end-line="365" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Program Files/Java/jdk1.7.0_51/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="2797" max-vertical-offset="7837">
+          <caret line="199" column="6" selection-start-line="199" selection-start-column="6" selection-end-line="199" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Program Files/Java/jdk1.7.0_51/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="757" max-vertical-offset="9027">
+          <caret line="100" column="25" selection-start-line="100" selection-start-column="25" selection-end-line="100" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/scopes/scope_settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="584">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/copyright/profiles_settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="584">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
+
