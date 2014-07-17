@@ -4,7 +4,7 @@
     <option name="ANALYSIS_IN_BACKGROUND" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6279669f-56c7-4672-8abb-2d18aff14ae2" name="Default" comment="IntelliJ IDEA try push">
+    <list default="true" id="6279669f-56c7-4672-8abb-2d18aff14ae2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Geister.iws" />
@@ -644,7 +644,7 @@
       <workItem from="1405534173256" duration="11105000" />
       <workItem from="1405587752171" duration="12145000" />
       <workItem from="1405604015911" duration="1667000" />
-      <workItem from="1405610498568" duration="483000" />
+      <workItem from="1405610498568" duration="529000" />
     </task>
     <task id="LOCAL-00001" summary="Realizzata gerarchia delle euristiche">
       <created>1405494145306</created>
@@ -678,11 +678,15 @@
       <created>1405610970704</created>
       <updated>1405610970704</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="IntelliJ IDEA try push">
+      <created>1405610985181</created>
+      <updated>1405610985181</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76313000" />
+    <option name="totallyTimeSpent" value="76359000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
