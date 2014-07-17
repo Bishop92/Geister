@@ -5,205 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6279669f-56c7-4672-8abb-2d18aff14ae2" name="Default" comment="">
-      <change type="DELETED" beforePath="E:\Geister\WSGame\IA\MinMaxAB.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\FeatureCollector.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\Profilo.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\ProvaLog.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\Ranker.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\RankerLog.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\features\Feature.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\features\MosseAvanti.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\features\MosseAvanti.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\learner\Learner.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\learner\MediaVettori.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\learner\MediaVettori2.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\Geister\WSGame\apprendimento\learner\MediaVettori2.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/CancellaAmici.java" afterPath="$PROJECT_DIR$/WSData/data/CancellaAmici.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/CancellaAmici.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/CancellaAmici.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/CancellaAmiciResponse.java" afterPath="$PROJECT_DIR$/WSData/data/CancellaAmiciResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/CancellaAmiciResponse.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/CancellaAmiciResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/CancellaAmico.java" afterPath="$PROJECT_DIR$/WSData/data/CancellaAmico.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/CancellaAmico.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/CancellaAmico.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/CancellaAmicoResponse.java" afterPath="$PROJECT_DIR$/WSData/data/CancellaAmicoResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/CancellaAmicoResponse.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/CancellaAmicoResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/CancellaPartita.java" afterPath="$PROJECT_DIR$/WSGame/game/CancellaPartita.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/CancellaPartitaResponse.java" afterPath="$PROJECT_DIR$/WSGame/game/CancellaPartitaResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/CancellaUtente.java" afterPath="$PROJECT_DIR$/WSData/data/CancellaUtente.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/CancellaUtente.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/CancellaUtente.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/CancellaUtenteResponse.java" afterPath="$PROJECT_DIR$/WSData/data/CancellaUtenteResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/CancellaUtenteResponse.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/CancellaUtenteResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/logica/Coordinata.java" afterPath="$PROJECT_DIR$/WSGame/logica/Coordinata.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/DeletePartita.java" afterPath="$PROJECT_DIR$/WSData/data/DeletePartita.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/DeletePartitaResponse.java" afterPath="$PROJECT_DIR$/WSData/data/DeletePartitaResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/EseguiMossa.java" afterPath="$PROJECT_DIR$/WSGame/game/EseguiMossa.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/EseguiMossaResponse.java" afterPath="$PROJECT_DIR$/WSGame/game/EseguiMossaResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/ExtensionMapper.java" afterPath="$PROJECT_DIR$/WSData/data/ExtensionMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/ExtensionMapper.java" afterPath="$PROJECT_DIR$/WSGame/game/ExtensionMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/ExtensionMapper.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/ExtensionMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/apprendimento/features/Feature.java" afterPath="$PROJECT_DIR$/WSGame/apprendimento/features/Feature.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/GeneraMossaIA.java" afterPath="$PROJECT_DIR$/WSGame/game/GeneraMossaIA.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/GeneraMossaIAResponse.java" afterPath="$PROJECT_DIR$/WSGame/game/GeneraMossaIAResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/logica/GestisceFile.java" afterPath="$PROJECT_DIR$/WSGame/logica/GestisceFile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/apprendimento/GestisceFileProfilo.java" afterPath="$PROJECT_DIR$/WSGame/apprendimento/GestisceFileProfilo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/apprendimento/GestisceLogPartita.java" afterPath="$PROJECT_DIR$/WSGame/apprendimento/GestisceLogPartita.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/GetCognome.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/GetCognome.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/GetCognomeResponse.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/GetCognomeResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/GetEmail.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/GetEmail.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/GetEmailResponse.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/GetEmailResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetIdtoken.java" afterPath="$PROJECT_DIR$/WSData/data/GetIdtoken.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetIdtokenResponse.java" afterPath="$PROJECT_DIR$/WSData/data/GetIdtokenResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetListaAmici.java" afterPath="$PROJECT_DIR$/WSData/data/GetListaAmici.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/GetListaAmici.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/GetListaAmici.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetListaAmiciResponse.java" afterPath="$PROJECT_DIR$/WSData/data/GetListaAmiciResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/GetListaAmiciResponse.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/GetListaAmiciResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetListaUtentiOnline.java" afterPath="$PROJECT_DIR$/WSData/data/GetListaUtentiOnline.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetListaUtentiOnlineResponse.java" afterPath="$PROJECT_DIR$/WSData/data/GetListaUtentiOnlineResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetMosse.java" afterPath="$PROJECT_DIR$/WSData/data/GetMosse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetMosseResponse.java" afterPath="$PROJECT_DIR$/WSData/data/GetMosseResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/GetNome.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/GetNome.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetNomePartita.java" afterPath="$PROJECT_DIR$/WSData/data/GetNomePartita.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/GetNomePartita.java" afterPath="$PROJECT_DIR$/WSGame/game/GetNomePartita.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetNomePartitaResponse.java" afterPath="$PROJECT_DIR$/WSData/data/GetNomePartitaResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/GetNomePartitaResponse.java" afterPath="$PROJECT_DIR$/WSGame/game/GetNomePartitaResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/GetNomeResponse.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/GetNomeResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetPartitaID.java" afterPath="$PROJECT_DIR$/WSData/data/GetPartitaID.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetPartitaIDResponse.java" afterPath="$PROJECT_DIR$/WSData/data/GetPartitaIDResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetPartite.java" afterPath="$PROJECT_DIR$/WSData/data/GetPartite.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetPartiteResponse.java" afterPath="$PROJECT_DIR$/WSData/data/GetPartiteResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetPosizioniIniziali.java" afterPath="$PROJECT_DIR$/WSData/data/GetPosizioniIniziali.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetPosizioniInizialiResponse.java" afterPath="$PROJECT_DIR$/WSData/data/GetPosizioniInizialiResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/GetTurno.java" afterPath="$PROJECT_DIR$/WSGame/game/GetTurno.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/GetTurnoResponse.java" afterPath="$PROJECT_DIR$/WSGame/game/GetTurnoResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetUtente.java" afterPath="$PROJECT_DIR$/WSData/data/GetUtente.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetUtenteAdmin.java" afterPath="$PROJECT_DIR$/WSData/data/GetUtenteAdmin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetUtenteAdminResponse.java" afterPath="$PROJECT_DIR$/WSData/data/GetUtenteAdminResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetUtenteCognome.java" afterPath="$PROJECT_DIR$/WSData/data/GetUtenteCognome.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetUtenteCognomeResponse.java" afterPath="$PROJECT_DIR$/WSData/data/GetUtenteCognomeResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetUtenteEmail.java" afterPath="$PROJECT_DIR$/WSData/data/GetUtenteEmail.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetUtenteEmailResponse.java" afterPath="$PROJECT_DIR$/WSData/data/GetUtenteEmailResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetUtenteIA.java" afterPath="$PROJECT_DIR$/WSData/data/GetUtenteIA.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetUtenteIAResponse.java" afterPath="$PROJECT_DIR$/WSData/data/GetUtenteIAResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetUtenteNome.java" afterPath="$PROJECT_DIR$/WSData/data/GetUtenteNome.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetUtenteNomeResponse.java" afterPath="$PROJECT_DIR$/WSData/data/GetUtenteNomeResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetUtenteOnline.java" afterPath="$PROJECT_DIR$/WSData/data/GetUtenteOnline.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetUtenteOnlineResponse.java" afterPath="$PROJECT_DIR$/WSData/data/GetUtenteOnlineResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetUtentePareggiate.java" afterPath="$PROJECT_DIR$/WSData/data/GetUtentePareggiate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetUtentePareggiateResponse.java" afterPath="$PROJECT_DIR$/WSData/data/GetUtentePareggiateResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetUtentePerse.java" afterPath="$PROJECT_DIR$/WSData/data/GetUtentePerse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetUtentePerseResponse.java" afterPath="$PROJECT_DIR$/WSData/data/GetUtentePerseResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetUtenteResponse.java" afterPath="$PROJECT_DIR$/WSData/data/GetUtenteResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetUtenteVinte.java" afterPath="$PROJECT_DIR$/WSData/data/GetUtenteVinte.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/GetUtenteVinteResponse.java" afterPath="$PROJECT_DIR$/WSData/data/GetUtenteVinteResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/logica/Giocatore.java" afterPath="$PROJECT_DIR$/WSGame/logica/Giocatore.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/InsertLOG.java" afterPath="$PROJECT_DIR$/WSData/data/InsertLOG.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/InsertLOGResponse.java" afterPath="$PROJECT_DIR$/WSData/data/InsertLOGResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/InsertMossa.java" afterPath="$PROJECT_DIR$/WSData/data/InsertMossa.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/InsertMossaResponse.java" afterPath="$PROJECT_DIR$/WSData/data/InsertMossaResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/InsertPartita.java" afterPath="$PROJECT_DIR$/WSData/data/InsertPartita.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/InsertPartitaResponse.java" afterPath="$PROJECT_DIR$/WSData/data/InsertPartitaResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/InsertPosizioneIniziale.java" afterPath="$PROJECT_DIR$/WSData/data/InsertPosizioneIniziale.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/InsertPosizioneInizialeResponse.java" afterPath="$PROJECT_DIR$/WSData/data/InsertPosizioneInizialeResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/InsertTurno.java" afterPath="$PROJECT_DIR$/WSData/data/InsertTurno.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/InsertTurnoResponse.java" afterPath="$PROJECT_DIR$/WSData/data/InsertTurnoResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/IA/IntelligenzaArtificiale.java" afterPath="$PROJECT_DIR$/WSGame/IA/IntelligenzaArtificiale.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/IsAmico.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/IsAmico.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/IsAmicoResponse.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/IsAmicoResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/IsIA.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/IsIA.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/IsIAResponse.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/IsIAResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/IsOnline.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/IsOnline.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/IsOnlineResponse.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/IsOnlineResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/IsPlaying.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/IsPlaying.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/IsPlayingResponse.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/IsPlayingResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/IsUtenteIniziale.java" afterPath="$PROJECT_DIR$/WSData/data/IsUtenteIniziale.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/IsUtenteInizialeResponse.java" afterPath="$PROJECT_DIR$/WSData/data/IsUtenteInizialeResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/apprendimento/learner/Learner.java" afterPath="$PROJECT_DIR$/WSGame/apprendimento/learner/Learner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/apprendimento/LearnerExecutor.java" afterPath="$PROJECT_DIR$/WSGame/apprendimento/LearnerExecutor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/ListaMosse.java" afterPath="$PROJECT_DIR$/WSGame/game/ListaMosse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/ListaMosseResponse.java" afterPath="$PROJECT_DIR$/WSGame/game/ListaMosseResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/ListaPartite.java" afterPath="$PROJECT_DIR$/WSGame/game/ListaPartite.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/ListaPartiteResponse.java" afterPath="$PROJECT_DIR$/WSGame/game/ListaPartiteResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/ListaPosizioniIniziali.java" afterPath="$PROJECT_DIR$/WSGame/game/ListaPosizioniIniziali.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/ListaPosizioniInizialiResponse.java" afterPath="$PROJECT_DIR$/WSGame/game/ListaPosizioniInizialiResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/apprendimento/LogPartita.java" afterPath="$PROJECT_DIR$/WSGame/apprendimento/LogPartita.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/Login.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/LoginResponse.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/LoginResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/apprendimento/learner/MediaVettori.java" afterPath="$PROJECT_DIR$/WSGame/apprendimento/learner/MediaVettori.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/ModificaPartita.java" afterPath="$PROJECT_DIR$/WSGame/game/ModificaPartita.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/ModificaPartitaResponse.java" afterPath="$PROJECT_DIR$/WSGame/game/ModificaPartitaResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/ModificaTipo.java" afterPath="$PROJECT_DIR$/WSGame/game/ModificaTipo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/ModificaTipoResponse.java" afterPath="$PROJECT_DIR$/WSGame/game/ModificaTipoResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/ModificaUtente.java" afterPath="$PROJECT_DIR$/WSData/data/ModificaUtente.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/ModificaUtente.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/ModificaUtente.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/ModificaUtenteResponse.java" afterPath="$PROJECT_DIR$/WSData/data/ModificaUtenteResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/ModificaUtenteResponse.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/ModificaUtenteResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/skeleton/MySkeleton.java" afterPath="$PROJECT_DIR$/WSData/skeleton/MySkeleton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/skeleton/MySkeleton.java" afterPath="$PROJECT_DIR$/WSGame/skeleton/MySkeleton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/skeleton/MySkeleton.java" afterPath="$PROJECT_DIR$/WSUtenti/skeleton/MySkeleton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/NuovaPartita.java" afterPath="$PROJECT_DIR$/WSGame/game/NuovaPartita.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/NuovaPartitaResponse.java" afterPath="$PROJECT_DIR$/WSGame/game/NuovaPartitaResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/NuovaPosizioneIniziale.java" afterPath="$PROJECT_DIR$/WSGame/game/NuovaPosizioneIniziale.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/NuovaPosizioneInizialeResponse.java" afterPath="$PROJECT_DIR$/WSGame/game/NuovaPosizioneInizialeResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/NuovoAmico.java" afterPath="$PROJECT_DIR$/WSData/data/NuovoAmico.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/NuovoAmico.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/NuovoAmico.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/NuovoAmicoResponse.java" afterPath="$PROJECT_DIR$/WSData/data/NuovoAmicoResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/NuovoAmicoResponse.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/NuovoAmicoResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/NuovoUtente.java" afterPath="$PROJECT_DIR$/WSData/data/NuovoUtente.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/NuovoUtente.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/NuovoUtente.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/NuovoUtenteResponse.java" afterPath="$PROJECT_DIR$/WSData/data/NuovoUtenteResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/NuovoUtenteResponse.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/NuovoUtenteResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/logica/Partita.java" afterPath="$PROJECT_DIR$/WSGame/logica/Partita.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/logica/Pezzo.java" afterPath="$PROJECT_DIR$/WSGame/logica/Pezzo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/apprendimento/PezzoNascosto.java" afterPath="$PROJECT_DIR$/WSGame/apprendimento/PezzoNascosto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/SetCognome.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/SetCognome.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/SetCognomeResponse.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/SetCognomeResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/SetEmail.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/SetEmail.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/SetEmailResponse.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/SetEmailResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/SetIA.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/SetIA.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/SetIAResponse.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/SetIAResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/SetNome.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/SetNome.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/SetNomeResponse.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/SetNomeResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/SetOnline.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/SetOnline.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/SetOnlineResponse.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/SetOnlineResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/SetPassword.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/SetPassword.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/SetPasswordResponse.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/SetPasswordResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/SetPlaying.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/SetPlaying.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/SetPlayingResponse.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/SetPlayingResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/SetUtenteAdmin.java" afterPath="$PROJECT_DIR$/WSData/data/SetUtenteAdmin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/SetUtenteAdminResponse.java" afterPath="$PROJECT_DIR$/WSData/data/SetUtenteAdminResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/SetUtenteCognome.java" afterPath="$PROJECT_DIR$/WSData/data/SetUtenteCognome.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/SetUtenteCognomeResponse.java" afterPath="$PROJECT_DIR$/WSData/data/SetUtenteCognomeResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/SetUtenteEmail.java" afterPath="$PROJECT_DIR$/WSData/data/SetUtenteEmail.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/SetUtenteEmailResponse.java" afterPath="$PROJECT_DIR$/WSData/data/SetUtenteEmailResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/SetUtenteIA.java" afterPath="$PROJECT_DIR$/WSData/data/SetUtenteIA.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/SetUtenteIAResponse.java" afterPath="$PROJECT_DIR$/WSData/data/SetUtenteIAResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/SetUtenteNome.java" afterPath="$PROJECT_DIR$/WSData/data/SetUtenteNome.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/SetUtenteNomeResponse.java" afterPath="$PROJECT_DIR$/WSData/data/SetUtenteNomeResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/SetUtenteOnline.java" afterPath="$PROJECT_DIR$/WSData/data/SetUtenteOnline.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/SetUtenteOnlineResponse.java" afterPath="$PROJECT_DIR$/WSData/data/SetUtenteOnlineResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/SetUtentePareggiate.java" afterPath="$PROJECT_DIR$/WSData/data/SetUtentePareggiate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/SetUtentePareggiateResponse.java" afterPath="$PROJECT_DIR$/WSData/data/SetUtentePareggiateResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/SetUtentePassword.java" afterPath="$PROJECT_DIR$/WSData/data/SetUtentePassword.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/SetUtentePasswordResponse.java" afterPath="$PROJECT_DIR$/WSData/data/SetUtentePasswordResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/SetUtentePerse.java" afterPath="$PROJECT_DIR$/WSData/data/SetUtentePerse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/SetUtentePerseResponse.java" afterPath="$PROJECT_DIR$/WSData/data/SetUtentePerseResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/SetUtenteVinte.java" afterPath="$PROJECT_DIR$/WSData/data/SetUtenteVinte.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/SetUtenteVinteResponse.java" afterPath="$PROJECT_DIR$/WSData/data/SetUtenteVinteResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/logica/Tavolo.java" afterPath="$PROJECT_DIR$/WSGame/logica/Tavolo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/UpdatePartita.java" afterPath="$PROJECT_DIR$/WSData/data/UpdatePartita.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/UpdatePartitaResponse.java" afterPath="$PROJECT_DIR$/WSData/data/UpdatePartitaResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/UpdateTipo.java" afterPath="$PROJECT_DIR$/WSData/data/UpdateTipo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/UpdateTipoResponse.java" afterPath="$PROJECT_DIR$/WSData/data/UpdateTipoResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/data/WSDataCallbackHandler.java" afterPath="$PROJECT_DIR$/WSGame/data/WSDataCallbackHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/data/WSDataCallbackHandler.java" afterPath="$PROJECT_DIR$/WSUtenti/data/WSDataCallbackHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/WSDataMessageReceiverInOut.java" afterPath="$PROJECT_DIR$/WSData/data/WSDataMessageReceiverInOut.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/WSDataSkeleton.java" afterPath="$PROJECT_DIR$/WSData/data/WSDataSkeleton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/data/WSDataStub.java" afterPath="$PROJECT_DIR$/WSGame/data/WSDataStub.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/data/WSDataStub.java" afterPath="$PROJECT_DIR$/WSUtenti/data/WSDataStub.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/WSGameMessageReceiverInOut.java" afterPath="$PROJECT_DIR$/WSGame/game/WSGameMessageReceiverInOut.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/game/WSGameSkeleton.java" afterPath="$PROJECT_DIR$/WSGame/game/WSGameSkeleton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/WSUtentiMessageReceiverInOnly.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/WSUtentiMessageReceiverInOnly.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/WSUtentiMessageReceiverInOut.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/WSUtentiMessageReceiverInOut.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/WSUtentiSkeleton.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/WSUtentiSkeleton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Geister.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -229,8 +31,8 @@
       <file leaf-file-name="IntelligenzaArtificiale.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WSGame/IA/IntelligenzaArtificiale.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="2584">
-              <caret line="48" column="7" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.73513514" vertical-offset="408" max-vertical-offset="2584">
+              <caret line="64" column="7" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
               <folding>
                 <element signature="e#7162#7163#0" expanded="true" />
                 <element signature="e#7238#7239#0" expanded="true" />
@@ -249,6 +51,11 @@
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -504,7 +311,7 @@
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="false" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
     <OptionsSetting value="true" id="Undo Check Out" />
@@ -837,7 +644,7 @@
       <workItem from="1405534173256" duration="11105000" />
       <workItem from="1405587752171" duration="12145000" />
       <workItem from="1405604015911" duration="1667000" />
-      <workItem from="1405610498568" duration="118000" />
+      <workItem from="1405610498568" duration="425000" />
     </task>
     <task id="LOCAL-00001" summary="Realizzata gerarchia delle euristiche">
       <created>1405494145306</created>
@@ -871,14 +678,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75948000" />
+    <option name="totallyTimeSpent" value="76255000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32843137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -895,7 +702,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="92" y="92" width="1178" height="544" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1259,8 +1066,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WSGame/IA/IntelligenzaArtificiale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="2584">
-          <caret line="48" column="7" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.73513514" vertical-offset="408" max-vertical-offset="2584">
+          <caret line="64" column="7" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
           <folding>
             <element signature="e#7162#7163#0" expanded="true" />
             <element signature="e#7238#7239#0" expanded="true" />
