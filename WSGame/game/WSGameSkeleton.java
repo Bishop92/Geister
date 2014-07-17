@@ -12,9 +12,9 @@ import skeleton.MySkeleton;
 /**
  * WSGameSkeleton java skeleton for the axisService
  */
-public class WSGameSkeleton {
+class WSGameSkeleton {
 
-    MySkeleton mySkeleton = new MySkeleton();
+    private MySkeleton mySkeleton = new MySkeleton();
 
     /**
      * Auto generated method signature
@@ -127,11 +127,10 @@ public class WSGameSkeleton {
     /**
      * Auto generated method signature
      *
-     * @param modificaPartita
      * @return modificaPartitaResponse
      */
 
-    public game.ModificaPartitaResponse modificaPartita(game.ModificaPartita modificaPartita) {
+    public game.ModificaPartitaResponse modificaPartita() {
         //TODO : fill this with the necessary business logic
         throw new java.lang.UnsupportedOperationException("Please implement " + this.getClass().getName() + "#modificaPartita");
     }

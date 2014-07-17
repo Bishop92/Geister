@@ -381,7 +381,7 @@
             if (qnames != null) {
                 // we have to store this data until last moment since it is not possible to write any
                 // namespace data after writing the charactor data
-                java.lang.StringBuffer stringToWrite = new java.lang.StringBuffer();
+                StringBuilder stringToWrite = new StringBuilder();
                 java.lang.String namespaceURI = null;
                 java.lang.String prefix = null;
 
@@ -510,7 +510,7 @@
                         "type");
                   if (fullTypeName!=null){
                     java.lang.String nsPrefix = null;
-                    if (fullTypeName.indexOf(":") > -1){
+                    if (fullTypeName.contains(":")){
                         nsPrefix = fullTypeName.substring(0,fullTypeName.indexOf(":"));
                     }
                     nsPrefix = nsPrefix==null?"":nsPrefix;
@@ -565,9 +565,7 @@
                                     
                               }  // End of if for expected property start element
                                 
-                                    else {
-                                        
-                                    }
+
                                 
                                     
                                     while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
@@ -594,10 +592,7 @@
                                 
                                     else {
                                         
-                                    }
-                                
-                                    
-                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                    }                      while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
                                 
                                     if (reader.isStartElement() && new javax.xml.namespace.QName("http://game","nomePartita").equals(reader.getName())){
                                 

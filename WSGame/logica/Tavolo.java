@@ -166,23 +166,23 @@ public class Tavolo implements Cloneable {
      * Metodo che ritorna un vettore contenente i pezzi in gioco del giocatore.
      * Se il giocatore usa l'intelligenza i pezzi avversari saranno di tipo pezzoNascosto
      *
-     * @param gioc
+     * @param gioc Giocatore che deve muovere
      * @return pezzi
      */
     public Vector<Pezzo> getPezziInGioco(byte gioc) {
         Vector<Pezzo> pezzi = new Vector<Pezzo>();
         if (gioc == (byte) 1) {
             /** aggiungo i pezzi al vettore da restituire*/
-            for (int i = 0; i < g1_pezzi_buoni.size(); i++)
-                pezzi.add(g1_pezzi_buoni.get(i));
-            for (int i = 0; i < g1_pezzi_cattivi.size(); i++)
-                pezzi.add(g1_pezzi_cattivi.get(i));
+            for (Pezzo pezzo : g1_pezzi_buoni)
+                pezzi.add(pezzo);
+            for (Pezzo pezzo : g1_pezzi_cattivi)
+                pezzi.add(pezzo);
         } else {
             /** aggiungo i pezzi al vettore da restituire*/
-            for (int i = 0; i < g2_pezzi_buoni.size(); i++)
-                pezzi.add(g2_pezzi_buoni.get(i));
-            for (int i = 0; i < g2_pezzi_cattivi.size(); i++)
-                pezzi.add(g2_pezzi_cattivi.get(i));
+            for (Pezzo pezzo : g2_pezzi_buoni)
+                pezzi.add(pezzo);
+            for (Pezzo pezzo : g2_pezzi_cattivi)
+                pezzi.add(pezzo);
         }
         return pezzi;
     }
@@ -410,22 +410,18 @@ public class Tavolo implements Cloneable {
      */
     public void aggiornaMosseLegali() {
         //per ogni pezzo di ogni vettore
-        for (int a = 0; a < g1_pezzi_buoni.size(); a++) {
+        for (Pezzo pezzo : g1_pezzi_buoni)
             //richiamo il metodo ricalcolaMosseFattibili
-            g1_pezzi_buoni.get(a).ricalcolaMosseFattibili(base_logica);
-        }
-        for (int a = 0; a < g1_pezzi_cattivi.size(); a++) {
+            pezzo.ricalcolaMosseFattibili(base_logica);
+        for (Pezzo pezzo : g1_pezzi_cattivi)
             //richiamo il metodo ricalcolaMosseFattibili
-            g1_pezzi_cattivi.get(a).ricalcolaMosseFattibili(base_logica);
-        }
-        for (int a = 0; a < g2_pezzi_buoni.size(); a++) {
+            pezzo.ricalcolaMosseFattibili(base_logica);
+        for (Pezzo pezzo : g2_pezzi_buoni)
             //richiamo il metodo ricalcolaMosseFattibili
-            g2_pezzi_buoni.get(a).ricalcolaMosseFattibili(base_logica);
-        }
-        for (int a = 0; a < g2_pezzi_cattivi.size(); a++) {
+            pezzo.ricalcolaMosseFattibili(base_logica);
+        for (Pezzo pezzo : g2_pezzi_cattivi)
             //richiamo il metodo ricalcolaMosseFattibili
-            g2_pezzi_cattivi.get(a).ricalcolaMosseFattibili(base_logica);
-        }
+            pezzo.ricalcolaMosseFattibili(base_logica);
     }
 
     /**
@@ -507,36 +503,6 @@ public class Tavolo implements Cloneable {
     }
 
     /**
-     * Metodo ad un parametro che restituisce i numero di pezzi buoni mangiati a un giocatore
-     *
-     * @param num_giocatore giocatore del quale si vuole sapere il numero di pezzi buoni mangiati
-     * @return byte - numero pezzi buoni mangiati dal giocatore
-     */
-    public byte getNumeroPezziBuoniMangiati(byte num_giocatore) {
-        if (num_giocatore == 1)
-            return (byte) g1_pezzi_buoni_mangiati.size();
-        if (num_giocatore == 2)
-            return (byte) g2_pezzi_buoni_mangiati.size();
-        //se il num_giocatore è diverso da 1 e 2, ritorna un valore di errore
-        return -1;
-    }
-
-    /**
-     * Metodo ad un parametro che restituisce i numero di pezzi cattivi mangiati a un giocatore
-     *
-     * @param num_giocatore giocatore del quale si vuole sapere il numero di pezzi cattivi mangiati
-     * @return byte - numero pezzi cattivi mangiati del giocatore
-     */
-    public byte getNumeroPezziCattiviMangiati(byte num_giocatore) {
-        if (num_giocatore == 1)
-            return (byte) g1_pezzi_cattivi_mangiati.size();
-        if (num_giocatore == 2)
-            return (byte) g2_pezzi_cattivi_mangiati.size();
-        //se il num_giocatore è diverso da 1 e 2, ritorna un valore di errore
-        return -1;
-    }
-
-    /**
      * Metodo ad un parametro che restituisce i numero di pezzi cattivi di un giocatore
      *
      * @param num_giocatore giocatore del quale si vuole sapere il numero di pezzi cattivi
@@ -553,8 +519,8 @@ public class Tavolo implements Cloneable {
 
 
     /**
-     * Metodo ad un parametro che modifica il tavolo di gioco sostituendo i pezzi di un giocatore
-     * con dei "pezziNascosti" dei quali non si sa esattamente se sono buoni o cattivi
+     * Modifica il tavolo di gioco sostituendo i pezzi di un giocatore
+     * con dei pezziNascosti dei quali non si sa esattamente se sono buoni o cattivi
      *
      * @param giocatore giocatore del quale si vogliono sostituire i pezzi
      */
@@ -625,8 +591,8 @@ public class Tavolo implements Cloneable {
             //che dovrebbero stare nel vettore dei pezzi cattivi
             while (i < g1_pezzi_buoni.size()) {
                 //	for (int i=0; i<g1_pezzi_buoni.size(); i++){
-                //se il pezzo � cattivo
-                if (((PezzoNascosto) g1_pezzi_buoni.get(i)).getBuono() == false) {
+                //se il pezzo e cattivo
+                if (!g1_pezzi_buoni.get(i).getBuono()) {
                     //sposto il pezzo da un vettore all'altro
                     g1_pezzi_cattivi.addElement(g1_pezzi_buoni.remove(i));
                 } else i++;
@@ -635,13 +601,13 @@ public class Tavolo implements Cloneable {
             while (i < g1_pezzi_cattivi.size()) {
                 //for (int i=0; i<g1_pezzi_cattivi.size(); i++){
                 //se il pezzo è buono
-                if (((PezzoNascosto) g1_pezzi_cattivi.get(i)).getBuono() == true) {
+                if (g1_pezzi_cattivi.get(i).getBuono()) {
                     //sposto il pezzo da un vettore all'altro
                     g1_pezzi_buoni.addElement(g1_pezzi_cattivi.remove(i));
                 } else i++;
             }
             /*
-			//controllo che il numero di pezzi buoni/cattivi sia giusto
+            //controllo che il numero di pezzi buoni/cattivi sia giusto
 			if(g1_pezzi_buoni.size()>4 || g1_pezzi_cattivi.size()>)*/
             ridistribuzioneBuoniCattivi(giocatore);
         } else { //giocatore == 2
@@ -656,24 +622,22 @@ public class Tavolo implements Cloneable {
             //scorro tutto il vettore dei pezzi buoni cercando i pezzi
             //che dovrebbero stare nel vettore dei pezzi cattivi
             int i = 0;
-            while (i < g2_pezzi_buoni.size()) {
+            while (i < g2_pezzi_buoni.size())
 //			for (int i=0; i<g2_pezzi_buoni.size(); i++){
                 //se il pezzo è cattivo
-                if (((PezzoNascosto) g2_pezzi_buoni.get(i)).getBuono() == false) {
+                if (!g2_pezzi_buoni.get(i).getBuono())
                     //sposto il pezzo da un vettore all'altro
                     g2_pezzi_cattivi.addElement(g2_pezzi_buoni.remove(i));
-                } else i++;
-            }
+                else i++;
             i = 0;
-            while (i < g2_pezzi_cattivi.size()) {
+            while (i < g2_pezzi_cattivi.size())
                 //for (int i=0; i<g2_pezzi_cattivi.size(); i++){
                 //se il pezzo è buono
-                if (((PezzoNascosto) g2_pezzi_cattivi.get(i)).getBuono() == true) {
+                if (g2_pezzi_cattivi.get(i).getBuono())
                     //sposto il pezzo da un vettore all'altro
                     g2_pezzi_buoni.addElement(g2_pezzi_cattivi.remove(i));
                     //faccio ripartire la ricerca dall'indice in cui mi son fermato in quanto
-                } else i++;
-            }
+                else i++;
             //controllo che il numero di pezzi buoni/cattivi sia giusto
             ridistribuzioneBuoniCattivi(giocatore);
         }
@@ -732,38 +696,34 @@ public class Tavolo implements Cloneable {
             //scorro tutto il vettore dei pezzi buoni cercando i pezzi
             //che devono stare nel vettore dei pezzi cattivi
             int i = 0;
-            while (i < g1_pezzi_buoni.size()) {
+            while (i < g1_pezzi_buoni.size())
                 //se il pezzo è cattivo
-                if (((Pezzo) g1_pezzi_buoni.get(i)).getBuono() == false) {
+                if (!g1_pezzi_buoni.get(i).getBuono())
                     //sposto il pezzo da un vettore all'altro
                     g1_pezzi_cattivi.addElement(g1_pezzi_buoni.remove(i));
-                } else i++;
-            }
+                else i++;
             i = 0;
-            while (i < g1_pezzi_cattivi.size()) {
-                if (((Pezzo) g1_pezzi_cattivi.get(i)).getBuono() == true) {
+            while (i < g1_pezzi_cattivi.size())
+                if (g1_pezzi_cattivi.get(i).getBuono())
                     //sposto il pezzo da un vettore all'altro
                     g1_pezzi_buoni.addElement(g1_pezzi_cattivi.remove(i));
-                } else i++;
-            }
+                else i++;
         } else { //giocatore == 2
             //scorro tutto il vettore dei pezzi buoni cercando i pezzi
             //che devono stare nel vettore dei pezzi cattivi
             int i = 0;
-            while (i < g2_pezzi_buoni.size()) {
+            while (i < g2_pezzi_buoni.size())
                 //se il pezzo è cattivo
-                if (((Pezzo) g2_pezzi_buoni.get(i)).getBuono() == false) {
+                if (!g2_pezzi_buoni.get(i).getBuono())
                     //sposto il pezzo da un vettore all'altro
                     g2_pezzi_cattivi.addElement(g2_pezzi_buoni.remove(i));
-                } else i++;
-            }
+                else i++;
             i = 0;
-            while (i < g2_pezzi_cattivi.size()) {
-                if (((Pezzo) g2_pezzi_cattivi.get(i)).getBuono() == true) {
+            while (i < g2_pezzi_cattivi.size())
+                if (g2_pezzi_cattivi.get(i).getBuono())
                     //sposto il pezzo da un vettore all'altro
                     g2_pezzi_buoni.addElement(g2_pezzi_cattivi.remove(i));
-                } else i++;
-            }
+                else i++;
         }
     }
 
@@ -781,10 +741,8 @@ public class Tavolo implements Cloneable {
             int num_buoni_teorico = 4 - g2_pezzi_buoni_mangiati.size();
 
             //controllo se il numero teorico ed effettivo dei pezzi coincide
-            if (num_buoni_teorico == g1_pezzi_buoni.size()) {
-                //allora non devo fare niente e posso uscire
-                return;
-            } else { //i pezzi sono disposti in modo sbagliato
+            if (num_buoni_teorico != g1_pezzi_buoni.size()) {
+                //i pezzi sono disposti in modo sbagliato
                 //i pezzi teorici sono minori dei pezzi effettivi
                 if (num_buoni_teorico < g1_pezzi_buoni.size()) {
                     //cerco il pezzo con il grado di bonta' maggiore (tra i pezzi buoni) e lo sposto nel
@@ -838,8 +796,8 @@ public class Tavolo implements Cloneable {
 //					incrementaDecrementaValore(g1_pezzi_buoni, valore_da_aggiungere);
                     //reimposto la bonta' del pezzo che devo spostare
                     System.out.println("sono qui:" + g1_pezzi_cattivi.size());
-                    if (g1_pezzi_cattivi.size() > 0) { //solo se indice=0 � il minimo, e non il default
-                        //perch� con size=0 va in overflow
+                    if (g1_pezzi_cattivi.size() > 0) { //solo se indice=0 e il minimo, e non il default
+                        //perche con size=0 va in overflow
                         ((PezzoNascosto) g1_pezzi_cattivi.get(indice_min)).aggiungiBonta(valore_da_aggiungere);
 
                         //ora so qual'e' il pezzo di valore massimo e lo sposto nel vettore dei pezzi cattivi
@@ -853,12 +811,7 @@ public class Tavolo implements Cloneable {
         } else { //giocatore == 2
             int num_buoni_teorico = 4 - g1_pezzi_buoni_mangiati.size();
             //controllo se il numero teorico ed effettivo dei pezzi coincide
-            if (num_buoni_teorico == g2_pezzi_buoni.size()) {
-                //allora non devo fare niente e posso uscire
-                return;
-            } else {
-
-
+            if (num_buoni_teorico != g2_pezzi_buoni.size())
                 //i pezzi sono disposti in modo sbagliato
                 //i pezzi teorici sono minori dei pezzi effettivi
                 if (num_buoni_teorico < g2_pezzi_buoni.size()) {
@@ -920,21 +873,6 @@ public class Tavolo implements Cloneable {
                     //teorici ed effettivi dei pezzi, sia uguale
                     ridistribuzioneBuoniCattivi(giocatore);
                 }
-            }
-        }
-    }
-
-    /**
-     * Metodo a due parametri che permette di incrementare il valore di bonta' di un vettore di pezzi
-     *
-     * @param vettore vettore contenente i pezzi dei quali si vuole aggiornare la bonta'
-     * @param valore  valore di cui si vuole incrementare la bonta' di ogni singolo pezzo
-     */
-    private static void incrementaDecrementaValore(Vector<Pezzo> vettore, double valore) {
-        //scorro tutto il vettore
-        for (int indice = 0; indice < vettore.size(); indice++) {
-            //aggiungo il valore alla bonta' del pezzo
-            ((PezzoNascosto) vettore.get(indice)).aggiungiBonta(valore);
         }
     }
 
@@ -990,22 +928,6 @@ public class Tavolo implements Cloneable {
     }
 
     /**
-     * Metodo che ritorna una stringa con la stampa della base logica attuale
-     */
-    public String printTavolo() {
-        String str = "";
-        for (int riga = 0; riga < 6; riga++) {
-            for (int colonna = 0; colonna < 6; colonna++) {
-                //se la casella e' vuota, continuo il ciclo
-                if (base_logica[riga][colonna] == null)
-                    continue;
-                str += "(" + riga + "" + colonna + "-" + base_logica[riga][colonna].getNumero() + ")";
-            }
-        }
-        return str;
-    }
-
-    /**
      * Metodo senza parametri che permette di effettuare una copia profonda dell'oggetto
      * di invocazione.
      * Questo metodo concretizza l'interfaccia Clonable, e proprio per questo motivo,
@@ -1039,8 +961,8 @@ public class Tavolo implements Cloneable {
             //creo un vettore temporaneo dove inserire i pezzi buoni del giocatore 1
             Vector<Pezzo> temp_g1_pezzi_buoni = new Vector<Pezzo>();
             //copio nel vettore temp_g1_pezzi_buoni i nuovi reference clonati
-            for (int a = 0; a < g1_pezzi_buoni.size(); a++) {
-                Pezzo pezzo_temporaneo = (Pezzo) g1_pezzi_buoni.get(a).clone();
+            for (Pezzo aG1_pezzi_buoni : g1_pezzi_buoni) {
+                Pezzo pezzo_temporaneo = (Pezzo) aG1_pezzi_buoni.clone();
                 temp_g1_pezzi_buoni.addElement(pezzo_temporaneo);
             }
             //copio il vettore temporaneo nel vettore dell'oggetto t
@@ -1049,8 +971,8 @@ public class Tavolo implements Cloneable {
             //creo un vettore temporaneo dove inserire i pezzi cattivi del giocatore 1
             Vector<Pezzo> temp_g1_pezzi_cattivi = new Vector<Pezzo>();
             //copio nel vettore temp_g1_pezzi_cattivi i nuovi reference clonati
-            for (int a = 0; a < g1_pezzi_cattivi.size(); a++) {
-                Pezzo pezzo_temporaneo = (Pezzo) g1_pezzi_cattivi.get(a).clone();
+            for (Pezzo aG1_pezzi_cattivi : g1_pezzi_cattivi) {
+                Pezzo pezzo_temporaneo = (Pezzo) aG1_pezzi_cattivi.clone();
                 temp_g1_pezzi_cattivi.addElement(pezzo_temporaneo);
             }
             //copio il vettore temporaneo nel vettore dell'oggetto t
@@ -1059,8 +981,8 @@ public class Tavolo implements Cloneable {
             //creo un vettore temporaneo dove inserire i pezzi buoni mangiati dal giocatore 1
             Vector<Pezzo> temp_g1_pezzi_buoni_mangiati = new Vector<Pezzo>();
             //copio nel vettore temp_g2_pezzi_buoni_mangiati i nuovi reference clonati
-            for (int a = 0; a < g1_pezzi_buoni_mangiati.size(); a++) {
-                Pezzo pezzo_temporaneo = (Pezzo) g1_pezzi_buoni_mangiati.get(a).clone();
+            for (Pezzo aG1_pezzi_buoni_mangiati : g1_pezzi_buoni_mangiati) {
+                Pezzo pezzo_temporaneo = (Pezzo) aG1_pezzi_buoni_mangiati.clone();
                 temp_g1_pezzi_buoni_mangiati.addElement(pezzo_temporaneo);
             }
             //copio il vettore temporaneo nel vettore dell'oggetto t
@@ -1069,8 +991,8 @@ public class Tavolo implements Cloneable {
             //creo un vettore temporaneo dove inserire i pezzi cattivi mangiati dal giocatore 1
             Vector<Pezzo> temp_g1_pezzi_cattivi_mangiati = new Vector<Pezzo>();
             //copio nel vettore temp_g2_pezzi_cattivi_mangiati i nuovi reference clonati
-            for (int a = 0; a < g1_pezzi_cattivi_mangiati.size(); a++) {
-                Pezzo pezzo_temporaneo = (Pezzo) g1_pezzi_cattivi_mangiati.get(a).clone();
+            for (Pezzo aG1_pezzi_cattivi_mangiati : g1_pezzi_cattivi_mangiati) {
+                Pezzo pezzo_temporaneo = (Pezzo) aG1_pezzi_cattivi_mangiati.clone();
                 temp_g1_pezzi_cattivi_mangiati.addElement(pezzo_temporaneo);
             }
             //copio il vettore temporaneo nel vettore dell'oggetto t
@@ -1079,8 +1001,8 @@ public class Tavolo implements Cloneable {
             //creo un vettore temporaneo dove inserire i pezzi buoni del giocatore 2
             Vector<Pezzo> temp_g2_pezzi_buoni = new Vector<Pezzo>();
             //copio nel vettore temp_g2_pezzi_buoni i nuovi reference clonati
-            for (int a = 0; a < g2_pezzi_buoni.size(); a++) {
-                Pezzo pezzo_temporaneo = (Pezzo) g2_pezzi_buoni.get(a).clone();
+            for (Pezzo aG2_pezzi_buoni : g2_pezzi_buoni) {
+                Pezzo pezzo_temporaneo = (Pezzo) aG2_pezzi_buoni.clone();
                 temp_g2_pezzi_buoni.addElement(pezzo_temporaneo);
             }
             //copio il vettore temporaneo nel vettore dell'oggetto t
@@ -1089,8 +1011,8 @@ public class Tavolo implements Cloneable {
             //creo un vettore temporaneo dove inserire i pezzi cattivi del giocatore 2
             Vector<Pezzo> temp_g2_pezzi_cattivi = new Vector<Pezzo>();
             //copio nel vettore temp_g2_pezzi_cattivi i nuovi reference clonati
-            for (int a = 0; a < g2_pezzi_cattivi.size(); a++) {
-                Pezzo pezzo_temporaneo = (Pezzo) g2_pezzi_cattivi.get(a).clone();
+            for (Pezzo aG2_pezzi_cattivi : g2_pezzi_cattivi) {
+                Pezzo pezzo_temporaneo = (Pezzo) aG2_pezzi_cattivi.clone();
                 temp_g2_pezzi_cattivi.addElement(pezzo_temporaneo);
             }
             //copio il vettore temporaneo nel vettore dell'oggetto t
@@ -1099,8 +1021,8 @@ public class Tavolo implements Cloneable {
             //creo un vettore temporaneo dove inserire i pezzi buoni mangiati dal giocatore 2
             Vector<Pezzo> temp_g2_pezzi_buoni_mangiati = new Vector<Pezzo>();
             //copio nel vettore temp_g2_pezzi_buoni_mangiati i nuovi reference clonati
-            for (int a = 0; a < g2_pezzi_buoni_mangiati.size(); a++) {
-                Pezzo pezzo_temporaneo = (Pezzo) g2_pezzi_buoni_mangiati.get(a).clone();
+            for (Pezzo aG2_pezzi_buoni_mangiati : g2_pezzi_buoni_mangiati) {
+                Pezzo pezzo_temporaneo = (Pezzo) aG2_pezzi_buoni_mangiati.clone();
                 temp_g2_pezzi_buoni_mangiati.addElement(pezzo_temporaneo);
             }
             //copio il vettore temporaneo nel vettore dell'oggetto t
@@ -1109,8 +1031,8 @@ public class Tavolo implements Cloneable {
             //creo un vettore temporaneo dove inserire i pezzi cattivi mangiati dal giocatore 2
             Vector<Pezzo> temp_g2_pezzi_cattivi_mangiati = new Vector<Pezzo>();
             //copio nel vettore temp_g2_pezzi_cattivi_mangiati i nuovi reference clonati
-            for (int a = 0; a < g2_pezzi_cattivi_mangiati.size(); a++) {
-                Pezzo pezzo_temporaneo = (Pezzo) g2_pezzi_cattivi_mangiati.get(a).clone();
+            for (Pezzo aG2_pezzi_cattivi_mangiati : g2_pezzi_cattivi_mangiati) {
+                Pezzo pezzo_temporaneo = (Pezzo) aG2_pezzi_cattivi_mangiati.clone();
                 temp_g2_pezzi_cattivi_mangiati.addElement(pezzo_temporaneo);
             }
             //copio il vettore temporaneo nel vettore dell'oggetto t

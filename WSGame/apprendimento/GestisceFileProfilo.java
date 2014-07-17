@@ -23,12 +23,6 @@ import logica.GestisceFile;
 import logica.Pezzo;
 import logica.Tavolo;
 import java.io.*;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.text.ParseException;
 import java.util.Vector;
 
 /**
@@ -169,30 +163,28 @@ public class GestisceFileProfilo extends GestisceFile {
 	/**
 	 * Costruttore a 3 parametri che inizializza il vettore contenente il log della
 	 * partita. Questo costruttore, non salva su file il profilo.
-	 * 
-	 * @param nome nome del giocatore
+	 *  @param nome nome del giocatore
 	 * @param log_partita vettore contenente il log della partita
-	 * @param identificatore stringa contenente l'identificativo univoco del giocatore
-	 */
-	public GestisceFileProfilo(String nome, Vector<String> log_partita, String b, String identificatore) throws FileNotFoundException{
+     * @param identificatore stringa contenente l'identificativo univoco del giocatore
+     */
+	public GestisceFileProfilo(String nome, Vector<String> log_partita, String identificatore) throws FileNotFoundException{
 		super(nome, ".txt", identificatore);
 		id=0;
 		//abbino al profilo il file di log del giocatore
 		log = log_partita;
 		//cancello il contenuto del file e scrivo la nuova intestazione
-		scriviIntestazione(nome, identificatore);		
+		scriviIntestazione();
 	}
 	
 	
 	/**
 	 * Costruttore a 3 parametri che inizializza il vettore contenente il profilo e memorizza, all'interno
 	 * di un file, il suo contenuto
-	 * 
-	 * @param nome nome del giocatore
+	 *  @param nome nome del giocatore
 	 * @param identificatore stringa rappresentante l'identificativo del giocatore
-	 * @param log_partita vettore contenente tutti i log di un giocatore
-	 */
-	public GestisceFileProfilo(String nome, String identificatore, String nome_avv, boolean ia, Vector<String> log_partita) throws FileNotFoundException{
+     * @param log_partita vettore contenente tutti i log di un giocatore
+     */
+	public GestisceFileProfilo(String nome, String identificatore, boolean ia, Vector<String> log_partita) throws FileNotFoundException{
 		super("profilo_" + nome, ".txt", identificatore);
 		
 		/* ************************ Cercare sul DB il giocatore tramite nome
@@ -207,7 +199,7 @@ public class GestisceFileProfilo extends GestisceFile {
 		log = log_partita;
 		//se il file è vuoto, scrivo l'intestazione:
 		if (leggiLineaX(0).equals("ERRORE")){
-			scriviIntestazione(nome, identificatore);
+			scriviIntestazione();
 		}
 		else{ //se il file esiste gia'
 			//inserisce nel vettore profilo, i dati contenuti nel file di profilo
@@ -219,11 +211,9 @@ public class GestisceFileProfilo extends GestisceFile {
 
 	/**
 	 * Metodo a due parametri che permette di scrivere l'intestazione del file contenente il profilo di un giocatore
-	 * 
-	 * @param nome  nome del giocatore
-	 * @param identificatore stringa rappresentante l'identificativo del giocatore
-	 */
-	private void scriviIntestazione(String nome, String identificatore) throws FileNotFoundException{
+	 *
+     */
+	private void scriviIntestazione() {
 		/*
 		
 		profilo.addElement("[*]-[*]-[*]    P R O F I L O   [*]-[*]-[*]");
@@ -294,9 +284,9 @@ public class GestisceFileProfilo extends GestisceFile {
 	/**
 	 * Metodo senza parametri che permette di generare un profilo utente a partire da un file di log.
 	 */
-	public void aggiornaProfilo() throws FileNotFoundException{
+	public void aggiornaProfilo() {
 		//se il file e' nuovo
-		if (nuovo == true){
+		if (nuovo){
 			//creo un vettore di stringhe contenente le varie parole del rigo numero uno del file di log
 			Vector<String> rigo_numero_partite = dividiTesto(log.get(3));
 			
@@ -719,7 +709,7 @@ public class GestisceFileProfilo extends GestisceFile {
 	 * 
 	 * @return rigo in cui la partita termina
 	 */
-	public int rigaFinePartita(int riga_inizio_partita){
+    int rigaFinePartita(int riga_inizio_partita){
 		int risultato = 21;
 		//continuo ad incrementare il risultato finche' finisco il file
 		//di log, o fin quando finisco la partita
@@ -738,7 +728,7 @@ public class GestisceFileProfilo extends GestisceFile {
 	 * @return pezzo[][] base logica della partita
 	 * 
 	 */
-	public Pezzo[][] generaTavolo(int num_riga){
+    Pezzo[][] generaTavolo(int num_riga){
 		//creo la matrice che conterra' il risultato
 		Pezzo[][] risultato = new Pezzo[6][6];
 		//inizializzo la matrice con i giusti valori
@@ -971,9 +961,8 @@ public class GestisceFileProfilo extends GestisceFile {
 		//creo il vettore che contera' il risultato
 		Vector<Coordinata> copia = new Vector<Coordinata>();
 		//scorro tutti i valori del vettore originale
-		for (int i=0; i<originale.size(); i++){
-			copia.add((Coordinata)originale.get(i).clone());
-		}
+        for (Coordinata anOriginale : originale)
+            copia.add((Coordinata) anOriginale.clone());
 		return copia;
 	}
 	
@@ -994,9 +983,9 @@ public class GestisceFileProfilo extends GestisceFile {
 		risultato.add("PARTITE ESAMINATE: " + partite_giocate);
 		risultato.add("");
 		//inserisco tanti righi vuoti quante saranno le righe dell'indice delle partite da inserire
-		for (int partita=0; partita<partite_giocate; partita++){
-			risultato.add("");
-		}
+        for (Vector<int[]> aStatistiche : statistiche) {
+            risultato.add("");
+        }
 		risultato.add("");
 		//scorro tutte le partite
 		for (int partita=0; partita<partite_giocate; partita++){
@@ -1030,7 +1019,7 @@ public class GestisceFileProfilo extends GestisceFile {
 	 * 
 	 * @return stringa che contiene i valori contenuti all'interno dell'array
 	 */
-	public static String trasformaArrayInStringa(int[] array){
+	private static String trasformaArrayInStringa(int[] array){
 		//creo una variabile locale per contenere il risultato
 		String risultato = "";
 		//scorro tutto l'array
@@ -1217,10 +1206,8 @@ public class GestisceFileProfilo extends GestisceFile {
 			}
 			else{ //il pezzo e' rimasto fermo
 				//controllo se il pezzo era minacciato
-				if (minacciato(p.getNumero()))
-					return true;
-				else //il pezzo non era minacciato
-					return false;
+                //il pezzo non era minacciato
+                return minacciato(p.getNumero());
 			}
 		}
 		
@@ -1302,10 +1289,8 @@ public class GestisceFileProfilo extends GestisceFile {
 		 */
 		private boolean minacciato(int pezzo){
 			//un pezzo e' minacciato se a sua volta minaccia
-			if (matrice[pezzo%10][1][0]== null)
-				return false;
-			return true;
-		}
+            return matrice[pezzo % 10][1][0] != null;
+        }
 	}
 	
 	

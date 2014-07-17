@@ -83,9 +83,9 @@ import data.UpdateTipoResponse;
  * </ul>
  */
 public class MySkeleton {
-	Connection connection = null;
+	private Connection connection = null;
 	/**Costruttore di default vuoto, serve a istanziare l'oggetto
-	 * dentro lo Skeleton autogenerato. Si userà poi per richiamare i metodi
+	 * dentro lo Skeleton autogenerato. Si userï¿½ poi per richiamare i metodi
 	 * riscritti
      */
 	public MySkeleton()
@@ -108,12 +108,8 @@ public class MySkeleton {
   			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/geister","root", "sportster");
    
   		} catch (SQLException e) { return false; }
-  		
-  		if (connection != null) {
- 			return true;
- 		} else {
- 			return false;
- 		}
+
+         return connection != null;
     	 
      }
      
@@ -127,7 +123,7 @@ public class MySkeleton {
     	 try {
 			Statement s1 = connection.createStatement ();
 			String query="SELECT COUNT(*) FROM "+tabella;
-			if(where!="")query+=" where " +where;
+			if(!where.equals(""))query+=" where " +where;
 			query+=" ;";		 
 			s1.executeQuery (query);
 			ResultSet rsCount = s1.getResultSet ();
@@ -185,8 +181,8 @@ public class MySkeleton {
       * @param message: string da inserire in LOG
       * @param function: string funzione di provenienza del log
       * @return String log
-      */ 
-     public String insertLOG(String message,String function)
+      */
+     String insertLOG(String message, String function)
      {
     	 String insertQuery="";
     	 setupDB();
@@ -207,7 +203,7 @@ public class MySkeleton {
         		return insertQuery;
         	}else{return "ERR:conn";}
          } catch (SQLException e) {return "ERR:"+e.toString()+" "+insertQuery;}
-         finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+         finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
          
      }
 
@@ -230,9 +226,7 @@ public class MySkeleton {
 
  			byte[]bytes = md.digest();
  			StringBuilder str = new StringBuilder();
- 			for(int i = 0; i < bytes.length; i++)
-
- 				str.append(Integer.toHexString( ( bytes[i] & 0xFF ) | 0x100 ).substring(1, 3));
+            for (byte aByte : bytes) str.append(Integer.toHexString((aByte & 0xFF) | 0x100).substring(1, 3));
 
  			return str.toString();
  		}
@@ -262,7 +256,7 @@ public class MySkeleton {
    	  			 // ci sono sessioni valide per il token?
    	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in cancellaAmici:"+idtoken,"WSData/cancellaAmici/ContaTabella");resp.set_return(false);}
    	  			 if (contaTabella("sessioni", where)==1) 
-   	  			 {//c'è il token, posso scegliere l'utente del token
+   	  			 {//c'ï¿½ il token, posso scegliere l'utente del token
    	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
    	  				 ResultSet rsToken=s.getResultSet();
    	  				 rsToken.next();
@@ -280,7 +274,7 @@ public class MySkeleton {
    	  			 s.close();
    	  		 }else{resp.set_return(false);insertLOG("ERR:noConn", "WSData/cancellaAmici");}
    	  	 }catch(Exception e){resp.set_return(false);insertLOG("ERR:"+e.toString(), "WSData/cancellaAmici");}
-   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
    	  	 return resp;
      }
      /**Cancella un relazione di amicizia tra l'utente e l'amico passato come parametro.
@@ -303,7 +297,7 @@ public class MySkeleton {
    	  			 // ci sono sessioni valide per il token?
    	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in cancellaAmico:"+idtoken,"WSData/cancellaAmico/ContaTabella");resp.set_return(false);}
    	  			 if (contaTabella("sessioni", where)==1) 
-   	  			 {//c'è il token, posso scegliere l'utente del token
+   	  			 {//c'ï¿½ il token, posso scegliere l'utente del token
    	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
    	  				 ResultSet rsToken=s.getResultSet();
    	  				 rsToken.next();
@@ -337,7 +331,7 @@ public class MySkeleton {
    	  			 s.close();
    	  		 }else{resp.set_return(false);insertLOG("ERR:noConn", "WSData/cancellaAmico");}
    	  	 }catch(Exception e){resp.set_return(false);insertLOG("ERR:"+e.toString(), "WSData/cancellaAmico");}
-   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
    	  	 return resp;
      }
      /**Ritorna la lista di username online, come stringa separata da virgola.
@@ -361,7 +355,7 @@ public class MySkeleton {
    	  			 // ci sono sessioni valide per il token?
    	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in getListaUtentiOnline:"+idtoken,"WSData/getListaUtentiOnline/ContaTabella");resp.set_return("ERR:noUser");}
    	  			 if (contaTabella("sessioni", where)==1) 
-   	  			 {//c'è il token, posso scegliere l'utente del token
+   	  			 {//c'ï¿½ il token, posso scegliere l'utente del token
    	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
    	  				 ResultSet rsToken=s.getResultSet();
    	  				 rsToken.next();
@@ -373,7 +367,7 @@ public class MySkeleton {
    	  				 ResultSet rsOnline=s.getResultSet();
    	  				 ////insertLOG("SELECT: "+selectQuery, "WSData/getListaUtentiOnline");
    	  				 while(rsOnline.next())
-   	  				 {//finchè trova utenti online, creo la stringa
+   	  				 {//finchï¿½ trova utenti online, creo la stringa
    	  					 userOnline+=rsOnline.getString(1)+CHAR_SEPARATE;
    	  					 
    	  				 }
@@ -385,7 +379,7 @@ public class MySkeleton {
    	  			 s.close();
    	  		 }else{resp.set_return("ERR:noConn");insertLOG("ERR:noConn", "WSData/getListaUtentiOnline");}
    	  	 }catch(Exception e){resp.set_return("ERR:"+e.toString());insertLOG("ERR:"+e.toString(), "WSData/getListaUtentiOnline");}
-   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
    	  	 return resp;
      }
      /**Ritorna la lista di username amici, come stringa separata da virgola.
@@ -409,7 +403,7 @@ public class MySkeleton {
    	  			 // ci sono sessioni valide per il token?
    	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in getListaAmici:"+idtoken,"WSData/getListaAmici/ContaTabella");resp.set_return("ERR:noUser");}
    	  			 if (contaTabella("sessioni", where)==1) 
-   	  			 {//c'è il token, posso scegliere l'utente del token
+   	  			 {//c'ï¿½ il token, posso scegliere l'utente del token
    	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
    	  				 ResultSet rsToken=s.getResultSet();
    	  				 rsToken.next();
@@ -424,7 +418,7 @@ public class MySkeleton {
    	  				 ResultSet rsAmicizia=s.getResultSet();
    	  				 ////insertLOG("SELECT: "+selectQuery, "WSData/getListaAmici");
    	  				 while(rsAmicizia.next())
-   	  				 {//finchè trova amici, creo la stringa
+   	  				 {//finchï¿½ trova amici, creo la stringa
    	  					 amici+=rsAmicizia.getString(1)+CHAR_SEPARATE;
    	  					 
    	  				 }
@@ -436,7 +430,7 @@ public class MySkeleton {
    	  			 s.close();
    	  		 }else{resp.set_return("ERR:noConn");insertLOG("ERR:noConn", "WSData/getListaAmici");}
    	  	 }catch(Exception e){resp.set_return("ERR:"+e.toString());insertLOG("ERR:"+e.toString(), "WSData/getListaAmici");}
-   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
    	  	 return resp;
      }
      /**Crea una nuova associazione di amicizia tra lo user e un altro username.
@@ -459,7 +453,7 @@ public class MySkeleton {
    	  			 // ci sono sessioni valide per il token?
    	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in nuovoAmico:"+idtoken,"WSData/nuovoAmico/ContaTabella");resp.set_return(false);}
    	  			 if (contaTabella("sessioni", where)==1) 
-   	  			 {//c'è il token, posso scegliere l'utente del token
+   	  			 {//c'ï¿½ il token, posso scegliere l'utente del token
    	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
    	  				 ResultSet rsToken=s.getResultSet();
    	  				 rsToken.next();
@@ -494,7 +488,7 @@ public class MySkeleton {
    	  			 s.close();
    	  		 }else{resp.set_return(false);insertLOG("ERR:noConn", "WSData/nuovoAmico");}
    	  	 }catch(Exception e){resp.set_return(false);insertLOG("ERR:"+e.toString(), "WSData/nuovoAmico");}
-   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
    	  	 return resp;
      }
      
@@ -517,7 +511,7 @@ public class MySkeleton {
    	  			 // ci sono sessioni valide per il token?
    	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in setUtenteOnline:"+idtoken,"WSData/setUtenteOnline/ContaTabella");resp.set_return(false);}
    	  			 if (contaTabella("sessioni", where)==1) 
-   	  			 {//c'è il token, posso scegliere l'utente del token
+   	  			 {//c'ï¿½ il token, posso scegliere l'utente del token
    	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
    	  				 ResultSet rsToken=s.getResultSet();
    	  				 rsToken.next();
@@ -533,7 +527,7 @@ public class MySkeleton {
    	  			 s.close();
    	  		 }else{resp.set_return(false);insertLOG("ERR:noConn", "WSData/setUtenteOnline");}
    	  	 }catch(Exception e){resp.set_return(false);insertLOG("ERR:"+e.toString(), "WSData/setUtenteOnline");}
-   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
    	  	 return resp;
      }
      
@@ -556,7 +550,7 @@ public class MySkeleton {
    	  			 // ci sono sessioni valide per il token?
    	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in setUtenteIA:"+idtoken,"WSData/setUtenteIA/ContaTabella");resp.set_return(false);}
    	  			 if (contaTabella("sessioni", where)==1) 
-   	  			 {//c'è il token, posso scegliere l'utente del token
+   	  			 {//c'ï¿½ il token, posso scegliere l'utente del token
    	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
    	  				 ResultSet rsToken=s.getResultSet();
    	  				 rsToken.next();
@@ -572,7 +566,7 @@ public class MySkeleton {
    	  			 s.close();
    	  		 }else{resp.set_return(false);insertLOG("ERR:noConn", "WSData/setUtenteIA");}
    	  	 }catch(Exception e){resp.set_return(false);insertLOG("ERR:"+e.toString(), "WSData/setUtenteIA");}
-   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
    	  	 return resp;
      }
      /**Setta l'email dell'utente.
@@ -594,7 +588,7 @@ public class MySkeleton {
    	  			 // ci sono sessioni valide per il token?
    	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in setUtenteEmail:"+idtoken,"WSData/setUtenteEmail/ContaTabella");resp.set_return(false);}
    	  			 if (contaTabella("sessioni", where)==1) 
-   	  			 {//c'è il token, posso scegliere l'utente del token
+   	  			 {//c'ï¿½ il token, posso scegliere l'utente del token
    	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
    	  				 ResultSet rsToken=s.getResultSet();
    	  				 rsToken.next();
@@ -610,7 +604,7 @@ public class MySkeleton {
    	  			 s.close();
    	  		 }else{resp.set_return(false);insertLOG("ERR:noConn", "WSData/setUtenteEmail");}
    	  	 }catch(Exception e){resp.set_return(false);insertLOG("ERR:"+e.toString(), "WSData/setUtenteEmail");}
-   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
    	  	 return resp;
      }
      
@@ -633,7 +627,7 @@ public class MySkeleton {
    	  			 // ci sono sessioni valide per il token?
    	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in setUtenteCognome:"+idtoken,"WSData/setUtenteCognome/ContaTabella");resp.set_return(false);}
    	  			 if (contaTabella("sessioni", where)==1) 
-   	  			 {//c'è il token, posso scegliere l'utente del token
+   	  			 {//c'ï¿½ il token, posso scegliere l'utente del token
    	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
    	  				 ResultSet rsToken=s.getResultSet();
    	  				 rsToken.next();
@@ -649,7 +643,7 @@ public class MySkeleton {
    	  			 s.close();
    	  		 }else{resp.set_return(false);insertLOG("ERR:noConn", "WSData/setUtenteCognome");}
    	  	 }catch(Exception e){resp.set_return(false);insertLOG("ERR:"+e.toString(), "WSData/setUtenteCognome");}
-   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
    	  	 return resp;
      }
      
@@ -672,7 +666,7 @@ public class MySkeleton {
    	  			 // ci sono sessioni valide per il token?
    	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in setUtenteNome:"+idtoken,"WSData/setUtenteNome/ContaTabella");resp.set_return(false);}
    	  			 if (contaTabella("sessioni", where)==1) 
-   	  			 {//c'è il token, posso scegliere l'utente del token
+   	  			 {//c'ï¿½ il token, posso scegliere l'utente del token
    	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
    	  				 ResultSet rsToken=s.getResultSet();
    	  				 rsToken.next();
@@ -688,7 +682,7 @@ public class MySkeleton {
    	  			 s.close();
    	  		 }else{resp.set_return(false);insertLOG("ERR:noConn", "WSData/setUtenteNome");}
    	  	 }catch(Exception e){resp.set_return(false);insertLOG("ERR:"+e.toString(), "WSData/setUtenteNome");}
-   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
    	  	 return resp;
      }
      
@@ -712,7 +706,7 @@ public class MySkeleton {
    	  			 // ci sono sessioni valide per il token?
    	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in setUtenteVinte:"+idtoken,"WSData/setUtenteVinte/ContaTabella");resp.set_return(false);}
    	  			 if (contaTabella("sessioni", where)==1) 
-   	  			 {//c'è il token, posso scegliere l'utente del token
+   	  			 {//c'ï¿½ il token, posso scegliere l'utente del token
    	  				 if(username.startsWith("IA"))
    	  				 {
    	  					 username=username.replaceFirst("IA", "");
@@ -734,7 +728,7 @@ public class MySkeleton {
    	  			 s.close();
    	  		 }else{resp.set_return(false);insertLOG("ERR:noConn", "WSData/setUtenteVinte");}
    	  	 }catch(Exception e){resp.set_return(false);insertLOG("ERR:"+e.toString(), "WSData/setUtenteVinte");}
-   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
    	  	 return resp;
    	  	 
      }
@@ -758,7 +752,7 @@ public class MySkeleton {
    	  			 // ci sono sessioni valide per il token?
    	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in setUtentePerse:"+idtoken,"WSData/setUtentePerse/ContaTabella");resp.set_return(false);}
    	  			 if (contaTabella("sessioni", where)==1) 
-   	  			 {//c'è il token, posso scegliere l'utente del token
+   	  			 {//c'ï¿½ il token, posso scegliere l'utente del token
    	  				 if(username.startsWith("IA"))
 	  				 {
 	  					 username=username.replaceFirst("IA", "");
@@ -780,7 +774,7 @@ public class MySkeleton {
    	  			 s.close();
    	  		 }else{resp.set_return(false);insertLOG("ERR:noConn", "WSData/setUtentePerse");}
    	  	 }catch(Exception e){resp.set_return(false);insertLOG("ERR:"+e.toString(), "WSData/setUtentePerse");}
-   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
    	  	 return resp;
      }
      /**Setta il numero di partite pareggiate dall'utente.
@@ -802,7 +796,7 @@ public class MySkeleton {
    	  			 // ci sono sessioni valide per il token?
    	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in setUtentePareggiate:"+idtoken,"WSData/setUtentePareggiate/ContaTabella");resp.set_return(false);}
    	  			 if (contaTabella("sessioni", where)==1) 
-   	  			 {//c'è il token, posso scegliere l'utente del token
+   	  			 {//c'ï¿½ il token, posso scegliere l'utente del token
    	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
    	  				 ResultSet rsToken=s.getResultSet();
    	  				 rsToken.next();
@@ -818,11 +812,11 @@ public class MySkeleton {
    	  			 s.close();
    	  		 }else{resp.set_return(false);insertLOG("ERR:noConn", "WSData/getUtentePareggiate");}
    	  	 }catch(Exception e){resp.set_return(false);insertLOG("ERR:"+e.toString(), "WSData/getUtentePareggiate");}
-   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
    	  	 return resp;
      }
 
-     /**Restituisce un valore che indica se l'utente è online, contenuto nel DB
+     /**Restituisce un valore che indica se l'utente ï¿½ online, contenuto nel DB
       * @param getUtenteOnline (token)
       * @return GetUtenteOnlineResponse (boolean)
       */
@@ -840,7 +834,7 @@ public class MySkeleton {
    	  			 // ci sono sessioni valide per il token?
    	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in getUtenteOnline:"+idtoken,"WSData/getUtenteOnline/ContaTabella");resp.set_return(false);}
    	  			 if (contaTabella("sessioni", where)==1) 
-   	  			 {//c'è il token, posso scegliere l'utente del token
+   	  			 {//c'ï¿½ il token, posso scegliere l'utente del token
    	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
    	  				 ResultSet rsToken=s.getResultSet();
    	  				 rsToken.next();
@@ -859,11 +853,11 @@ public class MySkeleton {
    	  			 s.close();
    	  		 }else{resp.set_return(false);insertLOG("ERR:noConn", "WSData/getUtenteOnline");}
    	  	 }catch(Exception e){resp.set_return(false);insertLOG("ERR:"+e.toString(), "WSData/getUtenteOnline");}
-   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
    	  	 return resp;
 	 }
      
-     /**Restituisce un valore che indica se l'utente è una intelligenza artificiale (IA), contenuto nel DB
+     /**Restituisce un valore che indica se l'utente ï¿½ una intelligenza artificiale (IA), contenuto nel DB
       * @param GetUtenteIA (token)
       * @return GetUtenteIAResponse (boolean)
       */
@@ -882,13 +876,13 @@ public class MySkeleton {
    	  			 // ci sono sessioni valide per il token?
    	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in getUtenteIA:"+idtoken,"WSData/getUtenteIA/ContaTabella");resp.set_return(false);}
    	  			 if (contaTabella("sessioni", where)==1) 
-   	  			 {//c'è il token, posso scegliere l'utente del token
+   	  			 {//c'ï¿½ il token, posso scegliere l'utente del token
    	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
    	  				 ResultSet rsToken=s.getResultSet();
    	  				 rsToken.next();
    	  				 int ID_Utente=rsToken.getInt(1); 
    	  				 int idUser=0;
-   	  				 if(username!="")
+   	  				 if(!username.equals(""))
    	  				 {
    	  					 s.executeQuery ("SELECT id FROM utenti where username like '"+username+"'");
    	  					 ResultSet rsUser=s.getResultSet();
@@ -912,7 +906,7 @@ public class MySkeleton {
    	  			 s.close();
    	  		 }else{resp.set_return(false);insertLOG("ERR:noConn", "WSData/getUtenteIA");}
    	  	 }catch(Exception e){resp.set_return(false);insertLOG("ERR:"+e.toString(), "WSData/getUtenteIA");}
-   	  finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+   	  finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
    	  	 return resp;
      }
      /**Restituisce dati generici dell'utente, contenuto nel DB
@@ -933,7 +927,7 @@ public class MySkeleton {
    	  			 // ci sono sessioni valide per il token?
    	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in getUtente:"+idtoken,"WSData/getUtenteEmail/getUtente");resp.set_return("ERR:noUser");}
    	  			 if (contaTabella("sessioni", where)==1) 
-   	  			 {//c'è il token, posso scegliere l'utente del token
+   	  			 {//c'ï¿½ il token, posso scegliere l'utente del token
    	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
    	  				 ResultSet rsToken=s.getResultSet();
    	  				 rsToken.next();
@@ -950,7 +944,7 @@ public class MySkeleton {
    	  			 s.close();
    	  		 }else{resp.set_return("ERR:noConn");insertLOG("ERR:noConn", "WSData/getUtente");}
    	  	 }catch(Exception e){resp.set_return("ERR");insertLOG("ERR:"+e.toString(), "WSData/getUtente");}
-   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
    	  	 return resp;
      }
      /**Restituisce l'email dell'utente, contenuto nel DB
@@ -971,7 +965,7 @@ public class MySkeleton {
    	  			 // ci sono sessioni valide per il token?
    	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in getUtenteEmail:"+idtoken,"WSData/getUtenteEmail/ContaTabella");resp.set_return("ERR:noUser");}
    	  			 if (contaTabella("sessioni", where)==1) 
-   	  			 {//c'è il token, posso scegliere l'utente del token
+   	  			 {//c'ï¿½ il token, posso scegliere l'utente del token
    	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
    	  				 ResultSet rsToken=s.getResultSet();
    	  				 rsToken.next();
@@ -988,7 +982,7 @@ public class MySkeleton {
    	  			 s.close();
    	  		 }else{resp.set_return("ERR:noConn");insertLOG("ERR:noConn", "WSData/getUtenteEmail");}
    	  	 }catch(Exception e){resp.set_return("ERR");insertLOG("ERR:"+e.toString(), "WSData/getUtenteEmail");}
-   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
    	  	 return resp;
      }
      
@@ -1010,7 +1004,7 @@ public class MySkeleton {
    	  			 // ci sono sessioni valide per il token?
    	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in getUtenteCognome:"+idtoken,"WSData/getUtenteCognome/ContaTabella");resp.set_return("ERR:noUser");}
    	  			 if (contaTabella("sessioni", where)==1) 
-   	  			 {//c'è il token, posso scegliere l'utente del token
+   	  			 {//c'ï¿½ il token, posso scegliere l'utente del token
    	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
    	  				 ResultSet rsToken=s.getResultSet();
    	  				 rsToken.next();
@@ -1027,7 +1021,7 @@ public class MySkeleton {
    	  			 s.close();
    	  		 }else{resp.set_return("ERR:noConn");insertLOG("ERR:noConn", "WSData/getUtenteCognome");}
    	  	 }catch(Exception e){resp.set_return("ERR");insertLOG("ERR:"+e.toString(), "WSData/getUtenteCognome");}
-   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
    	  	 return resp;
      }
      
@@ -1049,7 +1043,7 @@ public class MySkeleton {
    	  			 // ci sono sessioni valide per il token?
    	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in getUtenteNome:"+idtoken,"WSData/getUtenteNome/ContaTabella");resp.set_return("ERR:noUser");}
    	  			 if (contaTabella("sessioni", where)==1) 
-   	  			 {//c'è il token, posso scegliere l'utente del token
+   	  			 {//c'ï¿½ il token, posso scegliere l'utente del token
    	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
    	  				 ResultSet rsToken=s.getResultSet();
    	  				 rsToken.next();
@@ -1066,7 +1060,7 @@ public class MySkeleton {
    	  			 s.close();
    	  		 }else{resp.set_return("ERR:noConn");insertLOG("ERR:noConn", "WSData/getUtenteNome");}
    	  	 }catch(Exception e){resp.set_return("ERR");insertLOG("ERR:"+e.toString(), "WSData/getUtenteNome");}
-   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
    	  	 return resp;
      }
      
@@ -1088,7 +1082,7 @@ public class MySkeleton {
    	  			 // ci sono sessioni valide per il token?
    	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in getUtentePareggiate:"+idtoken,"WSData/getUtentePareggiate/ContaTabella");resp.set_return(-1);}
    	  			 if (contaTabella("sessioni", where)==1) 
-   	  			 {//c'è il token, posso scegliere l'utente del token
+   	  			 {//c'ï¿½ il token, posso scegliere l'utente del token
    	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
    	  				 ResultSet rsToken=s.getResultSet();
    	  				 rsToken.next();
@@ -1105,7 +1099,7 @@ public class MySkeleton {
    	  			 s.close();
    	  		 }else{resp.set_return(-1);insertLOG("ERR:noConn", "WSData/getUtentePareggiate");}
    	  	 }catch(Exception e){resp.set_return(-1);insertLOG("ERR:"+e.toString(), "WSData/getUtentePareggiate");}
-   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
    	  	 return resp;
      }
      
@@ -1128,7 +1122,7 @@ public class MySkeleton {
    	  			 // ci sono sessioni valide per il token?
    	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in getUtenteVinte:"+idtoken,"WSData/getUtenteVinte/ContaTabella");resp.set_return(-1);}
    	  			 if (contaTabella("sessioni", where)==1) 
-   	  			 {//c'è il token, posso scegliere l'utente del token
+   	  			 {//c'ï¿½ il token, posso scegliere l'utente del token
    	  			if(username.startsWith("IA"))
 	  				 {
 	  					 username=username.replaceFirst("IA", "");
@@ -1151,7 +1145,7 @@ public class MySkeleton {
    	  			 s.close();
    	  		 }else{resp.set_return(-1);insertLOG("ERR:noConn", "WSData/getUtenteVinte");}
    	  	 }catch(Exception e){resp.set_return(-1);insertLOG("ERR:"+e.toString(), "WSData/getUtenteVinte");}
-   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
    	  	 return resp;
      }
      
@@ -1174,7 +1168,7 @@ public class MySkeleton {
    	  			 // ci sono sessioni valide per il token?
    	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in getUtentePerse:"+idtoken,"WSData/getUtentePerse/ContaTabella");resp.set_return(-1);}
    	  			 if (contaTabella("sessioni", where)==1) 
-   	  			 {//c'è il token, posso scegliere l'utente del token
+   	  			 {//c'ï¿½ il token, posso scegliere l'utente del token
    	  			if(username.startsWith("IA"))
 	  				 {
 	  					 username=username.replaceFirst("IA", "");
@@ -1198,7 +1192,7 @@ public class MySkeleton {
    	  			 s.close();
    	  		 }else{resp.set_return(-1);insertLOG("ERR:noConn", "WSData/getUtentePerse");}
    	  	 }catch(Exception e){resp.set_return(-1);insertLOG("ERR:"+e.toString(), "WSData/getUtentePerse");}
-   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
    	  	 return resp;
      }
               
@@ -1237,7 +1231,7 @@ public class MySkeleton {
 				   		"'"+cognome+"',"+//cognome
 				   		"'"+email+"',"+//email
 				   		"'"+0+"',"+//is_ia
-				   		"'"+1+"',"+//is_online. come lo creo, lo metto online perchè lo autorizzo già
+				   		"'"+1+"',"+//is_online. come lo creo, lo metto online perchï¿½ lo autorizzo giï¿½
 				   		"'"+0+"',"+//vinte
 				   		"'"+0+"',"+//pareggiate
 				   		"'"+0+"',"+//perse
@@ -1267,10 +1261,10 @@ public class MySkeleton {
    	  			 s.close();
    	  		 }else{resp.set_return(false);insertLOG("ERR:noConn", "WSData/nuovoUtente");}
    	  	 }catch(Exception e){resp.set_return(false);insertLOG("ERR:"+e.toString(), "WSData/nuovoUtente");}
-   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
    	  	 return resp;
     }
-     /**Modifica dell'utente loggato. Può modificare i dati anagrafici, ma non lo username.
+     /**Modifica dell'utente loggato. Puï¿½ modificare i dati anagrafici, ma non lo username.
       * Recupera lo username dal token.
       * Mette is_online=1
       * @param modificaUtente ( password, nome, cognome, email)
@@ -1296,7 +1290,7 @@ public class MySkeleton {
    	  			 // ci sono sessioni valide per il token?
    	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in modificaUtente:"+idtoken,"WSData/modificaUtente/contaTabella");resp.set_return(false);}
    	  			 if (contaTabella("sessioni", where)==1) 
-   	  			 {//c'è il token, posso modificare l'utente
+   	  			 {//c'ï¿½ il token, posso modificare l'utente
    	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
    	  				 ResultSet rsToken=s.getResultSet();
    	  				 rsToken.next();
@@ -1316,7 +1310,7 @@ public class MySkeleton {
    	  			 s.close();
    	  		 }else{resp.set_return(false);insertLOG("ERR:noConn", "WSData/modificaUtente");}
    	  	 }catch(Exception e){resp.set_return(false);insertLOG("ERR:"+e.toString(), "WSData/modificaUtente");}
-   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+   	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
    	  	 return resp;
      }
      /** Cancellazione dell'utente loggato, recuperato tramite il token.
@@ -1341,7 +1335,7 @@ public class MySkeleton {
   	  			 // ci sono sessioni valide per il token?
   	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in cancellaUtente:"+idtoken,"WSData/cancellaUtente/contaTabella");resp.set_return(false);}
   	  			 if (contaTabella("sessioni", where)==1) 
-  	  			 {//c'è il token, posso modificare l'utente
+  	  			 {//c'ï¿½ il token, posso modificare l'utente
   	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
   	  				 ResultSet rsToken=s.getResultSet();
   	  				 rsToken.next();
@@ -1361,7 +1355,7 @@ public class MySkeleton {
   	  			 s.close();
   	  		 }else{resp.set_return(false);insertLOG("ERR:noConn", "WSData/cancellaUtenti");}
   	  	 }catch(Exception e){resp.set_return(false);insertLOG("ERR:"+e.toString(), "WSData/cancellaUtenti");}
-  	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+  	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
   	  	 return resp;
      }
      /** Ritorna il token di sessione valido per l'utente loggato.
@@ -1404,7 +1398,7 @@ public class MySkeleton {
     				   pass=rsID.getString(2);
     			   }
     			   
-    			   if(ID_Utente!=0 && pass!="")
+    			   if(ID_Utente!=0 && !pass.equals(""))
     			   {
     			   if(hashCode(pass+password[1],"SHA-1").equals(password[0]))
     			   {
@@ -1422,7 +1416,7 @@ public class MySkeleton {
     					   insertLOG("INSERT:"+insertQuery,"WSData/getIdtoken");
     					   resp.set_return(token);
     				   }else
-    				   {//sessione c'è,  aggiorno token e data
+    				   {//sessione c'ï¿½,  aggiorno token e data
     					   s.executeQuery ("SELECT id FROM sessioni where id_utente="+ID_Utente);
     					   ResultSet rsToken=s.getResultSet();
     					   rsToken.next();
@@ -1444,7 +1438,7 @@ public class MySkeleton {
     		   s.close();
    		  } else {resp.set_return("ERR:noConn");insertLOG("ERR:noConn", "WSData/getIdtoken");}	  
     	  }catch(Exception e){resp.set_return("ERR:"+e.toString());insertLOG("ERR:"+e.toString(), "WSData/getIdtoken");}
-    	  finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+    	  finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
     	  
     	  
     	  return resp;
@@ -1481,7 +1475,7 @@ public class MySkeleton {
          	  		// ci sono sessioni valide per il token?
          	  		if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in updateTipo:"+idtoken,"WSData/updateTipo/ContaTabella");resp.set_return("Err:noUser");}
          	  			 if (contaTabella("sessioni", where)==1) 
-         	  			 {//c'è il token, posso controllare se esiste la partita
+         	  			 {//c'ï¿½ il token, posso controllare se esiste la partita
          	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
          	  				 ResultSet rsUtente1=s.getResultSet();
          	  				 if(rsUtente1.next()) ID_Utente=rsUtente1.getInt(1);//se esiste l'utente
@@ -1509,10 +1503,10 @@ public class MySkeleton {
          	  			 s.close();
          	  		 }else{resp.set_return("ERR:noConn");insertLOG("ERR:noConn", "WSData/updateTipo");}
          	}catch(Exception e){resp.set_return("ERR:"+e.toString());insertLOG("ERR:"+e.toString(), "WSData/updateTipo");}
-          	finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+          	finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
           	return resp;
       }
-      /**Restituisce la lista dei nomi delle partite in cui il giocatore è dentro, in base al tipo scelto. 
+      /**Restituisce la lista dei nomi delle partite in cui il giocatore ï¿½ dentro, in base al tipo scelto. 
        * 
        *
        * @param getPartite (String idtoken,String username, String tipo)
@@ -1537,7 +1531,7 @@ public class MySkeleton {
          	  		// ci sono sessioni valide per il token?
          	  		if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in getPartite:"+idtoken,"WSData/getPartite/ContaTabella");resp.set_return("Err:noUser");}
          	  			 if (contaTabella("sessioni", where)==1) 
-         	  			 {//c'è il token, posso controllare se esiste la partita
+         	  			 {//c'ï¿½ il token, posso controllare se esiste la partita
          	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
          	  				 ResultSet rsUtente1=s.getResultSet();
          	  				 if(rsUtente1.next()) ID_Utente=rsUtente1.getInt(1);//se esiste l'utente
@@ -1551,7 +1545,7 @@ public class MySkeleton {
             	  				 ResultSet rsPartita=s.getResultSet();
             	  				//insertLOG("SELECT:"+selectQuery, "WSData/getPartite");
             	  				while(rsPartita.next())
-       	   	  				 	{//finchè trova posizioni, creo la stringa
+       	   	  				 	{//finchï¿½ trova posizioni, creo la stringa
             	  					listaPartite+=rsPartita.getString(1)+CHAR_SEPARATE;
        	   	  					}
        	   	  				 	//tolgo il carattere separatore finale
@@ -1562,7 +1556,7 @@ public class MySkeleton {
          	  			 s.close();
          	  		 }else{resp.set_return("ERR:noConn");insertLOG("ERR:noConn", "WSData/getPartite");}
          	}catch(Exception e){resp.set_return("ERR:"+e.toString());insertLOG("ERR:"+e.toString(), "WSData/getPartite");}
-          	finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+          	finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
           	return resp;
       }
       /**Restituisce le posizioni iniziali di una partita in cui l'utente partecipa. 
@@ -1592,7 +1586,7 @@ public class MySkeleton {
          	  		// ci sono sessioni valide per il token?
          	  		if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in getPosizioniIniziali:"+idtoken,"WSData/getPosizioniIniziali/ContaTabella");resp.set_return("Err:noUser");}
          	  			 if (contaTabella("sessioni", where)==1) 
-         	  			 {//c'è il token, posso controllare se esiste la partita
+         	  			 {//c'ï¿½ il token, posso controllare se esiste la partita
          	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
          	  				 ResultSet rsUtente1=s.getResultSet();
          	  				 if(rsUtente1.next()) ID_Utente=rsUtente1.getInt(1);//se esiste l'utente
@@ -1613,7 +1607,7 @@ public class MySkeleton {
             	   	  				 ResultSet rsPosizioni=s.getResultSet();
             	   	  				 //insertLOG("SELECT: "+selectQuery, "WSData/getPosizioniIniziali");
             	   	  				 while(rsPosizioni.next())
-            	   	  				 {//finchè trova posizioni, creo la stringa
+            	   	  				 {//finchï¿½ trova posizioni, creo la stringa
             	   	  				posizioni+=rsPosizioni.getString(2)+":"+rsPosizioni.getInt(3)+CHAR_SEPARATE;
             	   	  				 }
             	   	  				 //tolgo il carattere separatore finale
@@ -1626,7 +1620,7 @@ public class MySkeleton {
          	  			 s.close();
          	  		 }else{resp.set_return("ERR:noConn");insertLOG("ERR:noConn", "WSData/getPosizioniIniziali");}
          	}catch(Exception e){resp.set_return("ERR:"+e.toString());insertLOG("ERR:"+e.toString(), "WSData/getPosizioniIniziali");}
-          	finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+          	finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
           	return resp;
       }
       /**Restituisce le mosse di una partita in cui l'utente partecipa. Le mosse sono tutte quelle fatte,
@@ -1656,7 +1650,7 @@ public class MySkeleton {
          	  		// ci sono sessioni valide per il token?
          	  		if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in getMosse:"+idtoken,"WSData/getMosse/ContaTabella");resp.set_return("Err:noUser");}
          	  			 if (contaTabella("sessioni", where)==1) 
-         	  			 {//c'è il token, posso controllare se esiste la partita
+         	  			 {//c'ï¿½ il token, posso controllare se esiste la partita
          	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
          	  				 ResultSet rsUtente1=s.getResultSet();
          	  				 if(rsUtente1.next()) ID_Utente=rsUtente1.getInt(1);//se esiste l'utente
@@ -1678,7 +1672,7 @@ public class MySkeleton {
             	   	  				 ResultSet rsMosse=s.getResultSet();
             	   	  				 //insertLOG("SELECT: "+selectQuery, "WSData/getMosse");
             	   	  				 while(rsMosse.next())
-            	   	  				 {//finchè trova mosse, creo la stringa
+            	   	  				 {//finchï¿½ trova mosse, creo la stringa
             	   	  					 mosse+="("+rsMosse.getString(5)+")"+rsMosse.getInt(2)+rsMosse.getString(3)+rsMosse.getInt(4)+CHAR_SEPARATE;
             	   	  				 }
             	   	  				 //tolgo il carattere separatore finale
@@ -1691,7 +1685,7 @@ public class MySkeleton {
          	  			 s.close();
          	  		 }else{resp.set_return("ERR:noConn");insertLOG("ERR:noConn", "WSData/getMosse");}
          	}catch(Exception e){resp.set_return("ERR:"+e.toString());insertLOG("ERR:"+e.toString(), "WSData/getMosse");}
-          	finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+          	finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
           	return resp;
       }
       /**Restituisce il nome della partita associata a giocatore e giocatore sfidato
@@ -1718,7 +1712,7 @@ public class MySkeleton {
        	  			 // ci sono sessioni valide per il token?
        	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in getNomePartita:"+idtoken,"WSData/getNomePartita/ContaTabella");resp.set_return("Err:noUser");}
        	  			 if (contaTabella("sessioni", where)==1) 
-       	  			 {//c'è il token, posso controllare se esiste la partita
+       	  			 {//c'ï¿½ il token, posso controllare se esiste la partita
        	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
        	  				 ResultSet rsUtente1=s.getResultSet();
        	  				 if(rsUtente1.next()) ID_Utente=rsUtente1.getInt(1);//se esiste l'utente
@@ -1740,10 +1734,10 @@ public class MySkeleton {
        	  			 s.close();
        	  		 }else{resp.set_return("ERR:noConn");insertLOG("ERR:noConn", "WSData/getNomePartita");}
        	  	 }catch(Exception e){resp.set_return("ERR:"+e.toString());insertLOG("ERR:"+e.toString(), "WSData/getNomePartita");}
-       	  finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+       	  finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
        	  	 return resp;
       }
-      /**Verifica se il chiamante è l'utente che inizia la sfida.
+      /**Verifica se il chiamante ï¿½ l'utente che inizia la sfida.
       *
       * @param IsUtenteIniziale (String idtoken,String nomePartita, String username)
       * @return IsUtenteInizialeResponse (boolean conferma)
@@ -1765,7 +1759,7 @@ public class MySkeleton {
       	  			 // ci sono sessioni valide per il token?
       	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in isUtenteIniziale:"+idtoken,"WSData/isUtenteIniziale/ContaTabella");resp.set_return(false);}
       	  			 if (contaTabella("sessioni", where)==1) 
-      	  			 {//c'è il token, posso controllare se esiste la partita
+      	  			 {//c'ï¿½ il token, posso controllare se esiste la partita
       	  				s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
       	  				ResultSet rsToken=s.getResultSet();
       	  				if(rsToken.next())ID_Utente=rsToken.getInt(1);
@@ -1783,7 +1777,7 @@ public class MySkeleton {
      	   	  				 s.executeQuery(selectQuery1);
      	   	  				 //insertLOG("SELECT:"+selectQuery1,"WSData/isUtenteIniziale");
      	   	  				 ResultSet rsUtente1=s.getResultSet();
-     	   	  				 if(rsUtente1.next()){resp.set_return(true);}//l'utente è il primo e tocca a lui
+     	   	  				 if(rsUtente1.next()){resp.set_return(true);}//l'utente ï¿½ il primo e tocca a lui
      	   	  				 else{
      	   	  					 String selectQuery2="SELECT id FROM partite where id="+ID_Partita+
 		 									 " and id_utente2="+ID_Utente +
@@ -1791,7 +1785,7 @@ public class MySkeleton {
      	   	  					 s.executeQuery(selectQuery2);
      	   	  					 //insertLOG("SELECT:"+selectQuery2,"WSData/isUtenteIniziale");
      	   	  					 ResultSet rsUtente2=s.getResultSet();
-     	   	  					 if(rsUtente2.next()){resp.set_return(true);}//l'utente è il secondo e tocca a lui
+     	   	  					 if(rsUtente2.next()){resp.set_return(true);}//l'utente ï¿½ il secondo e tocca a lui
      	   	  					 else{resp.set_return(false);}//utente e turno iniziale sono discordi
      	   	  				 }
      	  				 }else{resp.set_return(false);insertLOG("ERR:InvalidMatchName", "WSData/isUtenteIniziale");}
@@ -1800,7 +1794,7 @@ public class MySkeleton {
       	  			 s.close();
       	  		 }else{resp.set_return(false);insertLOG("ERR:noConn", "WSData/isUtenteIniziale");}
       	  	 }catch(Exception e){resp.set_return(false);insertLOG("ERR:"+e.toString(), "WSData/isUtenteIniziale");}
-      	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+      	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
       	  	 return resp;
       }
       /**Inserimento in database di una mossa valida.
@@ -1830,7 +1824,7 @@ public class MySkeleton {
       	  			 // ci sono sessioni valide per il token?
       	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in insertMossa:"+idtoken,"WSData/insertMossa/ContaTabella");resp.set_return(false);}
       	  			 if (contaTabella("sessioni", where)==1) 
-      	  			 {//c'è il token, posso controllare se esiste la partita
+      	  			 {//c'ï¿½ il token, posso controllare se esiste la partita
       	  				 s.executeQuery ("SELECT id FROM partite where nome_partita like '"+nomePartita+"'");
       	  				 ResultSet rsPartita=s.getResultSet();
       	  				 if(rsPartita.next()) ID_Partita=rsPartita.getInt(1);//se esiste la partita
@@ -1865,7 +1859,7 @@ public class MySkeleton {
       	  			 s.close();
       	  		 }else{resp.set_return(false);insertLOG("ERR:noConn", "WSData/insertMossa");}
       	  	 }catch(Exception e){resp.set_return(false);insertLOG("ERR:"+e.toString(), "WSData/insertMossa");}
-      	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+      	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
       	  	 return resp;
       }
       /**Inserimento in database della posizione iniziale di una pedina sul tavolo di gioco.
@@ -1892,7 +1886,7 @@ public class MySkeleton {
      	  			 // ci sono sessioni valide per il token?
      	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in insertPosizioneIniziale:"+idtoken,"WSData/insertPosizioneIniziale/ContaTabella");resp.set_return(false);}
      	  			 if (contaTabella("sessioni", where)==1) 
-     	  			 {//c'è il token, posso controllare se esiste la partita
+     	  			 {//c'ï¿½ il token, posso controllare se esiste la partita
      	  				 s.executeQuery ("SELECT id FROM partite where nome_partita like '"+nomePartita+"'");
      	  				 ResultSet rsPartita=s.getResultSet();
      	  				 if(rsPartita.next()) ID_Partita=rsPartita.getInt(1);//se esiste la partita
@@ -1916,7 +1910,7 @@ public class MySkeleton {
      	  			 s.close();
      	  		 }else{resp.set_return(false);insertLOG("ERR:noConn", "WSData/insertPosizioneIniziale");}
      	  	 }catch(Exception e){resp.set_return(false);insertLOG("ERR:"+e.toString(), "WSData/insertPosizioneIniziale");}
-     	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+     	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
      	  	 return resp;
       }
       /** Cancellazione della partita tra due utenti, recuperato tramite username dei partecipanti.
@@ -1943,7 +1937,7 @@ public class MySkeleton {
     	  			 // ci sono sessioni valide per il token?
     	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in deletePartita:"+idtoken,"WSData/deletePartita/contaTabella");resp.set_return(false);}
     	  			 if (contaTabella("sessioni", where)==1) 
-    	  			 {//c'è il token, posso modificare l'utente
+    	  			 {//c'ï¿½ il token, posso modificare l'utente
     	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
     	  				 ResultSet rsToken=s.getResultSet();
     	  				 if(rsToken.next())ID_Utente=rsToken.getInt(1);  
@@ -1969,11 +1963,11 @@ public class MySkeleton {
     	  			 s.close();
     	  		 }else{resp.set_return(false);insertLOG("ERR:noConn", "WSData/deletePartita");}
     	  	 }catch(Exception e){resp.set_return(false);insertLOG("ERR:"+e.toString(), "WSData/deletePartita");}
-    	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+    	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
     	  	 return resp;
       }
       /**Inserimento in database di una nuova partita.Controlla se esiste una precedente partita e
-       * inserisce la nuova quando possibile (1 partita per coppia). nomePartita è univoco
+       * inserisce la nuova quando possibile (1 partita per coppia). nomePartita ï¿½ univoco
        *
        * @param InsertPartita ( String idtoken,String nomePartita, byte nGiocatoreInit, String username1,
        * 						String username2,double livello1,double livello2,boolean allenamento1,boolean allenamento2)
@@ -2005,10 +1999,10 @@ public class MySkeleton {
     	  			 // ci sono sessioni valide per il token?
     	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in insertPartita:"+idtoken,"WSData/insertPartita/ContaTabella");resp.set_return(false);}
     	  			 if (contaTabella("sessioni", where)==1) 
-    	  			 {//c'è il token, posso controllare i due utenti del token
+    	  			 {//c'ï¿½ il token, posso controllare i due utenti del token
     	  				s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
       	  				 ResultSet rsToken=s.getResultSet();
-      	  				 if(rsToken.next()){ ID_Utente1=rsToken.getInt(1);} //se il token è corretto, utente1 è
+      	  				 if(rsToken.next()){ ID_Utente1=rsToken.getInt(1);} //se il token ï¿½ corretto, utente1 ï¿½
       	  				 												  //il proprietario del token
     	  				 
     	  				 s.executeQuery ("SELECT id FROM utenti where username like '"+username_sfidato+"'");
@@ -2034,7 +2028,7 @@ public class MySkeleton {
    	   	  				 		 ResultSet rsNomePartita=s.getResultSet();
    	   	  				 		 
    	   	  				 		 if(!rsNomePartita.next())
-   	   	  				 		 {//non ci sono partite con lo stesso nome, si può inserire il record
+   	   	  				 		 {//non ci sono partite con lo stesso nome, si puï¿½ inserire il record
    	   	  				 			 String insertQuery="INSERT INTO partite VALUES ("+
    	   	  				 					 "NULL"+","+//id autoincrement
    	   	  				 					 "'"+nomePartita+"',"+//nome partita univoco possibilmente
@@ -2058,7 +2052,7 @@ public class MySkeleton {
     	  			 s.close();
     	  		 }else{resp.set_return(false);insertLOG("ERR:noConn", "WSData/insertPartita");}
     	  	 }catch(Exception e){resp.set_return(false);insertLOG("ERR:"+e.toString(), "WSData/insertPartita");}
-    	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+    	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
     	  	 return resp;
 	  }
       public data.GetPartitaIDResponse getPartitaID(data.GetPartitaID getPartitaID)
@@ -2076,7 +2070,7 @@ public class MySkeleton {
     	  			 // ci sono sessioni valide per il token?
     	  			 if (contaTabella("sessioni", where)==-1) {insertLOG("ERR:noUser;Exception in contaTabella in getPartitaID:"+idtoken,"WSData/getPartitaID/ContaTabella");resp.set_return(-1);}
     	  			 if (contaTabella("sessioni", where)==1) 
-    	  			 {//c'è il token, posso scegliere l'utente del token
+    	  			 {//c'ï¿½ il token, posso scegliere l'utente del token
     	  				 s.executeQuery ("SELECT id_utente FROM sessioni where idtoken='"+idtoken+"'");
     	  				 ResultSet rsToken=s.getResultSet();
     	  				 
@@ -2097,7 +2091,7 @@ public class MySkeleton {
     	  			 s.close();
     	  		 }else{resp.set_return(-1);insertLOG("ERR:noConn", "WSData/getPartitaID");}
     	  	 }catch(Exception e){resp.set_return(-1);insertLOG("ERR:"+e.toString(), "WSData/getPartitaID");}
-    	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException e) {}}
+    	  	 finally{if (connection!=null)try {connection.close();} catch (SQLException ignored) {}}
     	  	 return resp;
       }
 }

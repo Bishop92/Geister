@@ -1,5 +1,10 @@
 package skeleton;
 
+import IA.Euristiche.EuristicheFactory;
+import IA.IAFactory;
+import IA.Strategie.StrategieFactory;
+import apprendimento.ValutaPezziLog;
+import apprendimento.ranker.RankerFactory;
 import game.CancellaPartitaResponse;
 import game.EseguiMossaResponse;
 import game.GeneraMossaIAResponse;
@@ -18,19 +23,11 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Vector;
 
-import logica.Coordinata;
-import logica.Giocatore;
-import logica.Pezzo;
-import logica.Tavolo;
+import logica.*;
+
 import IA.IntelligenzaArtificiale;
-import IA.MinMaxAB;
-import apprendimento.FeatureCollector;
-import apprendimento.RankerLog;
-import apprendimento.features.MosseAvanti;
-import apprendimento.learner.Learner;
-import apprendimento.learner.MediaVettori;
+
 import data.WSDataStub;
 
 /**
@@ -51,12 +48,12 @@ import data.WSDataStub;
  * <li>Aggiunti metodi per generazione mossaIA, gestione tipo in sfida, lista sfide per tipo.</li>
  * </ul>
  */
-public class MySkeleton {
+class MySkeleton {
     Connection connection = null;
 
     /**
      * Costruttore di default vuoto, serve a istanziare l'oggetto
-     * dentro lo Skeleton autogenerato. Si user� poi per richiamare i metodi
+     * dentro lo Skeleton autogenerato. Si usera poi per richiamare i metodi
      * riscritti
      */
     public MySkeleton() {
@@ -90,7 +87,7 @@ public class MySkeleton {
     /**
      * Modifica il tipo per la sfida, presa chiamando il servizio WSData
      *
-     * @param ModificaTipo String idtoken,String username,String username_sfidato,String nomePartita
+     * @param modificaTipo String idtoken,String username,String username_sfidato,String nomePartita
      * @return ModificaTipoResponse (String: conferma)
      */
     public game.ModificaTipoResponse modificaTipo(game.ModificaTipo modificaTipo) {
@@ -102,6 +99,10 @@ public class MySkeleton {
             partitaStub.setUsername(modificaTipo.getUsername());
             partitaStub.setNomePartita(modificaTipo.getNomePartita());
             partitaStub.setTipo_nuovo(modificaTipo.getTipo_nuovo());
+
+            if(modificaTipo.getTipo_nuovo().equals("100"))
+                IAFactory.getInstance().deleteIA(modificaTipo.getNomePartita());
+
             WSDataStub.UpdateTipoResponse dataResp = stub.updateTipo(partitaStub);
 
             resp.set_return(dataResp.get_return());
@@ -116,7 +117,9 @@ public class MySkeleton {
     /**
      * Recupera il nome della partita tra due sfidanti, presa chiamando il servizio WSData
      *
-     * @param GetNomePartita String idtoken,String username,String username_sfidato
+     * @param token        Token generato per la partita
+     * @param user         Utente che ha avviato la partita
+     * @param user_sfidato Utente sfidato
      * @return GetNomePartitaResponse (String: nome partita)
      */
     private String getNomePartita(String token, String user, String user_sfidato) {
@@ -151,7 +154,7 @@ public class MySkeleton {
     /**
      * Recupero della lista partite in base al tipo, presa chiamando il servizio WSData
      *
-     * @param ListaPartite String idtoken,String tipo
+     * @param listaPartite String idtoken,String tipo
      * @return ListaPartiteResponse (String: lista partite)
      */
     public game.ListaPartiteResponse listaPartite(game.ListaPartite listaPartite) {
@@ -176,7 +179,7 @@ public class MySkeleton {
     /**
      * Recupero della lista posizioni iniziali, presa chiamando il servizio WSData
      *
-     * @param ListaPosizioniIniziali String idtoken,String nomePartita
+     * @param listaPosizioniIniziali String idtoken,String nomePartita
      * @return ListaPosizioniInizialiResponse (String: lista posizioni)
      */
     public game.ListaPosizioniInizialiResponse listaPosizioniIniziali(game.ListaPosizioniIniziali listaPosizioniIniziali) {
@@ -201,11 +204,11 @@ public class MySkeleton {
     /**
      * Inserisce un log nel database, richiamando il metodo dal servizio WSData
      *
-     * @param String message
-     * @param String function
+     * @param message  String
+     * @param function String
      * @return boolean: conferma inserimento log
      */
-    public boolean insertLog(String message, String function) {
+    boolean insertLog(String message, String function) {
         boolean resp = false;
         try {
             WSDataStub stub = new WSDataStub();
@@ -230,7 +233,9 @@ public class MySkeleton {
     /**
      * Chiamante per gestione mosse, dal DB o XML.
      *
-     * @param GetTurno (String idtoken,String nomePartita)
+     * @param idtoken     Token della partita generata
+     * @param username    Username del giocatore che ha avviato la partita
+     * @param nomePartita Nome della partita in analisi.
      * @return GetTurnoResponse (int turno. 1=sfidato, 2=sfidante. -1=ERRORE)
      */
     private String mossePartita(String idtoken, String username, String nomePartita) {
@@ -252,15 +257,18 @@ public class MySkeleton {
     }
 
     /**
-     * Metodo interno di getTurno, separato per essere usato in pi� punti del servizio.
+     * Metodo interno di getTurno, separato per essere usato in piu punti del servizio.
      *
-     * @param GetTurno (String idtoken, String username, String nomePartita,String mosse)
+     * @param idtoken Token della partita generata
+     * @param username Username del giocatore che ha avviato la partita
+     * @param nomePartita Nome della partita in analisi.
+     * @param mosse Elenco delle mosse che identificano il turno
      * @return int (int turno. 1=chiamante, 2=avversario. -1=ERRORE)
      */
-    public int getTurno(String idtoken, String username, String nomePartita, String mosse) {
+    int getTurno(String idtoken, String username, String nomePartita, String mosse) {
         String CHAR_SEPARATE = ";";
-        if (!mosse.startsWith("ERR")) {//non c'� errore nel recupero della lista mosse in DB
-            if (mosse == "") {//non ci sono mosse, il turno � del giocatore init
+        if (!mosse.startsWith("ERR")) {//non c'e errore nel recupero della lista mosse in DB
+            if (mosse.equals("")) {//non ci sono mosse, il turno e del giocatore init
                 try {
                     WSDataStub stub = new WSDataStub();
                     WSDataStub.IsUtenteIniziale giocatoreInit = new WSDataStub.IsUtenteIniziale();
@@ -313,7 +321,7 @@ public class MySkeleton {
     /**
      * Restituisce il valore di chi ha il turno, indicando con 1 il chiamante, con 2 l'avversario.
      *
-     * @param GetTurno (String idtoken,String nomePartita)
+     * @param getTurno (String idtoken,String nomePartita)
      * @return GetTurnoResponse (int turno. 1=chiamante, 2=avversario. -1=ERRORE)
      */
     public game.GetTurnoResponse getTurno(game.GetTurno getTurno) {
@@ -335,7 +343,7 @@ public class MySkeleton {
     /**
      * Cancello una partita esistente, chiamando il servizio WSData per DB.
      *
-     * @param CancellaPartita (String idtoken,String nomePartita)
+     * @param cancellaPartita (String idtoken,String nomePartita)
      * @return CancellaPartitaResponse (boolean di conferma)
      */
     public game.CancellaPartitaResponse cancellaPartita(game.CancellaPartita cancellaPartita) {
@@ -355,7 +363,7 @@ public class MySkeleton {
             WSDataStub.DeletePartitaResponse dataResp = stub.deletePartita(partitaStub);
             //gestire qui eventuale XML!!!!!!!
 
-            if (!dataResp.get_return()) {//non c'� errore nella cancellazione in DB
+            if (!dataResp.get_return()) {//non c'e errore nella cancellazione in DB
                 resp.set_return(dataResp.get_return());
                 return resp;
             } else {
@@ -373,7 +381,7 @@ public class MySkeleton {
     /**
      * Recupero della lista delle mosse salvate in una partita, chiamando WSData per DB.
      *
-     * @param NuovaPartita (String idtoken,String username,String nomePartita)
+     * @param listaMosse (String idtoken,String username,String nomePartita)
      * @return ListaMosseResponse (String listaMosse)
      */
     public game.ListaMosseResponse listaMosse(game.ListaMosse listaMosse) {
@@ -418,17 +426,10 @@ public class MySkeleton {
         }
     }
 
-    private Vector<String> preparaEuristiche() {
-        Vector<String> eur1 = new Vector<String>();
-        for (int i = 0; i < MinMaxAB.euristiche().length; i++)
-            eur1.add(MinMaxAB.euristiche()[i]);
-        return eur1;
-    }
-
     /**
      * Prepara il tavolo prendendo i dati in formato raw arrivati come stringa dal client
      *
-     * @param String dataRaw (formato:  coordinata;posizione;giocatore|coordinata2;....)
+     * @param rawData String (formato:  coordinata;posizione;giocatore|coordinata2;....)
      * @return Tavolo (Tavolo con pezzi posizionati e pronti)
      */
     private Tavolo preparaTavoloLogico(String rawData) {
@@ -437,8 +438,8 @@ public class MySkeleton {
 
         int x, y, posizione, giocatore;
         String vettorePosizioni[] = rawData.split("\\|");
-        for (int i = 0; i < vettorePosizioni.length; i++) {
-            String pedina[] = vettorePosizioni[i].split("\\;");
+        for (String aVettorePosizioni : vettorePosizioni) {
+            String pedina[] = aVettorePosizioni.split("\\;");
             //pedina[0]=coordinata
             //pedina[1]=posizione
             //pedina[2]=giocatore
@@ -483,15 +484,14 @@ public class MySkeleton {
         Giocatore giocatore_correnteIA = new Giocatore("password", (byte) 2, username_sfidato, "1");
         Giocatore giocatore_avversarioIO = new Giocatore("password", (byte) 1, username, "2");
         nomePartita = getNomePartita(idtoken, username, username_sfidato);
-        new RankerLog(nomePartita);
+        new ValutaPezziLog(nomePartita);
         Tavolo t = preparaTavoloLogico(temp[1]);
-        Vector<String> euristiche = preparaEuristiche();
         int id_sfidato = getUtenteIDDB(username_sfidato);
         double liv1 = getLivelloDB(nomePartita, 1);
         double liv2 = getLivelloDB(nomePartita, 2);
 
 
-        String mossa = getMossaIntelligenzaArtificiale(t, liv1, liv2, giocatore_correnteIA, giocatore_avversarioIO, euristiche, nomePartita);
+        String mossa = getMossaIntelligenzaArtificiale(t, liv1, liv2, giocatore_correnteIA, giocatore_avversarioIO, nomePartita);
         resp.set_return(mossa);
         return resp;
     }
@@ -514,7 +514,7 @@ public class MySkeleton {
             Connection con = DriverManager.getConnection(url, "root", "sportster");
             Statement s = con.createStatement();
             String selectQuery = "select livello" + livello + " from partite where nome_partita like '" + nomePartita + "';";
-            new RankerLog(selectQuery);
+            new ValutaPezziLog(selectQuery);
             s.executeQuery(selectQuery);
             ResultSet rsID = s.getResultSet();
             if (rsID.next()) {
@@ -522,7 +522,7 @@ public class MySkeleton {
 
             }
 
-            // chiudere le risorse DB � obbligatorio
+            // chiudere le risorse DB e obbligatorio
             rsID.close();
             s.close();
             con.close();
@@ -541,7 +541,7 @@ public class MySkeleton {
     /**
      * Richiama il DB per recuperare l'id del giocatore richiesto nel profiler del Ranker.
      *
-     * @param nomePartita nome della partita in analisi.
+     * @param username Username del giocatore che ha avviato la partita
      * @return int l'id del giocatore
      * <p/>
      * Probabilmente questo metodo va spostato nel WSData, dipende dal livello di indipendenza si vorr� dare ai vari gestori dell'IA.
@@ -568,30 +568,27 @@ public class MySkeleton {
             con.close();
             return result;
         } catch (ClassNotFoundException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
-            new RankerLog(e.toString());
+            new ValutaPezziLog(e.toString());
             return result;
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
-            new RankerLog(e.toString());
+            new ValutaPezziLog(e.toString());
             return result;
         }
     }
 
     /**
-     * Chiama l'IntelligenzaArtificiale e restituisce la mossa calcolata in base ai profili
+     * Chiama l'intelligenza artificiale e restituisce la mossa calcolata in base ai profili
      */
-    String getMossaIntelligenzaArtificiale(Tavolo t, double liv, double livAvv, Giocatore gioc_corr, Giocatore avv, Vector<String> eur, String nomePar) {
+    String getMossaIntelligenzaArtificiale(Tavolo t, double liv, double livAvv, Giocatore gioc_corr, Giocatore avv, String nomePar) {
         try {
 
-            String mossa = "";
-            IntelligenzaArtificiale IA = new IntelligenzaArtificiale(t, liv, livAvv, gioc_corr, avv, eur, nomePar);
-            IA.calcolaMossa();
+            IntelligenzaArtificiale IA = IAFactory.getInstance().getIA(t, gioc_corr, avv, liv, nomePar, EuristicheFactory.EURISTICHE.ATTACCOAIBUONI, StrategieFactory.STRATEGIE.MINMAXAB, RankerFactory.RANKERS.DISTANZAVETTORI);
+            Mossa mossa = IA.calcolaMossa();
 
-            Coordinata partenza = IA.getPartenza();
-            Coordinata arrivo = IA.getArrivo();
+            Coordinata partenza = mossa.getPartenza();
+            Coordinata arrivo = mossa.getArrivo();
             if (arrivo != null) {
                 return String.valueOf(partenza.getRiga()) + String.valueOf(partenza.getColonna()) +
                         " " + String.valueOf(arrivo.getRiga() + String.valueOf(arrivo.getColonna()));
@@ -605,7 +602,6 @@ public class MySkeleton {
                     return partenza1 + " " + "99"; //mossa di uscita in basso a sinistra default test
             }
         } catch (Exception e) {
-            // TODO Auto-generated catch block
             return (e.toString());
         }
     }
@@ -613,7 +609,7 @@ public class MySkeleton {
     /**
      * Inserimento di una nuova mossa, con richiamo al servizio dati per salvare in DB.
      *
-     * @param EseguiMossa (String idtoken,String nomePartita, String mossa)
+     * @param eseguiMossa (String idtoken,String nomePartita, String mossa)
      * @return EseguiMossaResponse (boolean conferma)
      */
     public game.EseguiMossaResponse eseguiMossa(game.EseguiMossa eseguiMossa) {
@@ -672,7 +668,7 @@ public class MySkeleton {
     /**
      * Inserimento di una nuova posizione iniziale, con richiamo al servizio dati per salvare in DB.
      *
-     * @param NuovaPosizioneIniziale (String idtoken,String nomePartita, String pedina, int posizione)
+     * @param nuovaPosizioneIniziale (String idtoken,String nomePartita, String pedina, int posizione)
      * @return NuovaPosizioneInizialeResponse (boolean conferma)
      */
     public game.NuovaPosizioneInizialeResponse nuovaPosizioneIniziale(game.NuovaPosizioneIniziale nuovaPosizioneIniziale) {
@@ -712,7 +708,7 @@ public class MySkeleton {
     /**
      * Gestione di una nuova partita, con richiamo al servizio dati per salvare in DB.
      *
-     * @param NuovaPartita (String idtoken,String nomePartita, byte GiocatoreInizio, String username,String username_sfidato,double livello1,double livello2,boolean allenamento1,boolean allenamento2)
+     * @param nuovaPartita (String idtoken,String nomePartita, byte GiocatoreInizio, String username,String username_sfidato,double livello1,double livello2,boolean allenamento1,boolean allenamento2)
      * @return NuovaPartitaResponse (boolean conferma)
      */
     public game.NuovaPartitaResponse nuovaPartita(game.NuovaPartita nuovaPartita) {
@@ -739,7 +735,7 @@ public class MySkeleton {
             partitaStub.setUsername_sfidato(username_sfidato);
             WSDataStub.GetNomePartitaResponse dataResp = stub.getNomePartita(partitaStub);
 
-            if (dataResp.get_return() != nomePartita) {//non c'� match tra i due utenti con questo nome: posso creare la partita nel db
+            if (!dataResp.get_return().equals(nomePartita)) {//non c'� match tra i due utenti con questo nome: posso creare la partita nel db
                 //gestire qui eventuale XML!!!!!!!
 
                 resp.set_return(insertPartitaDB(idtoken, username, username_sfidato, nomePartita, giocatore_init, livello1, livello2, allenamento1, allenamento2));

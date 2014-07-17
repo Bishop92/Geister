@@ -158,10 +158,8 @@ public class Pezzo implements Cloneable{
 	 * @return boolean - indica se il pezzo e' buono o cattivo
 	 */
 	public boolean getBuono(){
-		if (numero%10 >=0 && numero%10 <4)
-			return true;
-		return false;
-	}
+        return numero % 10 >= 0 && numero % 10 < 4;
+    }
 	
 	/** Metodo senza parametri che ritorna il vettore delle mosse fattibili che il pezzo
 	 * puo' compiere
@@ -278,10 +276,8 @@ public class Pezzo implements Cloneable{
 		//i vettori generati devono essere necessariamente uguali
 		if (o!=null){
 			Pezzo p=(Pezzo)o;
-			if(this.cor==p.cor && this.giocatore==p.giocatore && this.numero==p.numero)
-				return true;
-			return false;
-		}
+            return this.cor == p.cor && this.giocatore == p.giocatore && this.numero == p.numero;
+        }
 		return false;
 	}
 	
@@ -293,7 +289,7 @@ public class Pezzo implements Cloneable{
      * @return ritorna un Object rappresentante la copia del pezzo su cui è stato 
      * richiamato il metodo.
      */
-	public Object clone(){
+	public Object clone() {
 		try{Pezzo p=(Pezzo) super.clone();
 			p.cor = (Coordinata)this.cor.clone();
 			p.giocatore = this.giocatore;
@@ -301,19 +297,19 @@ public class Pezzo implements Cloneable{
 			//creo un vettore temporaneo dove copiare il vettore mosse_fattibili
 			Vector<Coordinata> vettore_temporaneo1 = new Vector<Coordinata>();
 			//copio il vettore mosse_fattibili nel vettore_temporaneo1
-			for(int a=0; a<mosse_fattibili.size(); a++){
-				Coordinata coordinata_temporanea = (Coordinata) mosse_fattibili.get(a).clone();
-				vettore_temporaneo1.addElement(coordinata_temporanea);
-			}
+            for (Coordinata aMosse_fattibili : mosse_fattibili) {
+                Coordinata coordinata_temporanea = (Coordinata) aMosse_fattibili.clone();
+                vettore_temporaneo1.addElement(coordinata_temporanea);
+            }
 			//copio il vettore temporaneo nel nuovo oggetto
 			p.mosse_fattibili = vettore_temporaneo1;
 			//creo un vettore temporaneo dove copiare il vettore coordinate_pezzi_mangiabili
 			Vector<Coordinata> vettore_temporaneo2 = new Vector<Coordinata>();
 			//copio il vettore coordinate_pezzi_mangiabili nel vettore_temporaneo2
-			for(int a=0; a<coordinate_pezzi_mangiabili.size(); a++){
-				Coordinata coordinata_temporanea = (Coordinata) coordinate_pezzi_mangiabili.get(a).clone();
-				vettore_temporaneo2.addElement(coordinata_temporanea);
-			}
+            for (Coordinata aCoordinate_pezzi_mangiabili : coordinate_pezzi_mangiabili) {
+                Coordinata coordinata_temporanea = (Coordinata) aCoordinate_pezzi_mangiabili.clone();
+                vettore_temporaneo2.addElement(coordinata_temporanea);
+            }
 			//copio il vettore temporaneo nel nuovo oggetto
 			p.coordinate_pezzi_mangiabili = vettore_temporaneo2;
 			//ritorno l'oggetto appena creato

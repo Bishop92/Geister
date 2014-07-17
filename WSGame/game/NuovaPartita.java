@@ -588,13 +588,7 @@ public class NuovaPartita
             namespace = "http://game";
             writeStartElement(null, namespace, "allenamento1", xmlWriter);
 
-            if (false) {
-
-                throw new org.apache.axis2.databinding.ADBException("allenamento1 cannot be null!!");
-
-            } else {
-                xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localAllenamento1));
-            }
+            xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localAllenamento1));
 
             xmlWriter.writeEndElement();
         }
@@ -602,13 +596,7 @@ public class NuovaPartita
             namespace = "http://game";
             writeStartElement(null, namespace, "allenamento2", xmlWriter);
 
-            if (false) {
-
-                throw new org.apache.axis2.databinding.ADBException("allenamento2 cannot be null!!");
-
-            } else {
-                xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localAllenamento2));
-            }
+            xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localAllenamento2));
 
             xmlWriter.writeEndElement();
         }
@@ -730,7 +718,7 @@ public class NuovaPartita
         if (qnames != null) {
             // we have to store this data until last moment since it is not possible to write any
             // namespace data after writing the charactor data
-            java.lang.StringBuffer stringToWrite = new java.lang.StringBuffer();
+            StringBuilder stringToWrite = new StringBuilder();
             java.lang.String namespaceURI = null;
             java.lang.String prefix = null;
 
@@ -896,7 +884,7 @@ public class NuovaPartita
                             "type");
                     if (fullTypeName != null) {
                         java.lang.String nsPrefix = null;
-                        if (fullTypeName.indexOf(":") > -1) {
+                        if (fullTypeName.contains(":")) {
                             nsPrefix = fullTypeName.substring(0, fullTypeName.indexOf(":"));
                         }
                         nsPrefix = nsPrefix == null ? "" : nsPrefix;
@@ -947,10 +935,6 @@ public class NuovaPartita
 
                 }  // End of if for expected property start element
 
-                else {
-
-                }
-
 
                 while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
 
@@ -977,9 +961,7 @@ public class NuovaPartita
                 else {
 
                 }
-
-
-                while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                (!reader.isStartElement() && !reader.isEndElement()) reader.next();
 
                 if (reader.isStartElement() && new javax.xml.namespace.QName("http://game", "giocatoreInizio").equals(reader.getName())) {
 
@@ -1037,7 +1019,7 @@ public class NuovaPartita
                 }
 
 
-                while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                while&&!reader.isEndElement())reader.next();
 
                 if (reader.isStartElement() && new javax.xml.namespace.QName("http://game", "username_sfidato").equals(reader.getName())) {
 
@@ -1064,7 +1046,7 @@ public class NuovaPartita
                 }
 
 
-                while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                while (!reader.isStartElement()))reader.next();
 
                 if (reader.isStartElement() && new javax.xml.namespace.QName("http://game", "livello1").equals(reader.getName())) {
 
@@ -1122,8 +1104,7 @@ public class NuovaPartita
                 }
 
 
-                while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
-
+                while (!reader.isStartElement() && !reader.isEndElement(
                 if (reader.isStartElement() && new javax.xml.namespace.QName("http://game", "allenamento2").equals(reader.getName())) {
 
                     java.lang.String content = reader.getElementText();

@@ -11434,9 +11434,7 @@
                                     
                               }  // End of if for expected property start element
                                 
-                                    else {
-                                        
-                                    }
+
                                   
                             while (!reader.isStartElement() && !reader.isEndElement())
                                 reader.next();
@@ -12581,10 +12579,7 @@
                                 
                                     else {
                                         
-                                    }
-                                
-                                    
-                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                    }                      while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
                                 
                                     if (reader.isStartElement() && new javax.xml.namespace.QName("http://data","username").equals(reader.getName())){
                                 
@@ -12611,7 +12606,7 @@
                                     }
                                 
                                     
-                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+              er.next();
                                 
                                     if (reader.isStartElement() && new javax.xml.namespace.QName("http://data","nomePartita").equals(reader.getName())){
                                 
@@ -12638,9 +12633,7 @@
                                     }
                                 
                                     
-                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
-                                
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://data","pedina").equals(reader.getName())){
+                                    while (!reader.isStartElement() && !reader.isEndElement()) readeader.isStartElement() && new javax.xml.namespace.QName("http://data","pedina").equals(reader.getName())){
                                 
                                        nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
                                        if (!"true".equals(nillableValue) && !"1".equals(nillableValue)){
@@ -12667,7 +12660,7 @@
                                     
                                     while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
                                 
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://data","posizione").equals(reader.getName())){
+                                    if (ruals(reader.getName())){
                                 
                                     java.lang.String content = reader.getElementText();
                                     
@@ -13123,8 +13116,7 @@
                                 reader.next();
                             
                                 if (reader.isStartElement())
-                                // A start element we are not expecting indicates a trailing invalid property
-                                throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                                // A start element we are not expecting indicateis2.databinding.ADBException("Unexpected subelement " + reader.getName());
                             
 
 
@@ -13570,8 +13562,7 @@
                             
                                 if (reader.isStartElement())
                                 // A start element we are not expecting indicates a trailing invalid property
-                                throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
-                            
+                                throw new org.apache.ax
 
 
 
@@ -14017,12 +14008,7 @@
                                 if (reader.isStartElement())
                                 // A start element we are not expecting indicates a trailing invalid property
                                 throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
-                            
-
-
-
-            } catch (javax.xml.stream.XMLStreamException e) {
-                throw new java.lang.Exception(e);
+                         throw new java.lang.Exception(e);
             }
 
             return object;
@@ -14457,10 +14443,7 @@
 
 
             } catch (javax.xml.stream.XMLStreamException e) {
-                throw new java.lang.Exception(e);
-            }
-
-            return object;
+ ject;
         }
 
         }//end of factory class
@@ -14895,16 +14878,7 @@
                 throw new java.lang.Exception(e);
             }
 
-            return object;
-        }
-
-        }//end of factory class
-
-        
-
-        }
-           
-    
+            return ob
         public static class InsertLOG
         implements org.apache.axis2.databinding.ADBBean{
         
@@ -15468,8 +15442,7 @@
                                        if (!"true".equals(nillableValue) && !"1".equals(nillableValue)){
                                     
                                     java.lang.String content = reader.getElementText();
-                                    
-                                              object.setMessaggio(
+     setMessaggio(
                                                     org.apache.axis2.databinding.utils.ConverterUtil.convertToString(content));
                                             
                                        } else {
@@ -15496,8 +15469,7 @@
                                     
                                     java.lang.String content = reader.getElementText();
                                     
-                                              object.setFunzione(
-                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToString(content));
+                                              object.sbinding.utils.ConverterUtil.convertToString(content));
                                             
                                        } else {
                                            
@@ -15540,9 +15512,7 @@
         public static class GetIdtokenResponse
         implements org.apache.axis2.databinding.ADBBean{
         
-                public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
-                "http://data",
-                "getIdtokenResponse",
+                public static final javax.xml.namespace           "getIdtokenResponse",
                 "ns1");
 
             
@@ -15988,12 +15958,7 @@
         
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://data",
-                "getUtenteNome",
-                "ns1");
-
-            
-
-                        /**
+           /**
                         * field for Idtoken
                         */
 
@@ -16485,9 +16450,7 @@
                                                     org.apache.axis2.databinding.utils.ConverterUtil.convertToString(content));
                                             
                                        } else {
-                                           
-                                           
-                                           reader.getElementText(); // throw away text nodes if any.
+                                              reader.getElementText(); // throw away text nodes if any.
                                        }
                                       
                                         reader.next();
@@ -16534,10 +16497,7 @@
 
                         /**
                         * field for _return
-                        */
-
-                        
-                                    protected boolean local_return ;
+                    n local_return ;
                                 
                            /*  This tracker boolean wil be used to detect whether the user called the set method
                           *   for this attribute. It will be used to determine whether to include this field
@@ -16972,9 +16932,7 @@
                         */
 
                         
-                                    protected java.lang.String localIdtoken ;
-                                
-                           /*  This tracker boolean wil be used to detect whether the user called the set method
+                                    protected java.lang.String localr boolean wil be used to detect whether the user called the set method
                           *   for this attribute. It will be used to determine whether to include this field
                            *   in the serialized XML
                            */
@@ -17530,8 +17488,7 @@
                                            reader.getElementText(); // throw away text nodes if any.
                                        }
                                       
-                                        reader.next();
-                                    
+
                               }  // End of if for expected property start element
                                 
                                     else {
@@ -17558,9 +17515,7 @@
                                        }
                                       
                                         reader.next();
-                                    
-                              }  // End of if for expected property start element
-                                
+
                                     else {
                                         
                                     }
@@ -17607,9 +17562,7 @@
                                     protected java.lang.String localIdtoken ;
                                 
                            /*  This tracker boolean wil be used to detect whether the user called the set method
-                          *   for this attribute. It will be used to determine whether to include this field
-                           *   in the serialized XML
-                           */
+                          *   for this attribute. It will be used to determine whether to include t     */
                            protected boolean localIdtokenTracker = false ;
 
                            public boolean isIdtokenSpecified(){
@@ -18550,9 +18503,7 @@
                               }  // End of if for expected property start element
                                 
                                     else {
-                                        
-                                    }
-                                
+
                                     
                                     while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
                                 
@@ -18577,9 +18528,7 @@
                                         reader.next();
                                     
                               }  // End of if for expected property start element
-                                
-                                    else {
-                                        
+
                                                object.setNGiocatoreInit(java.lang.Byte.MIN_VALUE);
                                            
                                     }
@@ -18639,7 +18588,7 @@
                                     }
                                 
                                     
-                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                  ext();
                                 
                                     if (reader.isStartElement() && new javax.xml.namespace.QName("http://data","livello1").equals(reader.getName())){
                                 
@@ -18666,8 +18615,7 @@
                                     java.lang.String content = reader.getElementText();
                                     
                                               object.setLivello2(
-                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToDouble(content));
-                                              
+                                                    org.ap
                                         reader.next();
                                     
                               }  // End of if for expected property start element
@@ -18740,8 +18688,7 @@
     
         public static class ExtensionMapper{
 
-          public static java.lang.Object getTypeObject(java.lang.String namespaceURI,
-                                                       java.lang.String typeName,
+          public static java.lang.Object g              java.lang.String typeName,
                                                        javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
 
               
@@ -18768,9 +18715,7 @@
                                     protected java.lang.String localIdtoken ;
                                 
                            /*  This tracker boolean wil be used to detect whether the user called the set method
-                          *   for this attribute. It will be used to determine whether to include this field
-                           *   in the serialized XML
-                           */
+                          *   for this attribute. It will be used to determine whether to include this fie
                            protected boolean localIdtokenTracker = false ;
 
                            public boolean isIdtokenSpecified(){
@@ -19270,10 +19215,7 @@
                             
                                 if (reader.isStartElement())
                                 // A start element we are not expecting indicates a trailing invalid property
-                                throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
-                            
-
-
+                                throw new org.apache.axis2.databinding.ADBE
 
             } catch (javax.xml.stream.XMLStreamException e) {
                 throw new java.lang.Exception(e);
@@ -19326,9 +19268,6 @@
                                return localIdtoken;
                            }
 
-                           
-                        
-                            /**
                                * Auto generated setter method
                                * @param param Idtoken
                                */
@@ -19876,9 +19815,7 @@
                                     if (reader.isStartElement() && new javax.xml.namespace.QName("http://data","username_sfidato").equals(reader.getName())){
                                 
                                        nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
-                                       if (!"true".equals(nillableValue) && !"1".equals(nillableValue)){
-                                    
-                                    java.lang.String content = reader.getElementText();
+                                       if (!"true".equals(nillableValue) && !"               java.lang.String content = reader.getElementText();
                                     
                                               object.setUsername_sfidato(
                                                     org.apache.axis2.databinding.utils.ConverterUtil.convertToString(content));
@@ -19911,17 +19848,7 @@
                 throw new java.lang.Exception(e);
             }
 
-            return object;
-        }
-
-        }//end of factory class
-
-        
-
-        }
-           
-    
-        public static class SetUtentePassword
+            return object      public static class SetUtentePassword
         implements org.apache.axis2.databinding.ADBBean{
         
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
@@ -19964,8 +19891,7 @@
                                * Auto generated setter method
                                * @param param Idtoken
                                */
-                               public void setIdtoken(java.lang.String param){
-                            localIdtokenTracker = true;
+                      localIdtokenTracker = true;
                                    
                                             this.localIdtoken=param;
                                     
@@ -20512,8 +20438,7 @@
                                     
                                     java.lang.String content = reader.getElementText();
                                     
-                                              object.setPassword_nuovo(
-                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToString(content));
+                                              object.setPassword_nuoutils.ConverterUtil.convertToString(content));
                                             
                                        } else {
                                            
@@ -20556,9 +20481,7 @@
         public static class GetUtenteAdmin
         implements org.apache.axis2.databinding.ADBBean{
         
-                public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
-                "http://data",
-                "getUtenteAdmin",
+                public static final javax.xml.namespace.QName MY_QNgetUtenteAdmin",
                 "ns1");
 
             
@@ -20602,13 +20525,7 @@
                                             this.localIdtoken=param;
                                     
 
-                               }
-                            
-
-     
-     
-        /**
-        *
+          *
         * @param parentQName
         * @param factory
         * @return org.apache.axiom.om.OMElement
@@ -21051,11 +20968,7 @@
                                }
                             
 
-                        /**
-                        * field for Password
-                        */
 
-                        
                                     protected java.lang.String localPassword ;
                                 
                            /*  This tracker boolean wil be used to detect whether the user called the set method
@@ -21596,9 +21509,7 @@
                                         
                                                object.setSeed(java.lang.Integer.MIN_VALUE);
                                            
-                                    }
-                                  
-                            while (!reader.isStartElement() && !reader.isEndElement())
+                               isStartElement() && !reader.isEndElement())
                                 reader.next();
                             
                                 if (reader.isStartElement())
@@ -21645,9 +21556,7 @@
                            */
                            protected boolean local_returnTracker = false ;
 
-                           public boolean is_returnSpecified(){
-                               return local_returnTracker;
-                           }
+                           public boolean is_re                  }
 
                            
 
@@ -22119,9 +22028,7 @@
         * @param parentQName
         * @param factory
         * @return org.apache.axiom.om.OMElement
-        */
-       public org.apache.axiom.om.OMElement getOMElement (
-               final javax.xml.namespace.QName parentQName,
+ inal javax.xml.namespace.QName parentQName,
                final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException{
 
 
@@ -22552,7 +22459,7 @@
                                     protected java.lang.String localUsername ;
                                 
                            /*  This tracker boolean wil be used to detect whether the user called the set method
-                          *   for this attribute. It will be used to determine whether to include this field
+  to include this field
                            *   in the serialized XML
                            */
                            protected boolean localUsernameTracker = false ;
@@ -23161,9 +23068,7 @@
                                         reader.next();
                                     
                               }  // End of if for expected property start element
-                                
-                                    else {
-                                        
+
                                     }
                                 
                                     
@@ -23190,10 +23095,7 @@
                               }  // End of if for expected property start element
                                 
                                     else {
-                                        
-                                    }
-                                  
-                            while (!reader.isStartElement() && !reader.isEndElement())
+                                                         while (!reader.isStartElement() && !reader.isEndElement())
                                 reader.next();
                             
                                 if (reader.isStartElement())
@@ -23240,8 +23142,7 @@
                            */
                            protected boolean local_returnTracker = false ;
 
-                           public boolean is_returnSpecified(){
-                               return local_returnTracker;
+                 local_returnTracker;
                            }
 
                            
@@ -23288,11 +23189,7 @@
         
                org.apache.axiom.om.OMDataSource dataSource =
                        new org.apache.axis2.databinding.ADBDataSource(this,MY_QNAME);
-               return factory.createOMElement(dataSource,MY_QNAME);
-            
-        }
-
-         public void serialize(final javax.xml.namespace.QName parentQName,
+               return factd serialize(final javax.xml.namespace.QName parentQName,
                                        javax.xml.stream.XMLStreamWriter xmlWriter)
                                 throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
                            serialize(parentQName,xmlWriter,false);
@@ -23727,8 +23624,7 @@
             
         }
 
-         public void serialize(final javax.xml.namespace.QName parentQName,
-                                       javax.xml.stream.XMLStreamWriter xmlWriter)
+         public voi           javax.xml.stream.XMLStreamWriter xmlWriter)
                                 throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
                            serialize(parentQName,xmlWriter,false);
          }
@@ -24159,9 +24055,7 @@
                            
 
                            /**
-                           * Auto generated getter method
-                           * @return java.lang.String
-                           */
+                           * Auto genera              */
                            public  java.lang.String getUsername(){
                                return localUsername;
                            }
@@ -24700,7 +24594,7 @@
                             
                                 if (reader.isStartElement())
                                 // A start element we are not expecting indicates a trailing invalid property
-                                throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+    pected subelement " + reader.getName());
                             
 
 
@@ -24753,10 +24647,7 @@
                            * @return java.lang.String
                            */
                            public  java.lang.String getIdtoken(){
-                               return localIdtoken;
-                           }
 
-                           
                         
                             /**
                                * Auto generated setter method
@@ -24798,9 +24689,6 @@
                                return localUsername;
                            }
 
-                           
-                        
-                            /**
                                * Auto generated setter method
                                * @param param Username
                                */
@@ -25298,8 +25186,7 @@
                            
                         
                             /**
-                               * Auto generated setter method
-                               * @param param Idtoken
+                        dtoken
                                */
                                public void setIdtoken(java.lang.String param){
                             localIdtokenTracker = true;
@@ -25341,9 +25228,7 @@
                         
                             /**
                                * Auto generated setter method
-                               * @param param Username
-                               */
-                               public void setUsername(java.lang.String param){
+                                   public void setUsername(java.lang.String param){
                             localUsernameTracker = true;
                                    
                                             this.localUsername=param;
@@ -25896,9 +25781,7 @@
                         */
 
                         
-                                    protected boolean local_return ;
-                                
-                           /*  This tracker boolean wil be used to detect whether the user called the set method
+                                    pr      /*  This tracker boolean wil be used to detect whether the user called the set method
                           *   for this attribute. It will be used to determine whether to include this field
                            *   in the serialized XML
                            */
@@ -25942,9 +25825,7 @@
         *
         * @param parentQName
         * @param factory
-        * @return org.apache.axiom.om.OMElement
-        */
-       public org.apache.axiom.om.OMElement getOMElement (
+        * @retunt getOMElement (
                final javax.xml.namespace.QName parentQName,
                final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException{
 
@@ -26404,8 +26285,7 @@
                                public void setUsername(java.lang.String param){
                             localUsernameTracker = true;
                                    
-                                            this.localUsername=param;
-                                    
+
 
                                }
                             
@@ -26903,8 +26783,7 @@
                                        // setting primitive attribute tracker to true
                                        local_returnTracker =
                                        param != java.lang.Integer.MIN_VALUE;
-                                   
-                                            this.local_return=param;
+     _return=param;
                                     
 
                                }
@@ -26950,7 +26829,7 @@
 
                     prefix = parentQName.getPrefix();
                     namespace = parentQName.getNamespaceURI();
-                    writeStartElement(prefix, namespace, parentQName.getLocalPart(), xmlWriter);
+
                 
                   if (serializeType){
                
@@ -27824,8 +27703,7 @@
                   if (serializeType){
                
 
-                   java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://data");
-                   if ((namespacePrefix != null) && (namespacePrefix.trim().length() > 0)){
+                   java.lang.String namespacePrefix = regist& (namespacePrefix.trim().length() > 0)){
                        writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
                            namespacePrefix+":getListaUtentiOnlineResponse",
                            xmlWriter);
@@ -28275,9 +28153,7 @@
         * @param factory
         * @return org.apache.axiom.om.OMElement
         */
-       public org.apache.axiom.om.OMElement getOMElement (
-               final javax.xml.namespace.QName parentQName,
-               final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException{
+       public org.apache.axiom.om.OMElement getOMElnal org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException{
 
 
         
@@ -28771,8 +28647,7 @@
                         
                                     protected java.lang.String localUsername ;
                                 
-                           /*  This tracker boolean wil be used to detect whether the user called the set method
-                          *   for this attribute. It will be used to determine whether to include this field
+                           /*  This tracker boolean wil be used is attribute. It will be used to determine whether to include this field
                            *   in the serialized XML
                            */
                            protected boolean localUsernameTracker = false ;
@@ -28813,8 +28688,7 @@
                         
                                     protected java.lang.String localUsername_amico ;
                                 
-                           /*  This tracker boolean wil be used to detect whether the user called the set method
-                          *   for this attribute. It will be used to determine whether to include this field
+                           /*  This tracker boolean wil be used to detect whether the user called the set methther to include this field
                            *   in the serialized XML
                            */
                            protected boolean localUsername_amicoTracker = false ;
@@ -29363,9 +29237,7 @@
                                 
                            /*  This tracker boolean wil be used to detect whether the user called the set method
                           *   for this attribute. It will be used to determine whether to include this field
-                           *   in the serialized XML
-                           */
-                           protected boolean local_returnTracker = false ;
+                         protected boolean local_returnTracker = false ;
 
                            public boolean is_returnSpecified(){
                                return local_returnTracker;
@@ -29413,8 +29285,7 @@
 
 
         
-               org.apache.axiom.om.OMDataSource dataSource =
-                       new org.apache.axis2.databinding.ADBDataSource(this,MY_QNAME);
+             .axis2.databinding.ADBDataSource(this,MY_QNAME);
                return factory.createOMElement(dataSource,MY_QNAME);
             
         }
@@ -29450,8 +29321,7 @@
                            namespacePrefix+":cancellaAmicoResponse",
                            xmlWriter);
                    } else {
-                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                           "cancellaAmicoResponse",
+                       writeAttribut  "cancellaAmicoResponse",
                            xmlWriter);
                    }
 
@@ -29886,9 +29756,7 @@
                            xmlWriter);
                    } else {
                        writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                           "deletePartitaResponse",
-                           xmlWriter);
-                   }
+                         }
 
                
                    }
@@ -30329,8 +30197,7 @@
         }
 
          public void serialize(final javax.xml.namespace.QName parentQName,
-                                       javax.xml.stream.XMLStreamWriter xmlWriter)
-                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+                                       javax.xml.stream.XMLStreamWriter xmlWr.apache.axis2.databinding.ADBException{
                            serialize(parentQName,xmlWriter,false);
          }
 
@@ -30827,8 +30694,7 @@
 
          public void serialize(final javax.xml.namespace.QName parentQName,
                                        javax.xml.stream.XMLStreamWriter xmlWriter)
-                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
-                           serialize(parentQName,xmlWriter,false);
+                                throws javax.xml.stream.XMLStreamException, org.ap,xmlWriter,false);
          }
 
          public void serialize(final javax.xml.namespace.QName parentQName,
@@ -30868,8 +30734,7 @@
                                     writeStartElement(null, namespace, "return", xmlWriter);
                              
 
-                                          if (local_return==null){
-                                              // write the nil attribute
+                            // write the nil attribute
                                               
                                                      writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
                                                   
@@ -31319,8 +31184,7 @@
                            serialize(parentQName,xmlWriter,false);
          }
 
-         public void serialize(final javax.xml.namespace.QName parentQName,
-                               javax.xml.stream.XMLStreamWriter xmlWriter,
+         public void serialize(final javax.xml.namespace.lWriter,
                                boolean serializeType)
             throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
             
@@ -31819,8 +31683,7 @@
                            serialize(parentQName,xmlWriter,false);
          }
 
-         public void serialize(final javax.xml.namespace.QName parentQName,
-                               javax.xml.stream.XMLStreamWriter xmlWriter,
+         public void serialixml.stream.XMLStreamWriter xmlWriter,
                                boolean serializeType)
             throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
             
@@ -31857,8 +31720,7 @@
                              
                                                if (false) {
                                            
-                                                         throw new org.apache.axis2.databinding.ADBException("return cannot be null!!");
-                                                      
+                                                         thro
                                                } else {
                                                     xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(local_return));
                                                }
@@ -32293,8 +32155,7 @@
                                                if (false) {
                                            
                                                          throw new org.apache.axis2.databinding.ADBException("return cannot be null!!");
-                                                      
-                                               } else {
+                 } else {
                                                     xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(local_return));
                                                }
                                     
@@ -32729,8 +32590,7 @@
                                            
                                                          throw new org.apache.axis2.databinding.ADBException("return cannot be null!!");
                                                       
-                                               } else {
-                                                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(local_return));
+                                       haracters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(local_return));
                                                }
                                     
                                    xmlWriter.writeEndElement();
@@ -33175,8 +33035,7 @@
                 java.lang.String namespace = null;
                 
 
-                    prefix = parentQName.getPrefix();
-                    namespace = parentQName.getNamespaceURI();
+                    prefix I();
                     writeStartElement(prefix, namespace, parentQName.getLocalPart(), xmlWriter);
                 
                   if (serializeType){
@@ -33670,10 +33529,7 @@
                                public void setUsername(java.lang.String param){
                             localUsernameTracker = true;
                                    
-                                            this.localUsername=param;
-                                    
-
-                               }
+                                                      }
                             
 
                         /**
@@ -33713,10 +33569,7 @@
                             localNome_nuovoTracker = true;
                                    
                                             this.localNome_nuovo=param;
-                                    
 
-                               }
-                            
 
      
      
@@ -34270,9 +34123,7 @@
      
         /**
         *
-        * @param parentQName
-        * @param factory
-        * @return org.apache.axiom.om.OMElement
+        * @ement
         */
        public org.apache.axiom.om.OMElement getOMElement (
                final javax.xml.namespace.QName parentQName,
@@ -34311,8 +34162,7 @@
                   if (serializeType){
                
 
-                   java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://data");
-                   if ((namespacePrefix != null) && (namespacePrefix.trim().length() > 0)){
+                   java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://dngth() > 0)){
                        writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
                            namespacePrefix+":getUtenteEmailResponse",
                            xmlWriter);
@@ -34349,10 +34199,7 @@
         }
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
-            if(namespace.equals("http://data")){
-                return "ns1";
-            }
-            return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
+            if(na   return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
 
         /**
@@ -34801,8 +34648,7 @@
 
                    java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://data");
                    if ((namespacePrefix != null) && (namespacePrefix.trim().length() > 0)){
-                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                           namespacePrefix+":getUtenteOnline",
+                       writeAttribute("xsi","http://www.w3.orgnteOnline",
                            xmlWriter);
                    } else {
                        writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
@@ -35301,8 +35147,7 @@
 
                    java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://data");
                    if ((namespacePrefix != null) && (namespacePrefix.trim().length() > 0)){
-                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                           namespacePrefix+":updatePartitaResponse",
+                       writeAttri     namespacePrefix+":updatePartitaResponse",
                            xmlWriter);
                    } else {
                        writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
@@ -35339,9 +35184,7 @@
         }
 
         /**
-         * Utility method to write an element start tag.
-         */
-        private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
+         * Utility method to write an elprefix, java.lang.String namespace, java.lang.String localPart,
                                        javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
             java.lang.String writerPrefix = xmlWriter.getPrefix(namespace);
             if (writerPrefix != null) {
@@ -35785,8 +35628,7 @@
 
         
                org.apache.axiom.om.OMDataSource dataSource =
-                       new org.apache.axis2.databinding.ADBDataSource(this,MY_QNAME);
-               return factory.createOMElement(dataSource,MY_QNAME);
+                       new org.apache.axis2.databindource,MY_QNAME);
             
         }
 
@@ -36331,8 +36173,7 @@
                            */
                            protected boolean localUsernameTracker = false ;
 
-                           public boolean isUsernameSpecified(){
-                               return localUsernameTracker;
+                           pubeTracker;
                            }
 
                            
@@ -36374,8 +36215,7 @@
                            protected boolean localCognome_nuovoTracker = false ;
 
                            public boolean isCognome_nuovoSpecified(){
-                               return localCognome_nuovoTracker;
-                           }
+       }
 
                            
 
@@ -36423,8 +36263,7 @@
         }
 
          public void serialize(final javax.xml.namespace.QName parentQName,
-                                       javax.xml.stream.XMLStreamWriter xmlWriter)
-                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+                              throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
                            serialize(parentQName,xmlWriter,false);
          }
 
@@ -36974,8 +36813,7 @@
         }
 
          public void serialize(final javax.xml.namespace.QName parentQName,
-                                       javax.xml.stream.XMLStreamWriter xmlWriter)
-                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+                                       javax.xml.stream.LStreamException, org.apache.axis2.databinding.ADBException{
                            serialize(parentQName,xmlWriter,false);
          }
 
@@ -37013,8 +36851,7 @@
                    }
                 if (local_returnTracker){
                                     namespace = "http://data";
-                                    writeStartElement(null, namespace, "return", xmlWriter);
-                             
+
                                                if (false) {
                                            
                                                          throw new org.apache.axis2.databinding.ADBException("return cannot be null!!");
@@ -37048,9 +36885,7 @@
             } else {
                 if (namespace.length() == 0) {
                     prefix = "";
-                } else if (prefix == null) {
-                    prefix = generatePrefix(namespace);
-                }
+                } else if       }
 
                 xmlWriter.writeStartElement(prefix, localPart, namespace);
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -37493,7 +37328,7 @@
                                           if (localIdtoken==null){
                                               // write the nil attribute
                                               
-                                                     writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
+         001/XMLSchema-instance","nil","1",xmlWriter);
                                                   
                                           }else{
 
@@ -37996,9 +37831,7 @@
                            
                         
                             /**
-                               * Auto generated setter method
-                               * @param param Valore
-                               */
+                               * Auto generated setter meth  */
                                public void setValore(int param){
                             
                                        // setting primitive attribute tracker to true
@@ -38039,8 +37872,7 @@
 
          public void serialize(final javax.xml.namespace.QName parentQName,
                                javax.xml.stream.XMLStreamWriter xmlWriter,
-                               boolean serializeType)
-            throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+                   tion, org.apache.axis2.databinding.ADBException{
             
                 
 
@@ -38594,9 +38426,7 @@
                         */
 
                         
-                                    protected java.lang.String localNomePartita ;
-                                
-                           /*  This tracker boolean wil be used to detect whether the user called the set method
+                                    protected java.la    /*  This tracker boolean wil be used to detect whether the user called the set method
                           *   for this attribute. It will be used to determine whether to include this field
                            *   in the serialized XML
                            */
@@ -38637,8 +38467,7 @@
 
                         
                                     protected int localPos_iniziale ;
-                                
-                           /*  This tracker boolean wil be used to detect whether the user called the set method
+       used to detect whether the user called the set method
                           *   for this attribute. It will be used to determine whether to include this field
                            *   in the serialized XML
                            */
@@ -39367,8 +39196,7 @@
                             while (!reader.isStartElement() && !reader.isEndElement())
                                 reader.next();
                             
-                                if (reader.isStartElement())
-                                // A start element we are not expecting indicates a trailing invalid property
+                    lement we are not expecting indicates a trailing invalid property
                                 throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
                             
 
@@ -39419,9 +39247,7 @@
 
                            /**
                            * Auto generated getter method
-                           * @return java.lang.String
-                           */
-                           public  java.lang.String getIdtoken(){
+                          public  java.lang.String getIdtoken(){
                                return localIdtoken;
                            }
 
@@ -39463,8 +39289,7 @@
                            * Auto generated getter method
                            * @return java.lang.String
                            */
-                           public  java.lang.String getUsername(){
-                               return localUsername;
+             return localUsername;
                            }
 
                            
@@ -39569,8 +39394,7 @@
                   if (serializeType){
                
 
-                   java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://data");
-                   if ((namespacePrefix != null) && (namespacePrefix.trim().length() > 0)){
+                             if ((namespacePrefix != null) && (namespacePrefix.trim().length() > 0)){
                        writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
                            namespacePrefix+":nuovoAmico",
                            xmlWriter);
@@ -40119,7 +39943,7 @@
 
                    java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://data");
                    if ((namespacePrefix != null) && (namespacePrefix.trim().length() > 0)){
-                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
+        ",
                            namespacePrefix+":getUtenteResponse",
                            xmlWriter);
                    } else {
@@ -40158,11 +39982,7 @@
             if(namespace.equals("http://data")){
                 return "ns1";
             }
-            return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
-        }
-
-        /**
-         * Utility method to write an element start tag.
+            return org.apache.axis2.dy method to write an element start tag.
          */
         private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
                                        javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
@@ -40197,8 +40017,7 @@
         /**
          * Util method to write an attribute without the ns prefix
          */
-        private void writeAttribute(java.lang.String namespace,java.lang.String attName,
-                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
+        private void writeAttribute(java.lang.String nag attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
             if (namespace.equals("")) {
                 xmlWriter.writeAttribute(attName,attValue);
             } else {
@@ -40644,7 +40463,7 @@
                                           if (localUsername==null){
                                               // write the nil attribute
                                               
-                                                     writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
+                                                     w
                                                   
                                           }else{
 
@@ -41147,8 +40966,7 @@
         /**
          * Utility method to write an element start tag.
          */
-        private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
-                                       javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+        private void writeStartElement(java.lang.String prefix, java.lang.String namespaam.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
             java.lang.String writerPrefix = xmlWriter.getPrefix(namespace);
             if (writerPrefix != null) {
                 xmlWriter.writeStartElement(namespace, localPart);
@@ -41182,9 +41000,7 @@
          */
         private void writeAttribute(java.lang.String namespace,java.lang.String attName,
                                     java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
-            if (namespace.equals("")) {
-                xmlWriter.writeAttribute(attName,attValue);
-            } else {
+            if (namespace.equelse {
                 registerPrefix(xmlWriter, namespace);
                 xmlWriter.writeAttribute(namespace,attName,attValue);
             }
@@ -41618,9 +41434,7 @@
         private void writeAttribute(java.lang.String namespace,java.lang.String attName,
                                     java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
             if (namespace.equals("")) {
-                xmlWriter.writeAttribute(attName,attValue);
-            } else {
-                registerPrefix(xmlWriter, namespace);
+            registerPrefix(xmlWriter, namespace);
                 xmlWriter.writeAttribute(namespace,attName,attValue);
             }
         }
@@ -42508,9 +42322,7 @@
                    }
 
                
-                   }
-                if (localIdtokenTracker){
-                                    namespace = "http://data";
+              namespace = "http://data";
                                     writeStartElement(null, namespace, "idtoken", xmlWriter);
                              
 
@@ -43062,9 +42874,7 @@
                                * Auto generated setter method
                                * @param param Valore
                                */
-                               public void setValore(int param){
-                            
-                                       // setting primitive attribute tracker to true
+                               public void setValore(int p primitive attribute tracker to true
                                        localValoreTracker =
                                        param != java.lang.Integer.MIN_VALUE;
                                    
@@ -43105,11 +42915,7 @@
                                boolean serializeType)
             throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
             
-                
-
-
-                java.lang.String prefix = null;
-                java.lang.String namespace = null;
+ a.lang.String namespace = null;
                 
 
                     prefix = parentQName.getPrefix();
@@ -43680,8 +43486,7 @@
                                                          throw new org.apache.axis2.databinding.ADBException("return cannot be null!!");
                                                       
                                                } else {
-                                                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(local_return));
-                                               }
+                                                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.Converte}
                                     
                                    xmlWriter.writeEndElement();
                              }
@@ -43722,7 +43527,7 @@
          * Util method to write an attribute with the ns prefix
          */
         private void writeAttribute(java.lang.String prefix,java.lang.String namespace,java.lang.String attName,
-                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
+                                    javtream.XMLStreamException{
             if (xmlWriter.getPrefix(namespace) == null) {
                 xmlWriter.writeNamespace(prefix, namespace);
                 xmlWriter.setPrefix(prefix, namespace);
@@ -44189,9 +43994,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://data")){
-                return "ns1";
-            }
-            return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
+            .BeanUtil.getUniquePrefix();
         }
 
         /**
@@ -44694,9 +44497,7 @@
             }
         }
         
-        /**
-         * Util method to write an attribute with the ns prefix
-         */
+
         private void writeAttribute(java.lang.String prefix,java.lang.String namespace,java.lang.String attName,
                                     java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
             if (xmlWriter.getPrefix(namespace) == null) {
@@ -44728,8 +44529,7 @@
 
                 java.lang.String attributeNamespace = qname.getNamespaceURI();
                 java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
-                if (attributePrefix == null) {
-                    attributePrefix = registerPrefix(xmlWriter, attributeNamespace);
+         refix(xmlWriter, attributeNamespace);
                 }
                 java.lang.String attributeValue;
                 if (attributePrefix.trim().length() > 0) {
@@ -45172,8 +44972,7 @@
 
                 java.lang.String attributeNamespace = qname.getNamespaceURI();
                 java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
-                if (attributePrefix == null) {
-                    attributePrefix = registerPrefix(xmlWriter, attributeNamespace);
+registerPrefix(xmlWriter, attributeNamespace);
                 }
                 java.lang.String attributeValue;
                 if (attributePrefix.trim().length() > 0) {
@@ -46045,10 +45844,7 @@
                 java.lang.String attributeNamespace = qname.getNamespaceURI();
                 java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
                 if (attributePrefix == null) {
-                    attributePrefix = registerPrefix(xmlWriter, attributeNamespace);
-                }
-                java.lang.String attributeValue;
-                if (attributePrefix.trim().length() > 0) {
+                    attributePrefix = registerPrefix(xmlWriter, attrib             if (attributePrefix.trim().length() > 0) {
                     attributeValue = attributePrefix + ":" + qname.getLocalPart();
                 } else {
                     attributeValue = qname.getLocalPart();
@@ -46486,9 +46282,7 @@
                 }
                 java.lang.String attributeValue;
                 if (attributePrefix.trim().length() > 0) {
-                    attributeValue = attributePrefix + ":" + qname.getLocalPart();
-                } else {
-                    attributeValue = qname.getLocalPart();
+                    attrib                 attributeValue = qname.getLocalPart();
                 }
 
                 if (namespace.equals("")) {
@@ -46930,9 +46724,7 @@
                 }
                 java.lang.String attributeValue;
                 if (attributePrefix.trim().length() > 0) {
-                    attributeValue = attributePrefix + ":" + qname.getLocalPart();
-                } else {
-                    attributeValue = qname.getLocalPart();
+                    attributeValue = attributePrefix alue = qname.getLocalPart();
                 }
 
                 if (namespace.equals("")) {
@@ -47381,8 +47173,7 @@
                                           }
                                     
                                    xmlWriter.writeEndElement();
-                             } if (localUsernameTracker){
-                                    namespace = "http://data";
+                   = "http://data";
                                     writeStartElement(null, namespace, "username", xmlWriter);
                              
 
@@ -47939,12 +47730,7 @@
                            protected boolean localCognomeTracker = false ;
 
                            public boolean isCognomeSpecified(){
-                               return localCognomeTracker;
-                           }
-
-                           
-
-                           /**
+                               return loca                  /**
                            * Auto generated getter method
                            * @return java.lang.String
                            */
@@ -47986,8 +47772,7 @@
 
                            
 
-                           /**
-                           * Auto generated getter method
+
                            * @return java.lang.String
                            */
                            public  java.lang.String getEmail(){
@@ -48667,9 +48452,7 @@
                                     protected java.lang.String localPassword ;
                                 
                            /*  This tracker boolean wil be used to detect whether the user called the set method
-                          *   for this attribute. It will be used to determine whether to include this field
-                           *   in the serialized XML
-                           */
+                          *   for this attribute. It will be used to determine whether to include this fi/
                            protected boolean localPasswordTracker = false ;
 
                            public boolean isPasswordSpecified(){
@@ -48711,8 +48494,7 @@
                            /*  This tracker boolean wil be used to detect whether the user called the set method
                           *   for this attribute. It will be used to determine whether to include this field
                            *   in the serialized XML
-                           */
-                           protected boolean localNomeTracker = false ;
+         false ;
 
                            public boolean isNomeSpecified(){
                                return localNomeTracker;
@@ -48754,10 +48536,7 @@
                           *   for this attribute. It will be used to determine whether to include this field
                            *   in the serialized XML
                            */
-                           protected boolean localCognomeTracker = false ;
-
-                           public boolean isCognomeSpecified(){
-                               return localCognomeTracker;
+                           protected boolean localCognomeTracker =                    return localCognomeTracker;
                            }
 
                            
@@ -48799,10 +48578,7 @@
                            protected boolean localEmailTracker = false ;
 
                            public boolean isEmailSpecified(){
-                               return localEmailTracker;
-                           }
 
-                           
 
                            /**
                            * Auto generated getter method
@@ -48848,8 +48624,7 @@
         }
 
          public void serialize(final javax.xml.namespace.QName parentQName,
-                                       javax.xml.stream.XMLStreamWriter xmlWriter)
-                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+                                       javax.xml.stream.XMtreamException, org.apache.axis2.databinding.ADBException{
                            serialize(parentQName,xmlWriter,false);
          }
 
@@ -49499,8 +49274,7 @@
 
          public void serialize(final javax.xml.namespace.QName parentQName,
                                        javax.xml.stream.XMLStreamWriter xmlWriter)
-                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
-                           serialize(parentQName,xmlWriter,false);
+                                throws javax.xml.stream.XMLStreamException, org.ae,xmlWriter,false);
          }
 
          public void serialize(final javax.xml.namespace.QName parentQName,
@@ -49540,8 +49314,7 @@
                                     writeStartElement(null, namespace, "return", xmlWriter);
                              
 
-                                          if (local_return==null){
-                                              // write the nil attribute
+                            // write the nil attribute
                                               
                                                      writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
                                                   
@@ -49577,9 +49350,7 @@
             } else {
                 if (namespace.length() == 0) {
                     prefix = "";
-                } else if (prefix == null) {
-                    prefix = generatePrefix(namespace);
-                }
+                } else          }
 
                 xmlWriter.writeStartElement(prefix, localPart, namespace);
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -49617,7 +49388,7 @@
              * Util method to write an attribute without the ns prefix
              */
             private void writeQNameAttribute(java.lang.String namespace, java.lang.String attName,
-                                             javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+                      ter xmlWriter) throws javax.xml.stream.XMLStreamException {
 
                 java.lang.String attributeNamespace = qname.getNamespaceURI();
                 java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
@@ -49653,8 +49424,7 @@
                     xmlWriter.setPrefix(prefix,namespaceURI);
                 }
 
-                if (prefix.trim().length() > 0){
-                    xmlWriter.writeCharacters(prefix + ":" + org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+       rs(prefix + ":" + org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
                 } else {
                     // i.e this is the default namespace
                     xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
@@ -50104,9 +49874,7 @@
                                         
                                                    xmlWriter.writeCharacters(localNomePartita);
                                             
-                                          }
-                                    
-                                   xmlWriter.writeEndElement();
+                               xmlWriter.writeEndElement();
                              
                     xmlWriter.writeEndElement();
                
@@ -50665,9 +50433,7 @@
 
                     prefix = parentQName.getPrefix();
                     namespace = parentQName.getNamespaceURI();
-                    writeStartElement(prefix, namespace, parentQName.getLocalPart(), xmlWriter);
-                
-                  if (serializeType){
+                    writeStartEleme            if (serializeType){
                
 
                    java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://data");
@@ -50700,9 +50466,7 @@
                                             
                                           }
                                     
-                                   xmlWriter.writeEndElement();
-                             } if (localUsernameTracker){
-                                    namespace = "http://data";
+                                   xmlWriter.writeEndElement();          namespace = "http://data";
                                     writeStartElement(null, namespace, "username", xmlWriter);
                              
 
@@ -51278,11 +51042,7 @@
                 xmlWriter.writeNamespace(prefix, namespace);
                 xmlWriter.setPrefix(prefix, namespace);
             }
-            xmlWriter.writeAttribute(namespace,attName,attValue);
-        }
-
-        /**
-         * Util method to write an attribute without the ns prefix
+            xmlWriter.writeAttribute(namespace,attName,a the ns prefix
          */
         private void writeAttribute(java.lang.String namespace,java.lang.String attName,
                                     java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
@@ -51316,8 +51076,7 @@
                 if (namespace.equals("")) {
                     xmlWriter.writeAttribute(attName, attributeValue);
                 } else {
-                    registerPrefix(xmlWriter, namespace);
-                    xmlWriter.writeAttribute(namespace, attName, attributeValue);
+                   amespace, attName, attributeValue);
                 }
             }
         /**
@@ -51784,9 +51543,7 @@
         private void writeAttribute(java.lang.String namespace,java.lang.String attName,
                                     java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
             if (namespace.equals("")) {
-                xmlWriter.writeAttribute(attName,attValue);
-            } else {
-                registerPrefix(xmlWriter, namespace);
+              gisterPrefix(xmlWriter, namespace);
                 xmlWriter.writeAttribute(namespace,attName,attValue);
             }
         }
@@ -52290,8 +52047,7 @@
         private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
                                        javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
             java.lang.String writerPrefix = xmlWriter.getPrefix(namespace);
-            if (writerPrefix != null) {
-                xmlWriter.writeStartElement(namespace, localPart);
+      ce, localPart);
             } else {
                 if (namespace.length() == 0) {
                     prefix = "";
@@ -52331,9 +52087,7 @@
         }
 
 
-           /**
-             * Util method to write an attribute without the ns prefix
-             */
+              */
             private void writeQNameAttribute(java.lang.String namespace, java.lang.String attName,
                                              javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
 

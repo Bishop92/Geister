@@ -94,7 +94,7 @@ public class GestisceFile {
 	 * @param estensione_file indica l'estensione che avra' il file
 	 * @param identificativo Indica l'identificativo del giocatore a cui e' associato il file	 * 
 	 */
-	public GestisceFile(String nome, String estensione_file, String identificativo){
+    protected GestisceFile(String nome, String estensione_file, String identificativo){
 		this.estensione = estensione_file;
 		identificativo_giocatore = identificativo;
 		nome_file = nome + "_" + identificativo_giocatore;
@@ -127,7 +127,7 @@ public class GestisceFile {
 	 * aggiungere la stringa alla fine del file cancellando il suo vecchio contenuto
 	 * 
 	 */
-	public void scriviValore(String valore, boolean modifica_vecchio) throws FileNotFoundException{
+    void scriviValore(String valore, boolean modifica_vecchio) throws FileNotFoundException{
 		//memorizzo il nome completo del file
 		String nome = nome_file + estensione;
 		PrintStream destinazione = new PrintStream(new FileOutputStream(nome, modifica_vecchio));
@@ -143,14 +143,14 @@ public class GestisceFile {
 	 * aggiungere la stringa alla fine del file cancellando il suo vecchio contenuto
 	 * 
 	 */
-	public void scriviVettore(Vector<String> vettore, boolean modifica_vecchio) throws FileNotFoundException{
+    protected void scriviVettore(Vector<String> vettore, boolean modifica_vecchio) throws FileNotFoundException{
 		//memorizzo il nome completo del file
 		String nome = nome_file + estensione;
 		PrintStream destinazione = new PrintStream(new FileOutputStream(nome, modifica_vecchio));
 		//aggiungo ogni elemento del vettore al file
-		for(int a=0; a<vettore.size(); a++){
-			destinazione.println(vettore.get(a));
-		}
+        for (String aVettore : vettore) {
+            destinazione.println(aVettore);
+        }
 		destinazione.close();
 	}
 	
@@ -161,7 +161,7 @@ public class GestisceFile {
 	 * 
 	 * @return String - Stringa contenuta al rigo x
 	 */
-	public String leggiLineaX(int x){
+    protected String leggiLineaX(int x){
 		try{
 			//memorizzo il nome completo del file
 			String nome = nome_file + estensione;
@@ -376,7 +376,7 @@ public class GestisceFile {
 		//creo una stringa descrittiva indicante il numero della partita e la sua posizione all'interno del file
 		String posizione_partita = "Partita " + numero_partite.toString() + " : ";
 		//controllo se è la prima partita che sto giocando, per determinare a che rigo la memorizzo
-		if (numero_partite.intValue() == 1){
+		if (numero_partite == 1){
 			posizione_partita = posizione_partita + "riga " + Integer.toString(testo_vecchio.size()+1);
 		}
 		else{ //non è la prima partita
@@ -398,7 +398,7 @@ public class GestisceFile {
      *
      * @return un Vector contenente tutte le stringhe(parole) che compongono il testo.
      */
-    public static Vector<String> dividiTesto(String testo){
+    protected static Vector<String> dividiTesto(String testo){
 		Vector <String> parole = new Vector <String>();
 		String s = testo;
 		boolean itera = true;
@@ -432,7 +432,7 @@ public class GestisceFile {
      *
      * @return la corrispondente stringa di testo senza spazi bianchi o caratteri di "tab" iniziali.
      */
-    public static String togliBianchi(String s)
+    private static String togliBianchi(String s)
     {
        int index = 0; 
        for(;s.substring(index).length() > 0 && (s.charAt(index) == ' '); index++);

@@ -2,11 +2,6 @@ package apprendimento;
 
 import logica.*;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.sql.*;
 import java.util.Vector;
 
@@ -72,7 +67,7 @@ public class LogPartita {
 				}//if_id_partita
 			log=trasformaInVettore(temp_log);
 			
-			res.close(); // chiudere le risorse DB è obbligatorio
+			res.close(); // chiudere le risorse DB ï¿½ obbligatorio
 			cmd.close();
 			con.close();
 		}
@@ -125,7 +120,7 @@ public class LogPartita {
 	public int getLastTurn(){
 		String turno = log.elementAt(log.size()-1);
 		int res=0;
-		//testo se il turno è un numero a singola o doppia (...) cifra
+		//testo se il turno ï¿½ un numero a singola o doppia (...) cifra
 		if(turno.substring(0, 2).endsWith("."))
 			res= Integer.parseInt(turno.substring(0, 1));
 		if(turno.substring(0, 3).endsWith("."))

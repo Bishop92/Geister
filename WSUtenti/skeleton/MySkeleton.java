@@ -61,9 +61,9 @@ import data.WSDataStub.SetUtenteVinte;
  *   <li>implementazione modificaUtente;</li>
  * </ul>
  */
-public class MySkeleton {
+class MySkeleton {
 	/**Costruttore di default vuoto, serve a istanziare l'oggetto
-	 * dentro lo Skeleton autogenerato. Si userà poi per richiamare i metodi
+	 * dentro lo Skeleton autogenerato. Si userï¿½ poi per richiamare i metodi
 	 * riscritti
      */
 	public MySkeleton(){}
@@ -71,7 +71,7 @@ public class MySkeleton {
      * @param GetCognome (token,username)
      * @return GetCognomeResponse: cognome dell'utente (String)
      */
-	public boolean insertLog(String message,String function)
+    boolean insertLog(String message, String function)
 	{
 		boolean resp=false;
 		try {
@@ -248,7 +248,7 @@ public class MySkeleton {
 		    return resp;
 		} catch (RemoteException e) {insertLog("ERR:"+e.toString(), "WSUtenti/SetCognome"); resp.set_return(false);return resp;}
 	}
-	/** Restituisce se l'utente è in fase playing, richiamando il metodo dal servizio WSData
+	/** Restituisce se l'utente ï¿½ in fase playing, richiamando il metodo dal servizio WSData
      * @param IsPlaying (token,username)
      * @return IsPlayingResponse: utente playing (boolean)
      */
@@ -272,7 +272,7 @@ public class MySkeleton {
 		} catch (RemoteException e) {insertLog("ERR:"+e.toString(), "WSUtenti/IsPlaying"); resp.set_return(false);return resp;}
 
 	}
-	/** Restituisce se l'utente è online, richiamando il metodo dal servizio WSData
+	/** Restituisce se l'utente ï¿½ online, richiamando il metodo dal servizio WSData
      * @param IsOnline (token,username)
      * @return IsOnlineResponse: utente online (boolean)
      */
@@ -293,7 +293,7 @@ public class MySkeleton {
 		    return resp;
 		} catch (RemoteException e) {insertLog("ERR:"+e.toString(), "WSUtenti/IsOnline"); resp.set_return(false);return resp;}
 	}
-	/** Restituisce se l'utente è IA, richiamando il metodo dal servizio WSData
+	/** Restituisce se l'utente ï¿½ IA, richiamando il metodo dal servizio WSData
      * @param IsIA (token,username)
      * @return IsIAResponse: utente IA (boolean)
      */
@@ -371,14 +371,14 @@ public class MySkeleton {
 			utente.setUsername(user);
 			utente.setPassword(password);
 		    WSDataStub.GetIdtokenResponse dataResp=stub.getIdtoken(utente);
-		    if(dataResp.get_return()!="")
+		    if(!dataResp.get_return().equals(""))
 		    {//utente modificato
 		    	resp.set_return(dataResp.get_return());
 		    	return resp;
 		    }else{resp.set_return("ERR:NoToken");return resp;}
 		} catch (RemoteException e) {resp.set_return("ERR:"+e.toString());return resp;}
 	}
-	/** Restituisce il controllo se uno username cercato è amico.Da implementare nel servizio WSData
+	/** Restituisce il controllo se uno username cercato ï¿½ amico.Da implementare nel servizio WSData
      * @param IsAmico (idtoken,username,username_amico)
      * @return IsAmicoResponse: boolean di conferma (boolean)
      */
@@ -455,7 +455,7 @@ public class MySkeleton {
 				listaOnline.setIdtoken(token);
 				listaOnline.setUsername(username);
 				GetListaUtentiOnlineResponse respOnline=stub.getListaUtentiOnline(listaOnline);
-				if(respOnline.get_return()!="")
+				if(!respOnline.get_return().equals(""))
 				{
 					resp.set_return(respOnline.get_return());
 					return resp;
@@ -469,7 +469,7 @@ public class MySkeleton {
 			
 				WSDataStub.GetListaAmiciResponse dataResp=stub.getListaAmici(utente);
 		    
-				if(dataResp.get_return()!="")
+				if(!dataResp.get_return().equals(""))
 				{
 					resp.set_return(dataResp.get_return());
 					return resp;
@@ -678,7 +678,7 @@ public class MySkeleton {
 		cognome=stringPulisci(cognome, false);
 		username=stringPulisci(username, false);
 		email=stringPulisci(email, true);
-		if(nome!="" && cognome!="" && username!="" && password!="" && email!=""){
+		if(!nome.equals("") && !cognome.equals("") && !username.equals("") && !password.equals("") && !email.equals("")){
 		try {
 			
 			WSDataStub stub = new WSDataStub();

@@ -131,16 +131,10 @@
                 if (local_returnTracker){
                                     namespace = "http://data";
                                     writeStartElement(null, namespace, "return", xmlWriter);
-                             
-                                               if (false) {
-                                           
-                                                         throw new org.apache.axis2.databinding.ADBException("return cannot be null!!");
-                                                      
-                                               } else {
-                                                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(local_return));
-                                               }
-                                    
-                                   xmlWriter.writeEndElement();
+
+                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(local_return));
+
+                    xmlWriter.writeEndElement();
                              }
                     xmlWriter.writeEndElement();
                
@@ -259,7 +253,7 @@
             if (qnames != null) {
                 // we have to store this data until last moment since it is not possible to write any
                 // namespace data after writing the charactor data
-                java.lang.StringBuffer stringToWrite = new java.lang.StringBuffer();
+                StringBuilder stringToWrite = new StringBuilder();
                 java.lang.String namespaceURI = null;
                 java.lang.String prefix = null;
 
@@ -376,7 +370,7 @@
                         "type");
                   if (fullTypeName!=null){
                     java.lang.String nsPrefix = null;
-                    if (fullTypeName.indexOf(":") > -1){
+                    if (fullTypeName.contains(":")){
                         nsPrefix = fullTypeName.substring(0,fullTypeName.indexOf(":"));
                     }
                     nsPrefix = nsPrefix==null?"":nsPrefix;
@@ -422,9 +416,7 @@
                                     
                               }  // End of if for expected property start element
                                 
-                                    else {
-                                        
-                                    }
+
                                   
                             while (!reader.isStartElement() && !reader.isEndElement())
                                 reader.next();

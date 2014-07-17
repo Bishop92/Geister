@@ -565,9 +565,7 @@
                                     
                               }  // End of if for expected property start element
                                 
-                                    else {
-                                        
-                                    }
+
                                 
                                     
                                     while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
@@ -592,9 +590,7 @@
                                     
                               }  // End of if for expected property start element
                                 
-                                    else {
-                                        
-                                    }
+
                                 
                                     
                                     while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
@@ -619,9 +615,7 @@
                                     
                               }  // End of if for expected property start element
                                 
-                                    else {
-                                        
-                                    }
+
                                   
                             while (!reader.isStartElement() && !reader.isEndElement())
                                 reader.next();

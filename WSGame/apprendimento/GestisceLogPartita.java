@@ -7,13 +7,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Vector;
 
-public class GestisceLogPartita {
+class GestisceLogPartita {
 
 	private Vector<LogPartita> partite;
-	private int id_giocatore;
 
-	public GestisceLogPartita(int id_giocatore){
-		this.id_giocatore = id_giocatore;
+    public GestisceLogPartita(int id_giocatore){
+        int id_giocatore1 = id_giocatore;
 		
 		partite = trovaPartite(id_giocatore);
 	}
@@ -31,7 +30,7 @@ public class GestisceLogPartita {
 			while (res.next()){
 				//partite.add(new LogPartita(res.getInt("partita")));
 			}
-			res.close(); // chiudere le risorse DB è obbligatorio
+			res.close(); // chiudere le risorse DB ï¿½ obbligatorio
 			cmd.close();
 			con.close();
 		}

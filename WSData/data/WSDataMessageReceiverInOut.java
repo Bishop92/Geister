@@ -11,7 +11,7 @@
         *  WSDataMessageReceiverInOut message receiver
         */
 
-        public class WSDataMessageReceiverInOut extends org.apache.axis2.receivers.AbstractInOutMessageReceiver{
+        class WSDataMessageReceiverInOut extends org.apache.axis2.receivers.AbstractInOutMessageReceiver{
 
 
         public void invokeBusinessLogic(org.apache.axis2.context.MessageContext msgContext, org.apache.axis2.context.MessageContext newMsgContext)
@@ -43,8 +43,8 @@
 	                        data.GetListaAmici wrappedParam =
                                                              (data.GetListaAmici)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.GetListaAmici.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.GetListaAmici.class
+                                                             );
                                                 
                                                getListaAmiciResponse1 =
                                                    
@@ -52,8 +52,7 @@
                                                          skel.getListaAmici(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), getListaAmiciResponse1, false, new javax.xml.namespace.QName("http://data",
-                                                    "getListaAmici"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), getListaAmiciResponse1);
                                     } else 
 
             if("getUtentePerse".equals(methodName)){
@@ -62,8 +61,8 @@
 	                        data.GetUtentePerse wrappedParam =
                                                              (data.GetUtentePerse)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.GetUtentePerse.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.GetUtentePerse.class
+                                                             );
                                                 
                                                getUtentePerseResponse3 =
                                                    
@@ -71,8 +70,7 @@
                                                          skel.getUtentePerse(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), getUtentePerseResponse3, false, new javax.xml.namespace.QName("http://data",
-                                                    "getUtentePerse"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), getUtentePerseResponse3);
                                     } else 
 
             if("getUtenteNome".equals(methodName)){
@@ -81,8 +79,8 @@
 	                        data.GetUtenteNome wrappedParam =
                                                              (data.GetUtenteNome)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.GetUtenteNome.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.GetUtenteNome.class
+                                                             );
                                                 
                                                getUtenteNomeResponse5 =
                                                    
@@ -90,8 +88,7 @@
                                                          skel.getUtenteNome(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), getUtenteNomeResponse5, false, new javax.xml.namespace.QName("http://data",
-                                                    "getUtenteNome"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), getUtenteNomeResponse5);
                                     } else 
 
             if("setUtentePareggiate".equals(methodName)){
@@ -100,8 +97,8 @@
 	                        data.SetUtentePareggiate wrappedParam =
                                                              (data.SetUtentePareggiate)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.SetUtentePareggiate.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.SetUtentePareggiate.class
+                                                             );
                                                 
                                                setUtentePareggiateResponse7 =
                                                    
@@ -109,8 +106,7 @@
                                                          skel.setUtentePareggiate(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), setUtentePareggiateResponse7, false, new javax.xml.namespace.QName("http://data",
-                                                    "setUtentePareggiate"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), setUtentePareggiateResponse7);
                                     } else 
 
             if("insertPartita".equals(methodName)){
@@ -119,8 +115,8 @@
 	                        data.InsertPartita wrappedParam =
                                                              (data.InsertPartita)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.InsertPartita.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.InsertPartita.class
+                                                             );
                                                 
                                                insertPartitaResponse9 =
                                                    
@@ -128,8 +124,7 @@
                                                          skel.insertPartita(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), insertPartitaResponse9, false, new javax.xml.namespace.QName("http://data",
-                                                    "insertPartita"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), insertPartitaResponse9);
                                     } else 
 
             if("getListaUtentiOnline".equals(methodName)){
@@ -138,8 +133,8 @@
 	                        data.GetListaUtentiOnline wrappedParam =
                                                              (data.GetListaUtentiOnline)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.GetListaUtentiOnline.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.GetListaUtentiOnline.class
+                                                             );
                                                 
                                                getListaUtentiOnlineResponse11 =
                                                    
@@ -147,8 +142,7 @@
                                                          skel.getListaUtentiOnline(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), getListaUtentiOnlineResponse11, false, new javax.xml.namespace.QName("http://data",
-                                                    "getListaUtentiOnline"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), getListaUtentiOnlineResponse11);
                                     } else 
 
             if("nuovoAmico".equals(methodName)){
@@ -157,8 +151,8 @@
 	                        data.NuovoAmico wrappedParam =
                                                              (data.NuovoAmico)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.NuovoAmico.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.NuovoAmico.class
+                                                             );
                                                 
                                                nuovoAmicoResponse13 =
                                                    
@@ -166,8 +160,7 @@
                                                          skel.nuovoAmico(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), nuovoAmicoResponse13, false, new javax.xml.namespace.QName("http://data",
-                                                    "nuovoAmico"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), nuovoAmicoResponse13);
                                     } else 
 
             if("insertPosizioneIniziale".equals(methodName)){
@@ -176,8 +169,8 @@
 	                        data.InsertPosizioneIniziale wrappedParam =
                                                              (data.InsertPosizioneIniziale)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.InsertPosizioneIniziale.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.InsertPosizioneIniziale.class
+                                                             );
                                                 
                                                insertPosizioneInizialeResponse15 =
                                                    
@@ -185,8 +178,7 @@
                                                          skel.insertPosizioneIniziale(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), insertPosizioneInizialeResponse15, false, new javax.xml.namespace.QName("http://data",
-                                                    "insertPosizioneIniziale"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), insertPosizioneInizialeResponse15);
                                     } else 
 
             if("insertMossa".equals(methodName)){
@@ -195,8 +187,8 @@
 	                        data.InsertMossa wrappedParam =
                                                              (data.InsertMossa)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.InsertMossa.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.InsertMossa.class
+                                                             );
                                                 
                                                insertMossaResponse17 =
                                                    
@@ -204,8 +196,7 @@
                                                          skel.insertMossa(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), insertMossaResponse17, false, new javax.xml.namespace.QName("http://data",
-                                                    "insertMossa"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), insertMossaResponse17);
                                     } else 
 
             if("getUtenteIA".equals(methodName)){
@@ -214,8 +205,8 @@
 	                        data.GetUtenteIA wrappedParam =
                                                              (data.GetUtenteIA)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.GetUtenteIA.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.GetUtenteIA.class
+                                                             );
                                                 
                                                getUtenteIAResponse19 =
                                                    
@@ -223,8 +214,7 @@
                                                          skel.getUtenteIA(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), getUtenteIAResponse19, false, new javax.xml.namespace.QName("http://data",
-                                                    "getUtenteIA"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), getUtenteIAResponse19);
                                     } else 
 
             if("getPartite".equals(methodName)){
@@ -233,8 +223,8 @@
 	                        data.GetPartite wrappedParam =
                                                              (data.GetPartite)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.GetPartite.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.GetPartite.class
+                                                             );
                                                 
                                                getPartiteResponse21 =
                                                    
@@ -242,8 +232,7 @@
                                                          skel.getPartite(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), getPartiteResponse21, false, new javax.xml.namespace.QName("http://data",
-                                                    "getPartite"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), getPartiteResponse21);
                                     } else 
 
             if("updateTipo".equals(methodName)){
@@ -252,8 +241,8 @@
 	                        data.UpdateTipo wrappedParam =
                                                              (data.UpdateTipo)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.UpdateTipo.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.UpdateTipo.class
+                                                             );
                                                 
                                                updateTipoResponse23 =
                                                    
@@ -261,8 +250,7 @@
                                                          skel.updateTipo(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), updateTipoResponse23, false, new javax.xml.namespace.QName("http://data",
-                                                    "updateTipo"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), updateTipoResponse23);
                                     } else 
 
             if("getUtente".equals(methodName)){
@@ -271,8 +259,8 @@
 	                        data.GetUtente wrappedParam =
                                                              (data.GetUtente)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.GetUtente.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.GetUtente.class
+                                                             );
                                                 
                                                getUtenteResponse25 =
                                                    
@@ -280,8 +268,7 @@
                                                          skel.getUtente(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), getUtenteResponse25, false, new javax.xml.namespace.QName("http://data",
-                                                    "getUtente"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), getUtenteResponse25);
                                     } else 
 
             if("setUtenteVinte".equals(methodName)){
@@ -290,8 +277,8 @@
 	                        data.SetUtenteVinte wrappedParam =
                                                              (data.SetUtenteVinte)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.SetUtenteVinte.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.SetUtenteVinte.class
+                                                             );
                                                 
                                                setUtenteVinteResponse27 =
                                                    
@@ -299,8 +286,7 @@
                                                          skel.setUtenteVinte(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), setUtenteVinteResponse27, false, new javax.xml.namespace.QName("http://data",
-                                                    "setUtenteVinte"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), setUtenteVinteResponse27);
                                     } else 
 
             if("setUtentePerse".equals(methodName)){
@@ -309,8 +295,8 @@
 	                        data.SetUtentePerse wrappedParam =
                                                              (data.SetUtentePerse)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.SetUtentePerse.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.SetUtentePerse.class
+                                                             );
                                                 
                                                setUtentePerseResponse29 =
                                                    
@@ -318,8 +304,7 @@
                                                          skel.setUtentePerse(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), setUtentePerseResponse29, false, new javax.xml.namespace.QName("http://data",
-                                                    "setUtentePerse"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), setUtentePerseResponse29);
                                     } else 
 
             if("setUtenteAdmin".equals(methodName)){
@@ -328,17 +313,16 @@
 	                        data.SetUtenteAdmin wrappedParam =
                                                              (data.SetUtenteAdmin)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.SetUtenteAdmin.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.SetUtenteAdmin.class
+                                                             );
                                                 
                                                setUtenteAdminResponse31 =
                                                    
                                                    
-                                                         skel.setUtenteAdmin(wrappedParam)
+                                                         skel.setUtenteAdmin()
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), setUtenteAdminResponse31, false, new javax.xml.namespace.QName("http://data",
-                                                    "setUtenteAdmin"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), setUtenteAdminResponse31);
                                     } else 
 
             if("getUtenteOnline".equals(methodName)){
@@ -347,8 +331,8 @@
 	                        data.GetUtenteOnline wrappedParam =
                                                              (data.GetUtenteOnline)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.GetUtenteOnline.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.GetUtenteOnline.class
+                                                             );
                                                 
                                                getUtenteOnlineResponse33 =
                                                    
@@ -356,8 +340,7 @@
                                                          skel.getUtenteOnline(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), getUtenteOnlineResponse33, false, new javax.xml.namespace.QName("http://data",
-                                                    "getUtenteOnline"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), getUtenteOnlineResponse33);
                                     } else 
 
             if("getNomePartita".equals(methodName)){
@@ -366,8 +349,8 @@
 	                        data.GetNomePartita wrappedParam =
                                                              (data.GetNomePartita)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.GetNomePartita.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.GetNomePartita.class
+                                                             );
                                                 
                                                getNomePartitaResponse35 =
                                                    
@@ -375,8 +358,7 @@
                                                          skel.getNomePartita(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), getNomePartitaResponse35, false, new javax.xml.namespace.QName("http://data",
-                                                    "getNomePartita"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), getNomePartitaResponse35);
                                     } else 
 
             if("updatePartita".equals(methodName)){
@@ -385,17 +367,16 @@
 	                        data.UpdatePartita wrappedParam =
                                                              (data.UpdatePartita)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.UpdatePartita.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.UpdatePartita.class
+                                                             );
                                                 
                                                updatePartitaResponse37 =
                                                    
                                                    
-                                                         skel.updatePartita(wrappedParam)
+                                                         skel.updatePartita()
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), updatePartitaResponse37, false, new javax.xml.namespace.QName("http://data",
-                                                    "updatePartita"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), updatePartitaResponse37);
                                     } else 
 
             if("setUtenteOnline".equals(methodName)){
@@ -404,8 +385,8 @@
 	                        data.SetUtenteOnline wrappedParam =
                                                              (data.SetUtenteOnline)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.SetUtenteOnline.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.SetUtenteOnline.class
+                                                             );
                                                 
                                                setUtenteOnlineResponse39 =
                                                    
@@ -413,8 +394,7 @@
                                                          skel.setUtenteOnline(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), setUtenteOnlineResponse39, false, new javax.xml.namespace.QName("http://data",
-                                                    "setUtenteOnline"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), setUtenteOnlineResponse39);
                                     } else 
 
             if("setUtenteIA".equals(methodName)){
@@ -423,8 +403,8 @@
 	                        data.SetUtenteIA wrappedParam =
                                                              (data.SetUtenteIA)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.SetUtenteIA.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.SetUtenteIA.class
+                                                             );
                                                 
                                                setUtenteIAResponse41 =
                                                    
@@ -432,8 +412,7 @@
                                                          skel.setUtenteIA(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), setUtenteIAResponse41, false, new javax.xml.namespace.QName("http://data",
-                                                    "setUtenteIA"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), setUtenteIAResponse41);
                                     } else 
 
             if("setUtenteEmail".equals(methodName)){
@@ -442,8 +421,8 @@
 	                        data.SetUtenteEmail wrappedParam =
                                                              (data.SetUtenteEmail)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.SetUtenteEmail.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.SetUtenteEmail.class
+                                                             );
                                                 
                                                setUtenteEmailResponse43 =
                                                    
@@ -451,8 +430,7 @@
                                                          skel.setUtenteEmail(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), setUtenteEmailResponse43, false, new javax.xml.namespace.QName("http://data",
-                                                    "setUtenteEmail"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), setUtenteEmailResponse43);
                                     } else 
 
             if("getMosse".equals(methodName)){
@@ -461,8 +439,8 @@
 	                        data.GetMosse wrappedParam =
                                                              (data.GetMosse)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.GetMosse.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.GetMosse.class
+                                                             );
                                                 
                                                getMosseResponse45 =
                                                    
@@ -470,8 +448,7 @@
                                                          skel.getMosse(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), getMosseResponse45, false, new javax.xml.namespace.QName("http://data",
-                                                    "getMosse"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), getMosseResponse45);
                                     } else 
 
             if("getPosizioniIniziali".equals(methodName)){
@@ -480,8 +457,8 @@
 	                        data.GetPosizioniIniziali wrappedParam =
                                                              (data.GetPosizioniIniziali)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.GetPosizioniIniziali.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.GetPosizioniIniziali.class
+                                                             );
                                                 
                                                getPosizioniInizialiResponse47 =
                                                    
@@ -489,8 +466,7 @@
                                                          skel.getPosizioniIniziali(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), getPosizioniInizialiResponse47, false, new javax.xml.namespace.QName("http://data",
-                                                    "getPosizioniIniziali"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), getPosizioniInizialiResponse47);
                                     } else 
 
             if("isUtenteIniziale".equals(methodName)){
@@ -499,8 +475,8 @@
 	                        data.IsUtenteIniziale wrappedParam =
                                                              (data.IsUtenteIniziale)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.IsUtenteIniziale.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.IsUtenteIniziale.class
+                                                             );
                                                 
                                                isUtenteInizialeResponse49 =
                                                    
@@ -508,8 +484,7 @@
                                                          skel.isUtenteIniziale(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), isUtenteInizialeResponse49, false, new javax.xml.namespace.QName("http://data",
-                                                    "isUtenteIniziale"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), isUtenteInizialeResponse49);
                                     } else 
 
             if("cancellaUtente".equals(methodName)){
@@ -518,8 +493,8 @@
 	                        data.CancellaUtente wrappedParam =
                                                              (data.CancellaUtente)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.CancellaUtente.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.CancellaUtente.class
+                                                             );
                                                 
                                                cancellaUtenteResponse51 =
                                                    
@@ -527,8 +502,7 @@
                                                          skel.cancellaUtente(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), cancellaUtenteResponse51, false, new javax.xml.namespace.QName("http://data",
-                                                    "cancellaUtente"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), cancellaUtenteResponse51);
                                     } else 
 
             if("setUtenteCognome".equals(methodName)){
@@ -537,8 +511,8 @@
 	                        data.SetUtenteCognome wrappedParam =
                                                              (data.SetUtenteCognome)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.SetUtenteCognome.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.SetUtenteCognome.class
+                                                             );
                                                 
                                                setUtenteCognomeResponse53 =
                                                    
@@ -546,8 +520,7 @@
                                                          skel.setUtenteCognome(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), setUtenteCognomeResponse53, false, new javax.xml.namespace.QName("http://data",
-                                                    "setUtenteCognome"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), setUtenteCognomeResponse53);
                                     } else 
 
             if("cancellaAmico".equals(methodName)){
@@ -556,8 +529,8 @@
 	                        data.CancellaAmico wrappedParam =
                                                              (data.CancellaAmico)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.CancellaAmico.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.CancellaAmico.class
+                                                             );
                                                 
                                                cancellaAmicoResponse55 =
                                                    
@@ -565,8 +538,7 @@
                                                          skel.cancellaAmico(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), cancellaAmicoResponse55, false, new javax.xml.namespace.QName("http://data",
-                                                    "cancellaAmico"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), cancellaAmicoResponse55);
                                     } else 
 
             if("getUtenteVinte".equals(methodName)){
@@ -575,8 +547,8 @@
 	                        data.GetUtenteVinte wrappedParam =
                                                              (data.GetUtenteVinte)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.GetUtenteVinte.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.GetUtenteVinte.class
+                                                             );
                                                 
                                                getUtenteVinteResponse57 =
                                                    
@@ -584,8 +556,7 @@
                                                          skel.getUtenteVinte(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), getUtenteVinteResponse57, false, new javax.xml.namespace.QName("http://data",
-                                                    "getUtenteVinte"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), getUtenteVinteResponse57);
                                     } else 
 
             if("setUtentePassword".equals(methodName)){
@@ -594,17 +565,16 @@
 	                        data.SetUtentePassword wrappedParam =
                                                              (data.SetUtentePassword)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.SetUtentePassword.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.SetUtentePassword.class
+                                                             );
                                                 
                                                setUtentePasswordResponse59 =
                                                    
                                                    
-                                                         skel.setUtentePassword(wrappedParam)
+                                                         skel.setUtentePassword()
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), setUtentePasswordResponse59, false, new javax.xml.namespace.QName("http://data",
-                                                    "setUtentePassword"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), setUtentePasswordResponse59);
                                     } else 
 
             if("getIdtoken".equals(methodName)){
@@ -613,8 +583,8 @@
 	                        data.GetIdtoken wrappedParam =
                                                              (data.GetIdtoken)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.GetIdtoken.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.GetIdtoken.class
+                                                             );
                                                 
                                                getIdtokenResponse61 =
                                                    
@@ -622,8 +592,7 @@
                                                          skel.getIdtoken(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), getIdtokenResponse61, false, new javax.xml.namespace.QName("http://data",
-                                                    "getIdtoken"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), getIdtokenResponse61);
                                     } else 
 
             if("nuovoUtente".equals(methodName)){
@@ -632,8 +601,8 @@
 	                        data.NuovoUtente wrappedParam =
                                                              (data.NuovoUtente)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.NuovoUtente.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.NuovoUtente.class
+                                                             );
                                                 
                                                nuovoUtenteResponse63 =
                                                    
@@ -641,8 +610,7 @@
                                                          skel.nuovoUtente(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), nuovoUtenteResponse63, false, new javax.xml.namespace.QName("http://data",
-                                                    "nuovoUtente"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), nuovoUtenteResponse63);
                                     } else 
 
             if("setUtenteNome".equals(methodName)){
@@ -651,8 +619,8 @@
 	                        data.SetUtenteNome wrappedParam =
                                                              (data.SetUtenteNome)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.SetUtenteNome.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.SetUtenteNome.class
+                                                             );
                                                 
                                                setUtenteNomeResponse65 =
                                                    
@@ -660,8 +628,7 @@
                                                          skel.setUtenteNome(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), setUtenteNomeResponse65, false, new javax.xml.namespace.QName("http://data",
-                                                    "setUtenteNome"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), setUtenteNomeResponse65);
                                     } else 
 
             if("insertLOG".equals(methodName)){
@@ -670,8 +637,8 @@
 	                        data.InsertLOG wrappedParam =
                                                              (data.InsertLOG)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.InsertLOG.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.InsertLOG.class
+                                                             );
                                                 
                                                insertLOGResponse67 =
                                                    
@@ -679,8 +646,7 @@
                                                          skel.insertLOG(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), insertLOGResponse67, false, new javax.xml.namespace.QName("http://data",
-                                                    "insertLOG"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), insertLOGResponse67);
                                     } else 
 
             if("getUtenteCognome".equals(methodName)){
@@ -689,8 +655,8 @@
 	                        data.GetUtenteCognome wrappedParam =
                                                              (data.GetUtenteCognome)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.GetUtenteCognome.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.GetUtenteCognome.class
+                                                             );
                                                 
                                                getUtenteCognomeResponse69 =
                                                    
@@ -698,8 +664,7 @@
                                                          skel.getUtenteCognome(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), getUtenteCognomeResponse69, false, new javax.xml.namespace.QName("http://data",
-                                                    "getUtenteCognome"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), getUtenteCognomeResponse69);
                                     } else 
 
             if("modificaUtente".equals(methodName)){
@@ -708,8 +673,8 @@
 	                        data.ModificaUtente wrappedParam =
                                                              (data.ModificaUtente)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.ModificaUtente.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.ModificaUtente.class
+                                                             );
                                                 
                                                modificaUtenteResponse71 =
                                                    
@@ -717,8 +682,7 @@
                                                          skel.modificaUtente(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), modificaUtenteResponse71, false, new javax.xml.namespace.QName("http://data",
-                                                    "modificaUtente"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), modificaUtenteResponse71);
                                     } else 
 
             if("getUtentePareggiate".equals(methodName)){
@@ -727,8 +691,8 @@
 	                        data.GetUtentePareggiate wrappedParam =
                                                              (data.GetUtentePareggiate)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.GetUtentePareggiate.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.GetUtentePareggiate.class
+                                                             );
                                                 
                                                getUtentePareggiateResponse73 =
                                                    
@@ -736,8 +700,7 @@
                                                          skel.getUtentePareggiate(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), getUtentePareggiateResponse73, false, new javax.xml.namespace.QName("http://data",
-                                                    "getUtentePareggiate"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), getUtentePareggiateResponse73);
                                     } else 
 
             if("getUtenteAdmin".equals(methodName)){
@@ -746,17 +709,16 @@
 	                        data.GetUtenteAdmin wrappedParam =
                                                              (data.GetUtenteAdmin)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.GetUtenteAdmin.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.GetUtenteAdmin.class
+                                                             );
                                                 
                                                getUtenteAdminResponse75 =
                                                    
                                                    
-                                                         skel.getUtenteAdmin(wrappedParam)
+                                                         skel.getUtenteAdmin()
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), getUtenteAdminResponse75, false, new javax.xml.namespace.QName("http://data",
-                                                    "getUtenteAdmin"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), getUtenteAdminResponse75);
                                     } else 
 
             if("deletePartita".equals(methodName)){
@@ -765,8 +727,8 @@
 	                        data.DeletePartita wrappedParam =
                                                              (data.DeletePartita)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.DeletePartita.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.DeletePartita.class
+                                                             );
                                                 
                                                deletePartitaResponse77 =
                                                    
@@ -774,8 +736,7 @@
                                                          skel.deletePartita(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), deletePartitaResponse77, false, new javax.xml.namespace.QName("http://data",
-                                                    "deletePartita"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), deletePartitaResponse77);
                                     } else 
 
             if("cancellaAmici".equals(methodName)){
@@ -784,8 +745,8 @@
 	                        data.CancellaAmici wrappedParam =
                                                              (data.CancellaAmici)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.CancellaAmici.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.CancellaAmici.class
+                                                             );
                                                 
                                                cancellaAmiciResponse79 =
                                                    
@@ -793,8 +754,7 @@
                                                          skel.cancellaAmici(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), cancellaAmiciResponse79, false, new javax.xml.namespace.QName("http://data",
-                                                    "cancellaAmici"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), cancellaAmiciResponse79);
                                     } else 
 
             if("getUtenteEmail".equals(methodName)){
@@ -803,8 +763,8 @@
 	                        data.GetUtenteEmail wrappedParam =
                                                              (data.GetUtenteEmail)fromOM(
                                     msgContext.getEnvelope().getBody().getFirstElement(),
-                                    data.GetUtenteEmail.class,
-                                    getEnvelopeNamespaces(msgContext.getEnvelope()));
+                                    data.GetUtenteEmail.class
+                                                             );
                                                 
                                                getUtenteEmailResponse81 =
                                                    
@@ -812,8 +772,7 @@
                                                          skel.getUtenteEmail(wrappedParam)
                                                     ;
                                             
-                                        envelope = toEnvelope(getSOAPFactory(msgContext), getUtenteEmailResponse81, false, new javax.xml.namespace.QName("http://data",
-                                                    "getUtenteEmail"));
+                                        envelope = toEnvelope(getSOAPFactory(msgContext), getUtenteEmailResponse81);
                                     
             } else {
               throw new java.lang.RuntimeException("method not found");
@@ -829,7 +788,7 @@
         }
         
         //
-            private  org.apache.axiom.om.OMElement  toOM(data.GetListaAmici param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetListaAmici param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -843,7 +802,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetListaAmiciResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetListaAmiciResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -857,7 +816,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetUtentePerse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetUtentePerse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -871,7 +830,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetUtentePerseResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetUtentePerseResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -885,7 +844,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetUtenteNome param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetUtenteNome param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -899,7 +858,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetUtenteNomeResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetUtenteNomeResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -913,7 +872,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.SetUtentePareggiate param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(SetUtentePareggiate param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -927,7 +886,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.SetUtentePareggiateResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(SetUtentePareggiateResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -941,7 +900,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.InsertPartita param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(InsertPartita param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -955,7 +914,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.InsertPartitaResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(InsertPartitaResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -969,7 +928,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetListaUtentiOnline param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetListaUtentiOnline param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -983,7 +942,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetListaUtentiOnlineResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetListaUtentiOnlineResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -997,7 +956,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.NuovoAmico param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(NuovoAmico param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1011,7 +970,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.NuovoAmicoResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(NuovoAmicoResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1025,7 +984,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.InsertPosizioneIniziale param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(InsertPosizioneIniziale param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1039,7 +998,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.InsertPosizioneInizialeResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(InsertPosizioneInizialeResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1053,7 +1012,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.InsertMossa param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(InsertMossa param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1067,7 +1026,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.InsertMossaResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(InsertMossaResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1081,7 +1040,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetUtenteIA param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetUtenteIA param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1095,7 +1054,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetUtenteIAResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetUtenteIAResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1109,7 +1068,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetPartite param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetPartite param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1123,7 +1082,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetPartiteResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetPartiteResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1137,7 +1096,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.UpdateTipo param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(UpdateTipo param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1151,7 +1110,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.UpdateTipoResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(UpdateTipoResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1165,7 +1124,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetUtente param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetUtente param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1179,7 +1138,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetUtenteResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetUtenteResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1193,7 +1152,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.SetUtenteVinte param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(SetUtenteVinte param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1207,7 +1166,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.SetUtenteVinteResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(SetUtenteVinteResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1221,7 +1180,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.SetUtentePerse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(SetUtentePerse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1235,7 +1194,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.SetUtentePerseResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(SetUtentePerseResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1249,7 +1208,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.SetUtenteAdmin param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(SetUtenteAdmin param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1263,7 +1222,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.SetUtenteAdminResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(SetUtenteAdminResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1277,7 +1236,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetUtenteOnline param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetUtenteOnline param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1291,7 +1250,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetUtenteOnlineResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetUtenteOnlineResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1305,7 +1264,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetNomePartita param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetNomePartita param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1319,7 +1278,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetNomePartitaResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetNomePartitaResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1333,7 +1292,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.UpdatePartita param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(UpdatePartita param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1347,7 +1306,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.UpdatePartitaResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(UpdatePartitaResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1361,7 +1320,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.SetUtenteOnline param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(SetUtenteOnline param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1375,7 +1334,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.SetUtenteOnlineResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(SetUtenteOnlineResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1389,7 +1348,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.SetUtenteIA param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(SetUtenteIA param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1403,7 +1362,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.SetUtenteIAResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(SetUtenteIAResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1417,7 +1376,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.SetUtenteEmail param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(SetUtenteEmail param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1431,7 +1390,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.SetUtenteEmailResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(SetUtenteEmailResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1445,7 +1404,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetMosse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetMosse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1459,7 +1418,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetMosseResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetMosseResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1473,7 +1432,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetPosizioniIniziali param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetPosizioniIniziali param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1487,7 +1446,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetPosizioniInizialiResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetPosizioniInizialiResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1501,7 +1460,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.IsUtenteIniziale param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(IsUtenteIniziale param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1515,7 +1474,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.IsUtenteInizialeResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(IsUtenteInizialeResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1529,7 +1488,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.CancellaUtente param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(CancellaUtente param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1543,7 +1502,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.CancellaUtenteResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(CancellaUtenteResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1557,7 +1516,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.SetUtenteCognome param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(SetUtenteCognome param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1571,7 +1530,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.SetUtenteCognomeResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(SetUtenteCognomeResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1585,7 +1544,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.CancellaAmico param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(CancellaAmico param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1599,7 +1558,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.CancellaAmicoResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(CancellaAmicoResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1613,7 +1572,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetUtenteVinte param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetUtenteVinte param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1627,7 +1586,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetUtenteVinteResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetUtenteVinteResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1641,7 +1600,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.SetUtentePassword param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(SetUtentePassword param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1655,7 +1614,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.SetUtentePasswordResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(SetUtentePasswordResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1669,7 +1628,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetIdtoken param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetIdtoken param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1683,7 +1642,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetIdtokenResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetIdtokenResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1697,7 +1656,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.NuovoUtente param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(NuovoUtente param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1711,7 +1670,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.NuovoUtenteResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(NuovoUtenteResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1725,7 +1684,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.SetUtenteNome param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(SetUtenteNome param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1739,7 +1698,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.SetUtenteNomeResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(SetUtenteNomeResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1753,7 +1712,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.InsertLOG param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(InsertLOG param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1767,7 +1726,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.InsertLOGResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(InsertLOGResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1781,7 +1740,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetUtenteCognome param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetUtenteCognome param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1795,7 +1754,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetUtenteCognomeResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetUtenteCognomeResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1809,7 +1768,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.ModificaUtente param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(ModificaUtente param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1823,7 +1782,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.ModificaUtenteResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(ModificaUtenteResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1837,7 +1796,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetUtentePareggiate param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetUtentePareggiate param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1851,7 +1810,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetUtentePareggiateResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetUtentePareggiateResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1865,7 +1824,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetUtenteAdmin param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetUtenteAdmin param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1879,7 +1838,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetUtenteAdminResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetUtenteAdminResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1893,7 +1852,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.DeletePartita param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(DeletePartita param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1907,7 +1866,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.DeletePartitaResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(DeletePartitaResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1921,7 +1880,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.CancellaAmici param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(CancellaAmici param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1935,7 +1894,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.CancellaAmiciResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(CancellaAmiciResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1949,7 +1908,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetUtenteEmail param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetUtenteEmail param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1963,7 +1922,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(data.GetUtenteEmailResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetUtenteEmailResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -1977,7 +1936,7 @@
 
             }
         
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.GetListaAmiciResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, GetListaAmiciResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -1996,7 +1955,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.GetUtentePerseResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, GetUtentePerseResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2015,7 +1974,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.GetUtenteNomeResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, GetUtenteNomeResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2034,7 +1993,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.SetUtentePareggiateResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, SetUtentePareggiateResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2053,7 +2012,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.InsertPartitaResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, InsertPartitaResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2072,7 +2031,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.GetListaUtentiOnlineResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, GetListaUtentiOnlineResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2091,7 +2050,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.NuovoAmicoResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, NuovoAmicoResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2110,7 +2069,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.InsertPosizioneInizialeResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, InsertPosizioneInizialeResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2129,7 +2088,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.InsertMossaResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, InsertMossaResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2148,7 +2107,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.GetUtenteIAResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, GetUtenteIAResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2167,7 +2126,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.GetPartiteResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, GetPartiteResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2186,7 +2145,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.UpdateTipoResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, UpdateTipoResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2205,7 +2164,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.GetUtenteResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, GetUtenteResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2224,7 +2183,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.SetUtenteVinteResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, SetUtenteVinteResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2243,7 +2202,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.SetUtentePerseResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, SetUtentePerseResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2262,7 +2221,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.SetUtenteAdminResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, SetUtenteAdminResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2281,7 +2240,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.GetUtenteOnlineResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, GetUtenteOnlineResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2300,7 +2259,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.GetNomePartitaResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, GetNomePartitaResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2319,7 +2278,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.UpdatePartitaResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, UpdatePartitaResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2338,7 +2297,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.SetUtenteOnlineResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, SetUtenteOnlineResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2357,7 +2316,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.SetUtenteIAResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, SetUtenteIAResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2376,7 +2335,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.SetUtenteEmailResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, SetUtenteEmailResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2395,7 +2354,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.GetMosseResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, GetMosseResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2414,7 +2373,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.GetPosizioniInizialiResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, GetPosizioniInizialiResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2433,7 +2392,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.IsUtenteInizialeResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, IsUtenteInizialeResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2452,7 +2411,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.CancellaUtenteResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, CancellaUtenteResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2471,7 +2430,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.SetUtenteCognomeResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, SetUtenteCognomeResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2490,7 +2449,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.CancellaAmicoResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, CancellaAmicoResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2509,7 +2468,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.GetUtenteVinteResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, GetUtenteVinteResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2528,7 +2487,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.SetUtentePasswordResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, SetUtentePasswordResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2547,7 +2506,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.GetIdtokenResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, GetIdtokenResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2566,7 +2525,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.NuovoUtenteResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, NuovoUtenteResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2585,7 +2544,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.SetUtenteNomeResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, SetUtenteNomeResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2604,7 +2563,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.InsertLOGResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, InsertLOGResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2623,7 +2582,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.GetUtenteCognomeResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, GetUtenteCognomeResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2642,7 +2601,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.ModificaUtenteResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, ModificaUtenteResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2661,7 +2620,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.GetUtentePareggiateResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, GetUtentePareggiateResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2680,7 +2639,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.GetUtenteAdminResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, GetUtenteAdminResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2699,7 +2658,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.DeletePartitaResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, DeletePartitaResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2718,7 +2677,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.CancellaAmiciResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, CancellaAmiciResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2737,7 +2696,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, data.GetUtenteEmailResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, GetUtenteEmailResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -2767,9 +2726,8 @@
 
 
         private  java.lang.Object fromOM(
-        org.apache.axiom.om.OMElement param,
-        java.lang.Class type,
-        java.util.Map extraNamespaces) throws org.apache.axis2.AxisFault{
+                org.apache.axiom.om.OMElement param,
+                Class type) throws org.apache.axis2.AxisFault{
 
         try {
         

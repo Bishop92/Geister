@@ -11,9 +11,9 @@ import skeleton.MySkeleton;
     /**
      *  WSDataSkeleton java skeleton for the axisService
      */
-    public class WSDataSkeleton{
+    class WSDataSkeleton{
         
-         MySkeleton mySkeleton=new MySkeleton();
+         private MySkeleton mySkeleton=new MySkeleton();
         /**
          * Auto generated method signature
          * 
@@ -257,14 +257,12 @@ import skeleton.MySkeleton;
         /**
          * Auto generated method signature
          * 
-                                     * @param setUtenteAdmin 
-             * @return setUtenteAdminResponse 
+                                     * @return setUtenteAdminResponse
          */
         
                  public data.SetUtenteAdminResponse setUtenteAdmin
-                  (
-                  data.SetUtenteAdmin setUtenteAdmin
-                  )
+                 (
+                 )
             {
                 //TODO : fill this with the necessary business logic
                 throw new  java.lang.UnsupportedOperationException("Please implement " + this.getClass().getName() + "#setUtenteAdmin");
@@ -306,14 +304,12 @@ import skeleton.MySkeleton;
         /**
          * Auto generated method signature
          * 
-                                     * @param updatePartita 
-             * @return updatePartitaResponse 
+                                     * @return updatePartitaResponse
          */
         
                  public data.UpdatePartitaResponse updatePartita
-                  (
-                  data.UpdatePartita updatePartita
-                  )
+                 (
+                 )
             {
                 //TODO : fill this with the necessary business logic
                 throw new  java.lang.UnsupportedOperationException("Please implement " + this.getClass().getName() + "#updatePartita");
@@ -483,14 +479,12 @@ import skeleton.MySkeleton;
         /**
          * Auto generated method signature
          * 
-                                     * @param setUtentePassword 
-             * @return setUtentePasswordResponse 
+                                     * @return setUtentePasswordResponse
          */
         
                  public data.SetUtentePasswordResponse setUtentePassword
-                  (
-                  data.SetUtentePassword setUtentePassword
-                  )
+                 (
+                 )
             {
                 //TODO : fill this with the necessary business logic
                 throw new  java.lang.UnsupportedOperationException("Please implement " + this.getClass().getName() + "#setUtentePassword");
@@ -612,14 +606,12 @@ import skeleton.MySkeleton;
         /**
          * Auto generated method signature
          * 
-                                     * @param getUtenteAdmin 
-             * @return getUtenteAdminResponse 
+                                     * @return getUtenteAdminResponse
          */
         
                  public data.GetUtenteAdminResponse getUtenteAdmin
-                  (
-                  data.GetUtenteAdmin getUtenteAdmin
-                  )
+                 (
+                 )
             {
                 //TODO : fill this with the necessary business logic
                 throw new  java.lang.UnsupportedOperationException("Please implement " + this.getClass().getName() + "#getUtenteAdmin");

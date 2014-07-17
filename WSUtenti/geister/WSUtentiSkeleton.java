@@ -11,9 +11,9 @@ import skeleton.MySkeleton;
     /**
      *  WSUtentiSkeleton java skeleton for the axisService
      */
-    public class WSUtentiSkeleton{
+    class WSUtentiSkeleton{
         
-         MySkeleton mySkeleton=new MySkeleton();
+         private MySkeleton mySkeleton=new MySkeleton();
          
         /**
          * Auto generated method signature

@@ -78,12 +78,10 @@ public class Giocatore {
 	private String identificatore;
 	/**indica se il giocatore e' umano o e' un'intelligenza artificiale*/
 	private boolean umano = true;
-	/**se il giocatore è una IA conterrà le proprie euristiche */
+	/**se il giocatore ï¿½ una IA conterrï¿½ le proprie euristiche */
 	private Vector<String> euristiche=new Vector<String>();
-	/**se il giocatore è una IA conterrà il proprio livello */
-	private double livello=0;
-	
-	/**Costruttore a quattro parametri.
+
+    /**Costruttore a quattro parametri.
      * 
      * @param pass password del giocatore.
      * @param num numero del giocatore (1 o 2)
@@ -106,7 +104,8 @@ public class Giocatore {
 		identificatore = id;
 		umano=false;
 		euristiche=e;
-		livello=liv;
+		/*se il giocatore ï¿½ una IA conterrï¿½ il proprio livello */
+        double livello = liv;
 	}
 	
 	/**metodo senza parametri che ritorna il numero del giocatore

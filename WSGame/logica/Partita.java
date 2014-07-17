@@ -147,11 +147,7 @@ public class Partita {
 	private Giocatore giocatore_uno;
 	/** rappresenta il giocatore due */
 	private Giocatore giocatore_due;
-	/** rappresenta il nome del file di log del giocatore 1*/
-	private String log_partite_g1 = "log_partite_g1";
-	/** rappresenta il nome del file di log del giocatore 2*/
-	private String log_partite_g2 = "log_partita_g2";
-	/** contiene tutte le funzionalita' di caricamento e salvataggio da file del giocatore 1*/
+    /** contiene tutte le funzionalita' di caricamento e salvataggio da file del giocatore 1*/
 	private GestisceFile file_log_g1;
 	/** contiene tutte le funzionalita' di caricamento e salvataggio da file del giocatore 2*/
 	private GestisceFile file_log_g2;
@@ -160,9 +156,8 @@ public class Partita {
 	private Vector<String> vettore_log = new Vector<String>();
 	
 	private String temp_turno="";
-	private String char_mangiato="-";
-	
-	private double livelloG1=0.0;
+
+    private double livelloG1=0.0;
 	
 	private double livelloG2=0.0;
 	
@@ -196,8 +191,10 @@ public class Partita {
 		livelloG2=l2;
 		allenamento1=all1;
 		allenamento2=all2;
-		log_partite_g1 = giocatore_uno.getNome();
-		log_partite_g2 = giocatore_due.getNome();
+		/* rappresenta il nome del file di log del giocatore 1*/
+        String log_partite_g1 = giocatore_uno.getNome();
+		/* rappresenta il nome del file di log del giocatore 2*/
+        String log_partite_g2 = giocatore_due.getNome();
 		file_log_g1 = new GestisceFile(giocatore_uno.getNome(), giocatore_uno.getIdentificatore());
 		file_log_g2 = new GestisceFile(giocatore_due.getNome(), giocatore_due.getIdentificatore());
 		//creo la stringa iniziale da inserire nel file di log
@@ -214,16 +211,6 @@ public class Partita {
 		vettore_log.add(temp);
 
 		System.out.println("PROVA VETTORE LOG IN PARTITA 2: "+vettore_log);
-		/*
-		if (partenza == 1){
-			temp = "Inizia a giocare " + giocatore_uno.getNome() + " ( # ";
-			temp = temp + giocatore_uno.getIdentificatore() + " ) situato nella posizione 1 ...";
-		}
-		else{
-			temp = "Inizia a giocare " + giocatore_due.getNome() + " ( # ";
-			temp = temp + giocatore_due.getIdentificatore() + " ) situato nella posizione 2 ...";
-		}
-		*/
 		
 	}
 	
@@ -253,7 +240,7 @@ public class Partita {
 	 * false se il pezzo non e' stato eliminato
 	 */
 	public void togliPezzo(Coordinata c){
-		char_mangiato = tav.eliminaPezzo(c,false);
+        String char_mangiato = tav.eliminaPezzo(c, false);
 		System.out.println("******** CHAR *********** CHAR ************" + char_mangiato);
 	}
 	
@@ -264,7 +251,7 @@ public class Partita {
 	 * @return boolean true se ho inizializzato correttamente il vettore dei log<p>
 	 * false se sul tavolo non sono presenti tutti e 16 i pezzi
 	 */
-	public boolean tavoloPronto() throws FileNotFoundException{
+	public boolean tavoloPronto() {
 		//determino se sulla scacchiera sono presenti tutti e 16 i pezzi
 		if (tav.vettorePezzi((byte)1).size()==4 &&
 			tav.vettorePezzi((byte)2).size()==4 && 
@@ -492,14 +479,14 @@ public class Partita {
 			//salvo la partita sui file di log del giocatore1
 			file_log_g1.salvaSuFile(vettore_log);
 			//creo il profilo abbinato al giocatore
-			GestisceFileProfilo profilo_giocatore_uno = new GestisceFileProfilo(giocatore_uno.getNome(),giocatore_uno.getIdentificatore(), giocatore_due.getNome(), !giocatore_uno.getUmano(), file_log_g1.trasformaInVettore());
+			GestisceFileProfilo profilo_giocatore_uno = new GestisceFileProfilo(giocatore_uno.getNome(),giocatore_uno.getIdentificatore(), !giocatore_uno.getUmano(), file_log_g1.trasformaInVettore());
 			profilo_giocatore_uno.aggiornaProfilo();
 		}
 		if(!this.getAllenamentoG2()){
 			//salvo la partita sui file di log del giocatore2
 			file_log_g2.salvaSuFile(vettore_log);
 			//creo il profilo abbinato al giocatore
-			GestisceFileProfilo profilo_giocatore_due = new GestisceFileProfilo(giocatore_due.getNome(),giocatore_due.getIdentificatore(), giocatore_uno.getNome(), !giocatore_due.getUmano(), file_log_g2.trasformaInVettore());
+			GestisceFileProfilo profilo_giocatore_due = new GestisceFileProfilo(giocatore_due.getNome(),giocatore_due.getIdentificatore(), !giocatore_due.getUmano(), file_log_g2.trasformaInVettore());
 			profilo_giocatore_due.aggiornaProfilo();
 		}
 	}
@@ -649,31 +636,12 @@ public class Partita {
 	 *
 	 * @return un boolean che vale true se il giocatore numero 'giocatore' ha l'IA attiva.
 	 */
-	public boolean getIA(byte num_giocatore){
+	public boolean isIA(byte num_giocatore){
 		if(num_giocatore == (byte)1)
 			return !(giocatore_uno.getUmano());
 		else
 			return !(giocatore_due.getUmano());
 	}
-	
-//	public boolean getIAattiva(byte num_giocatore){
-//		if(num_giocatore == (byte)1)
-//			return  attiva_ia1;
-//		else
-//			return attiva_ia2;
-//	}
-//	/**
-//	 * Metodo a due parametri che setta l'IA di un giocatore.
-//	 *
-//	 * @param num_giocatore un byte che rappresenta il numero del giocatore che sta impostando l'IA.
-//	 * @param ia un booleano che vale true se si sta attivando l'IA, altrimenti vale false.
-//	 */
-//	public void setIAattiva(byte num_giocatore, boolean ia){
-//		if(num_giocatore == (byte)1)
-//			attiva_ia1=ia;
-//		else
-//			attiva_ia2=ia;
-//	}
 	
 	/**
 	 * Metodo che ritorna l'avversario del giocatore che riceve come parametro.
@@ -722,18 +690,18 @@ public class Partita {
 	}
 	
 	/**
-	 * Metodo che ritorna se il giocatore 1 sta giocando in modalità allenamento con conseguente uso di aiuti
+	 * Metodo che ritorna se il giocatore 1 sta giocando in modalitï¿½ allenamento con conseguente uso di aiuti
 	 * @return lo stato di allenamento1
 	 */
-	public boolean getAllenamentoG1(){
+    boolean getAllenamentoG1(){
 		return  allenamento1;
 	}
 	
 	/**
-	 * Metodo che ritorna se il giocatore 2 sta giocando in modalità allenamento con conseguente uso di aiuti
+	 * Metodo che ritorna se il giocatore 2 sta giocando in modalitï¿½ allenamento con conseguente uso di aiuti
 	 * @return lo stato di allenamento2
 	 */
-	public boolean getAllenamentoG2(){
+    boolean getAllenamentoG2(){
 		return  allenamento2;
 	}
 	

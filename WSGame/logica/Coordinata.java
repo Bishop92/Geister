@@ -159,17 +159,11 @@ public class Coordinata implements Cloneable{
 		//distinguo i due caso di giocatore
 		if (giocatore == 1){
 			//se la riga di arrivo e' maggiore di quella di partenza
-			if (arrivo.riga > riga)
-				return true;
-			else
-				return false;
+            return arrivo.riga > riga;
 		}
 		else{ //giocatore == 2
 			//se la riga di arrivo e' minore di quella di partenza
-			if (arrivo.riga < riga)
-				return true;
-			else
-				return false;
+            return arrivo.riga < riga;
 		}
 	}
 	
@@ -186,17 +180,11 @@ public class Coordinata implements Cloneable{
 		//distinguo i due caso di giocatore
 		if (giocatore == 1){
 			//se la riga di arrivo e' minore di quella di partenza
-			if (arrivo.riga < riga)
-				return true;
-			else
-				return false;
+            return arrivo.riga < riga;
 		}
 		else{ //giocatore == 2
 			//se la riga di arrivo e' maggiore di quella di partenza
-			if (arrivo.riga > riga)
-				return true;
-			else
-				return false;
+            return arrivo.riga > riga;
 		}
 	}
 	
@@ -210,10 +198,7 @@ public class Coordinata implements Cloneable{
 	 */
 	public boolean mossoLateralmente(Coordinata arrivo){
 		//se la colonna di arrivo non e' uguale a quella di partenza ritorno true
-		if (arrivo.colonna != colonna)
-			return true;
-		else
-			return false;
+        return arrivo.colonna != colonna;
 	}
 	
 	/**Metodo con un parametro di tipo Object che permette di effettuare il confronto
@@ -227,10 +212,8 @@ public class Coordinata implements Cloneable{
 	public boolean equals(Object o){
 		if (o!=null){
 			Coordinata cor=(Coordinata)o;
-			if(this.colonna==cor.colonna && this.riga==cor.riga)
-				return true;
-			return false;
-		}
+            return this.colonna == cor.colonna && this.riga == cor.riga;
+        }
 		return false;
 	}
     
@@ -242,7 +225,7 @@ public class Coordinata implements Cloneable{
      * @return ritorna un Object rappresentante la copia della coordinata su cui e' stato 
      * richiamato il metodo.
      */
-	public Object clone(){
+	public Object clone() {
 		try{Coordinata c=(Coordinata) super.clone();
 			c.riga= this.riga;
 			c.colonna= this.colonna;

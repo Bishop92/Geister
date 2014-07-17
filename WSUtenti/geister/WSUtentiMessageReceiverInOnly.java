@@ -12,7 +12,7 @@
         *  WSUtentiMessageReceiverInOnly message receiver
         */
 
-        public class WSUtentiMessageReceiverInOnly extends org.apache.axis2.receivers.AbstractInMessageReceiver{
+        class WSUtentiMessageReceiverInOnly extends org.apache.axis2.receivers.AbstractInMessageReceiver{
 
         public void invokeBusinessLogic(org.apache.axis2.context.MessageContext inMessage) throws org.apache.axis2.AxisFault{
 
@@ -38,8 +38,8 @@
             
             geister.SetCognome wrappedParam = (geister.SetCognome)fromOM(
                                                         inMessage.getEnvelope().getBody().getFirstElement(),
-                                                        geister.SetCognome.class,
-                                                        getEnvelopeNamespaces(inMessage.getEnvelope()));
+                                                        geister.SetCognome.class
+            );
                                             
                                                      skel.setCognome(wrappedParam);
                                                 } else 
@@ -47,8 +47,8 @@
             
             geister.SetEmail wrappedParam = (geister.SetEmail)fromOM(
                                                         inMessage.getEnvelope().getBody().getFirstElement(),
-                                                        geister.SetEmail.class,
-                                                        getEnvelopeNamespaces(inMessage.getEnvelope()));
+                                                        geister.SetEmail.class
+            );
                                             
                                                      skel.setEmail(wrappedParam);
                                                 } else 
@@ -56,8 +56,8 @@
             
             geister.SetNome wrappedParam = (geister.SetNome)fromOM(
                                                         inMessage.getEnvelope().getBody().getFirstElement(),
-                                                        geister.SetNome.class,
-                                                        getEnvelopeNamespaces(inMessage.getEnvelope()));
+                                                        geister.SetNome.class
+            );
                                             
                                                      skel.setNome(wrappedParam);
                                                 
@@ -75,7 +75,7 @@
 
         
         //
-            private  org.apache.axiom.om.OMElement  toOM(geister.GetNome param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetNome param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -89,7 +89,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.GetNomeResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetNomeResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -103,7 +103,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.NuovoUtente param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(NuovoUtente param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -117,7 +117,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.NuovoUtenteResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(NuovoUtenteResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -131,7 +131,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.GetCognome param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetCognome param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -145,7 +145,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.GetCognomeResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetCognomeResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -159,7 +159,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.GetEmail param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetEmail param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -173,7 +173,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.GetEmailResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetEmailResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -187,7 +187,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.SetCognome param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(SetCognome param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -201,7 +201,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.Login param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(Login param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -215,7 +215,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.LoginResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(LoginResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -229,7 +229,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.SetPassword param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(SetPassword param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -243,7 +243,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.SetPasswordResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(SetPasswordResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -257,7 +257,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.CancellaUtente param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(CancellaUtente param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -271,7 +271,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.CancellaUtenteResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(CancellaUtenteResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -285,7 +285,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.IsPlaying param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(IsPlaying param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -299,7 +299,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.IsPlayingResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(IsPlayingResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -313,7 +313,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.CancellaAmico param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(CancellaAmico param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -327,7 +327,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.CancellaAmicoResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(CancellaAmicoResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -341,7 +341,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.GetListaAmici param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetListaAmici param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -355,7 +355,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.GetListaAmiciResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(GetListaAmiciResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -369,7 +369,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.NuovoAmico param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(NuovoAmico param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -383,7 +383,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.NuovoAmicoResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(NuovoAmicoResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -397,7 +397,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.IsOnline param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(IsOnline param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -411,7 +411,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.IsOnlineResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(IsOnlineResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -425,7 +425,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.IsAmico param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(IsAmico param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -439,7 +439,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.IsAmicoResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(IsAmicoResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -453,7 +453,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.IsIA param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(IsIA param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -467,7 +467,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.IsIAResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(IsIAResponse param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -481,7 +481,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.SetEmail param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(SetEmail param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -495,7 +495,7 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(geister.SetNome param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(SetNome param)
             throws org.apache.axis2.AxisFault {
 
             
@@ -509,7 +509,7 @@
 
             }
         
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, geister.GetNomeResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, GetNomeResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -528,7 +528,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, geister.NuovoUtenteResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, NuovoUtenteResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -547,7 +547,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, geister.GetCognomeResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, GetCognomeResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -566,7 +566,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, geister.GetEmailResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, GetEmailResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -585,7 +585,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, geister.LoginResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, LoginResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -604,7 +604,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, geister.SetPasswordResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, SetPasswordResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -623,7 +623,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, geister.CancellaUtenteResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, CancellaUtenteResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -642,7 +642,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, geister.IsPlayingResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, IsPlayingResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -661,7 +661,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, geister.CancellaAmicoResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, CancellaAmicoResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -680,7 +680,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, geister.GetListaAmiciResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, GetListaAmiciResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -699,7 +699,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, geister.NuovoAmicoResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, NuovoAmicoResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -718,7 +718,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, geister.IsOnlineResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, IsOnlineResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -737,7 +737,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, geister.IsAmicoResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, IsAmicoResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -756,7 +756,7 @@
                                 return wrappedElement;
                          }
                     
-                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, geister.IsIAResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                    private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, IsIAResponse param)
                         throws org.apache.axis2.AxisFault{
                       try{
                           org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
@@ -786,9 +786,8 @@
 
 
         private  java.lang.Object fromOM(
-        org.apache.axiom.om.OMElement param,
-        java.lang.Class type,
-        java.util.Map extraNamespaces) throws org.apache.axis2.AxisFault{
+                org.apache.axiom.om.OMElement param,
+                Class type) throws org.apache.axis2.AxisFault{
 
         try {
         
