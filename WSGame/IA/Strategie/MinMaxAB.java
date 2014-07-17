@@ -1,10 +1,10 @@
-package IA.Strategie;
+package IA.strategie;
 
 import java.util.Stack;
 import java.util.Vector;
 
-import IA.Euristiche.Euristica;
-import IA.Euristiche.EuristicheFactory;
+import IA.euristiche.Euristica;
+import IA.euristiche.EuristicheFactory;
 import logica.*;
 
 

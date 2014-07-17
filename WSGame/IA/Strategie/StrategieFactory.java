@@ -1,4 +1,4 @@
-package IA.Strategie;
+package IA.strategie;
 
 import java.util.Collection;
 import java.util.HashMap;

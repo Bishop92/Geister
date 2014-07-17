@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>apprendimento.ranker</OriginalElement>
+  <nodes>
+    <node x="336.0176282051282" y="642.0">apprendimento.ValutaPezzi</node>
+    <node x="189.90544871794873" y="243.0">apprendimento.ranker.Ranker</node>
+    <node x="255.0897435897436" y="0.0">apprendimento.PezzoNascosto</node>
+    <node x="0.0" y="344.0">apprendimento.ranker.DistanzaVettori</node>
+    <node x="256.1217948717949" y="467.0">apprendimento.ranker.RankerFactory</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="apprendimento.ranker.RankerFactory" target="apprendimento.ranker.RankerFactory">
+      <point x="-30.0" y="47.5" />
+      <point x="346.1217948717949" y="592.0" />
+      <point x="226.1217948717949" y="592.0" />
+      <point x="226.1217948717949" y="514.5" />
+      <point x="-120.0" y="-0.0" />
+    </edge>
+    <edge source="apprendimento.ranker.DistanzaVettori" target="apprendimento.ranker.Ranker">
+      <point x="99.5" y="-36.5" />
+      <point x="298.5" y="319.0" />
+      <point x="247.28044871794873" y="319.0" />
+      <point x="-172.125" y="25.5" />
+    </edge>
+    <edge source="apprendimento.ValutaPezzi" target="apprendimento.ranker.RankerFactory">
+      <point x="-118.33333333333331" y="-102.5" />
+      <point x="395.1842948717949" y="622.0" />
+      <point x="466.1217948717949" y="622.0" />
+      <point x="90.0" y="47.5" />
+    </edge>
+    <edge source="apprendimento.ranker.RankerFactory" target="apprendimento.ranker.DistanzaVettori">
+      <point x="-80.0" y="-47.5" />
+      <point x="296.1217948717949" y="442.0" />
+      <point x="199.0" y="442.0" />
+      <point x="0.0" y="36.5" />
+    </edge>
+    <edge source="apprendimento.ranker.Ranker" target="apprendimento.PezzoNascosto">
+      <point x="0.0" y="-25.5" />
+      <point x="419.40544871794873" y="223.0" />
+      <point x="423.2147435897436" y="223.0" />
+      <point x="33.625" y="91.5" />
+    </edge>
+    <edge source="apprendimento.ValutaPezzi" target="apprendimento.PezzoNascosto">
+      <point x="118.33333333333337" y="-102.5" />
+      <point x="631.8509615384615" y="622.0" />
+      <point x="659.4054487179487" y="622.0" />
+      <point x="659.4054487179487" y="223.0" />
+      <point x="490.4647435897436" y="223.0" />
+      <point x="100.875" y="91.5" />
+    </edge>
+    <edge source="apprendimento.ranker.DistanzaVettori" target="apprendimento.PezzoNascosto">
+      <point x="-99.5" y="-36.5" />
+      <point x="99.5" y="223.0" />
+      <point x="355.9647435897436" y="223.0" />
+      <point x="-33.625" y="91.5" />
+    </edge>
+    <edge source="apprendimento.ValutaPezzi" target="apprendimento.ranker.Ranker">
+      <point x="0.0" y="-102.5" />
+      <point x="513.5176282051282" y="622.0" />
+      <point x="531.9070512820513" y="622.0" />
+      <point x="531.9070512820513" y="319.0" />
+      <point x="591.5304487179487" y="319.0" />
+      <point x="172.125" y="25.5" />
+    </edge>
+    <edge source="apprendimento.ranker.RankerFactory" target="apprendimento.ranker.Ranker">
+      <point x="80.0" y="-47.5" />
+      <point x="456.1217948717949" y="442.0" />
+      <point x="428.7147435897436" y="442.0" />
+      <point x="428.7147435897436" y="319.0" />
+      <point x="476.78044871794873" y="319.0" />
+      <point x="57.375" y="25.5" />
+    </edge>
+    <edge source="apprendimento.PezzoNascosto" target="apprendimento.PezzoNascosto">
+      <point x="-100.875" y="91.5" />
+      <point x="288.7147435897436" y="203.0" />
+      <point x="235.0897435897436" y="203.0" />
+      <point x="235.0897435897436" y="91.5" />
+      <point x="-134.5" y="-0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="230.0" y="111.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

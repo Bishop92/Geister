@@ -169,7 +169,7 @@ public class PezzoNascosto extends Pezzo implements Cloneable {
      *
      * @return true se l'IA crede che sia buono, false se crede che sia cattivo
      */
-    public boolean getBuono() {
+    public boolean isBuono() {
         return bonta <= 0;
     }
 }

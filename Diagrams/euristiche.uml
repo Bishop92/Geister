@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="218.0" y="101.0">IA.euristiche.CattiviInGioco</node>
+    <node x="252.3125" y="0.0">IA.euristiche.Euristica</node>
+    <node x="219.0625" y="202.0">IA.euristiche.EuristicheFactory</node>
+    <node x="0.0" y="101.0">IA.euristiche.BuoniInGioco</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="IA.euristiche.EuristicheFactory" target="IA.euristiche.EuristicheFactory">
+      <point x="0.0" y="47.5" />
+      <point x="346.5625" y="327.0" />
+      <point x="189.0625" y="327.0" />
+      <point x="189.0625" y="249.5" />
+      <point x="-127.5" y="-0.0" />
+    </edge>
+    <edge source="IA.euristiche.EuristicheFactory" target="IA.euristiche.BuoniInGioco">
+      <point x="-95.625" y="-47.5" />
+      <point x="250.9375" y="177.0" />
+      <point x="99.0" y="177.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="IA.euristiche.CattiviInGioco" target="IA.euristiche.Euristica">
+      <point x="0.0" y="-25.5" />
+      <point x="317.0" y="81.0" />
+      <point x="326.5625" y="81.0" />
+      <point x="-24.75" y="25.5" />
+    </edge>
+    <edge source="IA.euristiche.BuoniInGioco" target="IA.euristiche.Euristica">
+      <point x="0.0" y="-25.5" />
+      <point x="99.0" y="81.0" />
+      <point x="277.0625" y="81.0" />
+      <point x="-74.25" y="25.5" />
+    </edge>
+    <edge source="IA.euristiche.EuristicheFactory" target="IA.euristiche.CattiviInGioco">
+      <point x="-31.875" y="-47.5" />
+      <point x="314.6875" y="177.0" />
+      <point x="317.0" y="177.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="IA.euristiche.EuristicheFactory" target="IA.euristiche.Euristica">
+      <point x="31.875" y="-47.5" />
+      <point x="378.4375" y="177.0" />
+      <point x="426.5" y="177.0" />
+      <point x="426.5" y="81.0" />
+      <point x="376.0625" y="81.0" />
+      <point x="24.75" y="25.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="476.0" y="158.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

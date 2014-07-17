@@ -12,8 +12,6 @@ class GestisceLogPartita {
 	private Vector<LogPartita> partite;
 
     public GestisceLogPartita(int id_giocatore){
-        int id_giocatore1 = id_giocatore;
-		
 		partite = trovaPartite(id_giocatore);
 	}
 

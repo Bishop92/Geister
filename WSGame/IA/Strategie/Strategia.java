@@ -1,7 +1,6 @@
-package IA.Strategie;
+package IA.strategie;
 
-import IA.Euristiche.Euristica;
-import IA.Euristiche.EuristicheFactory;
+import IA.euristiche.EuristicheFactory;
 import logica.Coordinata;
 import logica.Giocatore;
 import logica.Mossa;

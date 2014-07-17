@@ -209,7 +209,7 @@ public class Tavolo implements Cloneable {
         if (pezzo_da_eliminare.getGiocatore() == 1) {
 
             //controllo se è buono
-            if (((Pezzo) pezzo_da_eliminare).getBuono()) {
+            if (((Pezzo) pezzo_da_eliminare).isBuono()) {
                 temp_s = "b";
 //				System.out.println("Sto eliminando pezzo BUONO giocatore 1 in coordinata: "+cor.getRiga()+" : "+cor.getColonna());
                 //scorro tutti i pezzi buoni del giocatore 1
@@ -263,7 +263,7 @@ public class Tavolo implements Cloneable {
         //il pezzo è del giocatore 2
         else {
             //controllo se è buono
-            if (((Pezzo) pezzo_da_eliminare).getBuono()) {
+            if (((Pezzo) pezzo_da_eliminare).isBuono()) {
                 temp_s = "b";
 //				System.out.print("PRIMA DI ELIMINARE PEZZO.......");
 //				System.out.println("pezzi buoni giocatore"+2);
@@ -337,7 +337,7 @@ public class Tavolo implements Cloneable {
         //controllo se il pezzo è del giocatore 1
         if (p.getGiocatore() == 1) {
             //controllo se è buono
-            if (((Pezzo) p).getBuono()) {
+            if (((Pezzo) p).isBuono()) {
                 base_logica[cor.getRiga()][cor.getColonna()] = p;
                 //imposto la nuova coordinata del pezzo
                 p.setCoordinata(cor);
@@ -354,7 +354,7 @@ public class Tavolo implements Cloneable {
             }
         } else {//il pezzo è del giocatore 2
             //controllo se è buono
-            if (((Pezzo) p).getBuono()) {
+            if (((Pezzo) p).isBuono()) {
                 base_logica[cor.getRiga()][cor.getColonna()] = p;
                 //imposto la nuova coordinata del pezzo
                 p.setCoordinata(cor);
@@ -592,7 +592,7 @@ public class Tavolo implements Cloneable {
             while (i < g1_pezzi_buoni.size()) {
                 //	for (int i=0; i<g1_pezzi_buoni.size(); i++){
                 //se il pezzo e cattivo
-                if (!g1_pezzi_buoni.get(i).getBuono()) {
+                if (!g1_pezzi_buoni.get(i).isBuono()) {
                     //sposto il pezzo da un vettore all'altro
                     g1_pezzi_cattivi.addElement(g1_pezzi_buoni.remove(i));
                 } else i++;
@@ -601,7 +601,7 @@ public class Tavolo implements Cloneable {
             while (i < g1_pezzi_cattivi.size()) {
                 //for (int i=0; i<g1_pezzi_cattivi.size(); i++){
                 //se il pezzo è buono
-                if (g1_pezzi_cattivi.get(i).getBuono()) {
+                if (g1_pezzi_cattivi.get(i).isBuono()) {
                     //sposto il pezzo da un vettore all'altro
                     g1_pezzi_buoni.addElement(g1_pezzi_cattivi.remove(i));
                 } else i++;
@@ -625,7 +625,7 @@ public class Tavolo implements Cloneable {
             while (i < g2_pezzi_buoni.size())
 //			for (int i=0; i<g2_pezzi_buoni.size(); i++){
                 //se il pezzo è cattivo
-                if (!g2_pezzi_buoni.get(i).getBuono())
+                if (!g2_pezzi_buoni.get(i).isBuono())
                     //sposto il pezzo da un vettore all'altro
                     g2_pezzi_cattivi.addElement(g2_pezzi_buoni.remove(i));
                 else i++;
@@ -633,7 +633,7 @@ public class Tavolo implements Cloneable {
             while (i < g2_pezzi_cattivi.size())
                 //for (int i=0; i<g2_pezzi_cattivi.size(); i++){
                 //se il pezzo è buono
-                if (g2_pezzi_cattivi.get(i).getBuono())
+                if (g2_pezzi_cattivi.get(i).isBuono())
                     //sposto il pezzo da un vettore all'altro
                     g2_pezzi_buoni.addElement(g2_pezzi_cattivi.remove(i));
                     //faccio ripartire la ricerca dall'indice in cui mi son fermato in quanto
@@ -698,13 +698,13 @@ public class Tavolo implements Cloneable {
             int i = 0;
             while (i < g1_pezzi_buoni.size())
                 //se il pezzo è cattivo
-                if (!g1_pezzi_buoni.get(i).getBuono())
+                if (!g1_pezzi_buoni.get(i).isBuono())
                     //sposto il pezzo da un vettore all'altro
                     g1_pezzi_cattivi.addElement(g1_pezzi_buoni.remove(i));
                 else i++;
             i = 0;
             while (i < g1_pezzi_cattivi.size())
-                if (g1_pezzi_cattivi.get(i).getBuono())
+                if (g1_pezzi_cattivi.get(i).isBuono())
                     //sposto il pezzo da un vettore all'altro
                     g1_pezzi_buoni.addElement(g1_pezzi_cattivi.remove(i));
                 else i++;
@@ -714,13 +714,13 @@ public class Tavolo implements Cloneable {
             int i = 0;
             while (i < g2_pezzi_buoni.size())
                 //se il pezzo è cattivo
-                if (!g2_pezzi_buoni.get(i).getBuono())
+                if (!g2_pezzi_buoni.get(i).isBuono())
                     //sposto il pezzo da un vettore all'altro
                     g2_pezzi_cattivi.addElement(g2_pezzi_buoni.remove(i));
                 else i++;
             i = 0;
             while (i < g2_pezzi_cattivi.size())
-                if (g2_pezzi_cattivi.get(i).getBuono())
+                if (g2_pezzi_cattivi.get(i).isBuono())
                     //sposto il pezzo da un vettore all'altro
                     g2_pezzi_buoni.addElement(g2_pezzi_cattivi.remove(i));
                 else i++;

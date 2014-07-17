@@ -1,4 +1,4 @@
-package IA.Euristiche;
+package IA.euristiche;
 
 import java.util.Collection;
 import java.util.HashMap;

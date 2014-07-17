@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>IA</OriginalElement>
+  <nodes>
+    <node x="3.25" y="79.0">apprendimento.ValutaPezzi</node>
+    <node x="14.75" y="0.0">apprendimento.ranker.Ranker</node>
+    <node x="99.875" y="376.0">skeleton.MySkeleton</node>
+    <node x="160.3159090909091" y="0.0">IA.strategie.Strategia</node>
+    <node x="159.125" y="79.0">IA.strategie.StrategieFactory</node>
+    <node x="17.125" y="188.0">IA.IntelligenzaArtificiale</node>
+    <node x="65.11742424242425" y="267.0">IA.IAFactory</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="apprendimento.ValutaPezzi" target="apprendimento.ranker.Ranker">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="IA.IntelligenzaArtificiale" target="apprendimento.ValutaPezzi">
+      <point x="-53.25" y="-14.5" />
+      <point x="34.875" y="168.0" />
+      <point x="26.0" y="168.0" />
+      <point x="-22.75" y="14.5" />
+    </edge>
+    <edge source="skeleton.MySkeleton" target="IA.strategie.StrategieFactory">
+      <point x="31.333333333333343" y="-14.5" />
+      <point x="178.20833333333334" y="356.0" />
+      <point x="264.42499999999995" y="356.0" />
+      <point x="46.799999999999955" y="14.5" />
+    </edge>
+    <edge source="skeleton.MySkeleton" target="IA.IAFactory">
+      <point x="0.0" y="-14.5" />
+      <point x="146.875" y="356.0" />
+      <point x="136.86742424242425" y="356.0" />
+      <point x="30.75" y="14.5" />
+    </edge>
+    <edge source="IA.IAFactory" target="IA.IntelligenzaArtificiale">
+      <point x="-27.33333333333333" y="-14.5" />
+      <point x="78.78409090909092" y="242.0" />
+      <point x="70.375" y="242.0" />
+      <point x="-17.75" y="14.5" />
+    </edge>
+    <edge source="IA.IntelligenzaArtificiale" target="IA.strategie.StrategieFactory">
+      <point x="53.25" y="-14.5" />
+      <point x="141.375" y="168.0" />
+      <point x="241.02499999999998" y="168.0" />
+      <point x="23.399999999999977" y="14.5" />
+    </edge>
+    <edge source="IA.strategie.StrategieFactory" target="IA.strategie.StrategieFactory">
+      <point x="-23.4" y="14.5" />
+      <point x="194.225" y="138.0" />
+      <point x="129.125" y="138.0" />
+      <point x="129.125" y="93.5" />
+      <point x="-58.5" y="-0.0" />
+    </edge>
+    <edge source="IA.strategie.StrategieFactory" target="IA.strategie.Strategia">
+      <point x="0.0" y="-14.5" />
+      <point x="217.625" y="54.0" />
+      <point x="209.0659090909091" y="54.0" />
+      <point x="9.75" y="14.5" />
+    </edge>
+    <edge source="skeleton.MySkeleton" target="IA.IntelligenzaArtificiale">
+      <point x="-31.33333333333333" y="-14.5" />
+      <point x="115.54166666666667" y="356.0" />
+      <point x="14.61742424242425" y="356.0" />
+      <point x="14.61742424242425" y="242.0" />
+      <point x="34.875" y="242.0" />
+      <point x="-53.25" y="14.5" />
+    </edge>
+    <edge source="IA.IntelligenzaArtificiale" target="IA.strategie.Strategia">
+      <point x="17.75" y="-14.5" />
+      <point x="105.875" y="168.0" />
+      <point x="108.625" y="168.0" />
+      <point x="108.625" y="54.0" />
+      <point x="170.0659090909091" y="54.0" />
+      <point x="-29.25" y="14.5" />
+    </edge>
+    <edge source="IA.IAFactory" target="IA.IAFactory">
+      <point x="-10.25" y="14.5" />
+      <point x="95.86742424242425" y="326.0" />
+      <point x="35.11742424242425" y="326.0" />
+      <point x="35.11742424242425" y="281.5" />
+      <point x="-41.0" y="-0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="197.0" y="192.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

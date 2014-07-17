@@ -21,9 +21,9 @@ package IA;
 
 import java.util.Vector;
 
-import IA.Euristiche.EuristicheFactory;
-import IA.Strategie.Strategia;
-import IA.Strategie.StrategieFactory;
+import IA.euristiche.EuristicheFactory;
+import IA.strategie.Strategia;
+import IA.strategie.StrategieFactory;
 import apprendimento.ValutaPezzi;
 import apprendimento.ranker.RankerFactory;
 import logica.*;

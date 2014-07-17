@@ -1,4 +1,4 @@
-package IA.Euristiche;
+package IA.euristiche;
 
 import logica.Coordinata;
 import logica.Pezzo;

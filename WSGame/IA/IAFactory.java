@@ -1,7 +1,7 @@
 package IA;
 
-import IA.Euristiche.EuristicheFactory;
-import IA.Strategie.StrategieFactory;
+import IA.euristiche.EuristicheFactory;
+import IA.strategie.StrategieFactory;
 import apprendimento.ranker.RankerFactory;
 import logica.Giocatore;
 import logica.Tavolo;

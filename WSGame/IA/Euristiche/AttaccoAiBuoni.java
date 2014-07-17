@@ -1,4 +1,4 @@
-package IA.Euristiche;
+package IA.euristiche;
 
 import logica.Coordinata;
 import logica.Pezzo;
@@ -25,7 +25,7 @@ public class AttaccoAiBuoni implements Euristica {
                 //scorro tutte le mosse in cui il pezzo in questione mangia un pezzo avversario
                 for (Coordinata coordinata : pezzo.getCoordinatePezziMangiabili())
                     //se il pezzo avversario sotto minaccia e buono
-                    if (tavolo.getPezzo(coordinata).getBuono())
+                    if (tavolo.getPezzo(coordinata).isBuono())
                         conta++;
             }
         } else {
@@ -33,7 +33,7 @@ public class AttaccoAiBuoni implements Euristica {
                 //scorro tutte le mosse in cui il pezzo in questione mangia un pezzo avversario
                 for (Coordinata coordinata : pezzo.getCoordinatePezziMangiabili())
                     //se il pezzo avversario sotto minaccia e buono
-                    if (tavolo.getPezzo(coordinata).getBuono())
+                    if (tavolo.getPezzo(coordinata).isBuono())
                         conta++;
             }
         }

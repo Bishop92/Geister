@@ -1,8 +1,8 @@
 package skeleton;
 
-import IA.Euristiche.EuristicheFactory;
+import IA.euristiche.EuristicheFactory;
 import IA.IAFactory;
-import IA.Strategie.StrategieFactory;
+import IA.strategie.StrategieFactory;
 import apprendimento.ValutaPezziLog;
 import apprendimento.ranker.RankerFactory;
 import game.CancellaPartitaResponse;

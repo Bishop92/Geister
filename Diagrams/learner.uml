@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>apprendimento.learner</OriginalElement>
+  <nodes>
+    <node x="115.48333333333332" y="0.0">apprendimento.learner.Learner</node>
+    <node x="0.0" y="189.0">apprendimento.learner.MediaVettori</node>
+    <node x="149.06666666666666" y="290.0">apprendimento.learner.LearnerFactory</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="apprendimento.learner.LearnerFactory" target="apprendimento.learner.LearnerFactory">
+      <point x="81.0" y="47.5" />
+      <point x="351.56666666666666" y="425.0" />
+      <point x="109.06666666666666" y="425.0" />
+      <point x="109.06666666666666" y="305.8333333333333" />
+      <point x="-121.5" y="-31.66666666666667" />
+    </edge>
+    <edge source="apprendimento.learner.LearnerFactory" target="apprendimento.learner.MediaVettori">
+      <point x="-81.0" y="-47.5" />
+      <point x="189.56666666666666" y="265.0" />
+      <point x="149.0" y="265.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="apprendimento.learner.LearnerFactory" target="apprendimento.learner.Learner">
+      <point x="81.0" y="-47.5" />
+      <point x="351.56666666666666" y="265.0" />
+      <point x="319.5" y="265.0" />
+      <point x="319.5" y="164.0" />
+      <point x="391.3166666666666" y="164.0" />
+      <point x="110.33333333333331" y="69.5" />
+    </edge>
+    <edge source="apprendimento.learner.MediaVettori" target="apprendimento.learner.Learner">
+      <point x="0.0" y="-25.5" />
+      <point x="149.0" y="164.0" />
+      <point x="170.64999999999998" y="164.0" />
+      <point x="-110.33333333333333" y="69.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="55.0" y="191.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
