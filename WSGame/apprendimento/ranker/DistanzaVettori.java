@@ -7,6 +7,11 @@ import java.util.Vector;
 /**
  * Created by Stefano on 16/07/2014.
  */
+
+/**
+ * Determina la bonta di un pezzo confrontando la distanza che c'e tra il vettore del profilo del pezzo
+ * e i vettori di riferimento passati come parametri
+ */
 public class DistanzaVettori implements Ranker {
     /**
      * Metodo ad un parametro che permette di determinare la distanza che c'e tra due vettori
@@ -25,18 +30,11 @@ public class DistanzaVettori implements Ranker {
         return distanza;
     }
 
-    /**
-     * Determina la bonta di un pezzo confrontando
-     * la distanza che c'e tra il vettore del profilo del pezzo ed i vettori di riferimento
-     * passati come parametri
-     *
-     * @param vettore_buoni   vettore di riferimento dei pezzi buoni
-     * @param vettore_cattivi vettore di riferimento dei pezzi cattivi
-     */
-    public double getBonta(PezzoNascosto pezzo, Vector<Double> vettore_buoni, Vector<Double> vettore_cattivi, double livello) {
+    @Override
+    public double getBonta(PezzoNascosto pezzo, Vector<Double> vettoreBuoni, Vector<Double> vettoreCattivi, double livello) {
         //determino la distanza che c'e' tra il vettore buono e cattivo
-        double distanzaBuono = distanzaTraVettori(pezzo.getFeatures(), vettore_buoni);
-        double distanzaCattivo = distanzaTraVettori(pezzo.getFeatures(), vettore_cattivi);
+        double distanzaBuono = distanzaTraVettori(pezzo.getFeatures(), vettoreBuoni);
+        double distanzaCattivo = distanzaTraVettori(pezzo.getFeatures(), vettoreCattivi);
         //imposto la variabile bonta in relazione alle distanze appena calcolate
         double bonta_teorica = (distanzaBuono - distanzaCattivo) / (distanzaCattivo + distanzaBuono);
         // se il livello == 0 non c'e rumore nell'apprendimento la bonta e quella teorica calcolata con l'algoritmo di apprendimento

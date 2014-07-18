@@ -107,7 +107,7 @@ public class IntelligenzaArtificiale {
      * CASO_1: se un pezzo buono del giocatore corrente, cioe colui che ha il turno e usa l'ia, e nella condizione
      * di poter uscire dal tavolo (casella di uscita) la mossa ritornata sara quella che permette di uscire dal tavolere e VINCERE la sfida
      * CASO_2: se il livello di IA e 1 significa che sto usando l'algoritmo con grado di rumore massimo pertanto la mossa sara sicuramente RANDOM (mossaRandom())
-     * CASO_3: se il livello di IA e tra 0 e 1 allora devo applicare l'algoritmo alfa_beta  per il calcolo della mossa migliore (mossaMinMaxAB())
+     * CASO_3: se il livello di IA e tra 0 e 1 allora devo applicare l'algoritmo richiesto per il calcolo della mossa migliore (getMossa())
      */
     public Mossa calcolaMossa() {
         /*attivo il valutaPezzi per aggiornarlo e permettere l'uso dell'intelligenza artificiale,

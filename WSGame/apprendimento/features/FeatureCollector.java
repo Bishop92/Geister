@@ -118,7 +118,6 @@ public class FeatureCollector {
         //per gioc1 => pezzi[x][1]=10, pezzi[x][2]=20, pezzi[x][3]=30,...
         //per gioc2 => pezzi[x][1]=14, pezzi[x][2]=24,...
 
-        System.out.println("**** FEATURECOLLECTOR(DISPOSIZIONEPEZZO): ****** " + partita.getLog());
         /*
          * Disposizione:
 		 * 0= 01 / 41
@@ -220,7 +219,7 @@ public class FeatureCollector {
      * @param giocatore Il giocatore che possiede il pezzo
      * @return L'insieme delle feature
      */
-    Vector<Double> resolvePezzo(int pezzo, int giocatore) {
+    private Vector<Double> resolvePezzo(int pezzo, int giocatore) {
         Vector<Double> featurePezzo = new Vector<Double>();
 
         //La prima posizione la riservo per l'id del pezzo
