@@ -20,7 +20,8 @@ public class MinMaxAB extends Strategia {
     @Override
     public Mossa getMossa(Tavolo tavolo, Giocatore giocatore, EuristicheFactory.EURISTICHE euristica) {
         int MAX = 1000;
-        ValutaMosse mosse = alphaBeta(0, tavolo, giocatore.getNumero(), MAX, -MAX, euristica);
+        Euristica e = EuristicheFactory.getInstance().getEuristica(euristica);
+        ValutaMosse mosse = alphaBeta(0, tavolo, giocatore.getNumero(), MAX, -MAX, e);
         System.out.println("il cammino migliore ha: " + mosse.getCammino().size() + " stati ");
         System.out.println("gli stati hanno queste coordinate hanno questi punteggi");
         for (Mossa mossa : mosse.getCammino()) {
@@ -43,7 +44,7 @@ public class MinMaxAB extends Strategia {
      * @param euristica   L'euristica da utilizzare per valutare il tavolo
      * @return L'intero cammino contenente la mossa migliore
      */
-    ValutaMosse alphaBeta(int prof, Tavolo tavolo, byte giocatore, double usaSoglia, double passaSoglia, EuristicheFactory.EURISTICHE euristica) {
+    ValutaMosse alphaBeta(int prof, Tavolo tavolo, byte giocatore, double usaSoglia, double passaSoglia, Euristica euristica) {
         Stack<Mossa> cammino_migliore = new Stack<Mossa>();
         ValutaMosse ris_succ;
         double nuovo_valore;
@@ -160,9 +161,8 @@ public class MinMaxAB extends Strategia {
      * @param euristica L'euristica da utilizzare per valutare il tavolo
      * @return La valutazione del tavolo
      */
-    private double valuta_tavolo(Tavolo tavolo, byte giocatore, EuristicheFactory.EURISTICHE euristica) {
-        Euristica e = EuristicheFactory.getInstance().getEuristica(euristica);
-        return e.valuta(tavolo, giocatore);
+    private double valuta_tavolo(Tavolo tavolo, byte giocatore, Euristica euristica) {
+        return euristica.valuta(tavolo, giocatore);
     }
 
     /**
