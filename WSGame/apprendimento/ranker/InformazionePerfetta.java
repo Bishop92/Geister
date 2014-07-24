@@ -15,8 +15,8 @@ import java.util.Vector;
 public class InformazionePerfetta implements Ranker {
     @Override
     public double getBonta(PezzoNascosto pezzo, Vector<Double> vettoreBuoni, Vector<Double> vettoreCattivi, double livello) {
-        if(((Pezzo) pezzo).isBuono())
+        if(pezzo.isReallyBuono())
             return 1;
-        return 0;
+        return -1;
     }
 }

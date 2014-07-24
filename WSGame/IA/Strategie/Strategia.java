@@ -13,11 +13,13 @@ public class Strategia {
 
     /**
      * Fornisce la mossa da effettuare
-     * @param tavolo Tavolo Il tavolo di cui si vuole determinare la mossa
+     *
+     * @param tavolo    Tavolo Il tavolo di cui si vuole determinare la mossa
      * @param giocatore Giocatore che deve effettuare la mossa
+     * @param partita   Il codice identificativo della partita in corso
      * @return La mossa da effettuare
      */
-    public Mossa getMossa(Tavolo tavolo, Giocatore giocatore, EuristicheFactory.EURISTICHE euristica) {
+    public Mossa getMossa(Tavolo tavolo, Giocatore giocatore, EuristicheFactory.EURISTICHE euristica, String partita) {
         //identifico i pezzi buoni e cattivi del giocatore corrente
         byte buoni;
         byte cattivi;

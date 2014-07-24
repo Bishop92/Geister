@@ -9,13 +9,14 @@ import java.util.Map;
  */
 public class RankerFactory {
 
-    public enum RANKERS{DISTANZAVETTORI}
+    public enum RANKERS{DISTANZAVETTORI, INFORMAZIONEPERFETTA}
 
     private static RankerFactory instance = new RankerFactory();
     private Map<RANKERS, Ranker> rankers = new HashMap<RANKERS, Ranker>();
 
     private RankerFactory() {
         rankers.put(RANKERS.DISTANZAVETTORI, new DistanzaVettori());
+        rankers.put(RANKERS.INFORMAZIONEPERFETTA, new InformazionePerfetta());
     }
 
     public static RankerFactory getInstance() {

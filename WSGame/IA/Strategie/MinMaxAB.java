@@ -18,17 +18,10 @@ import logica.*;
 public class MinMaxAB extends Strategia {
 
     @Override
-    public Mossa getMossa(Tavolo tavolo, Giocatore giocatore, EuristicheFactory.EURISTICHE euristica) {
+    public Mossa getMossa(Tavolo tavolo, Giocatore giocatore, EuristicheFactory.EURISTICHE euristica, String partita) {
         int MAX = 1000;
         Euristica e = EuristicheFactory.getInstance().getEuristica(euristica);
-        ValutaMosse mosse = alphaBeta(0, tavolo, giocatore.getNumero(), MAX, -MAX, e);
-        System.out.println("il cammino migliore ha: " + mosse.getCammino().size() + " stati ");
-        System.out.println("gli stati hanno queste coordinate hanno questi punteggi");
-        for (Mossa mossa : mosse.getCammino()) {
-            System.out.print(mossa.getPartenza().getRiga() + "," + mossa.getPartenza().getColonna() +
-                    " : " + mossa.getArrivo().getRiga() + "," + mossa.getArrivo().getColonna());
-            System.out.println(" -> " + mosse.getValore());
-        }
+        ValutaMosse mosse = alphaBeta(0, tavolo, giocatore.getNumero(), MAX, -MAX, e, partita);
         Coordinata partenza = mosse.getCammino().lastElement().getPartenza();
         Coordinata arrivo = mosse.getCammino().lastElement().getArrivo();
 
@@ -42,9 +35,10 @@ public class MinMaxAB extends Strategia {
      * @param usaSoglia   Parametro che memorizza il punteggio della mossa mogliore
      * @param passaSoglia Parametro che memorizza il valore da passare al prossimo livello di esplorazione
      * @param euristica   L'euristica da utilizzare per valutare il tavolo
+     * @param partita     Il codice identificativo della partita in corso
      * @return L'intero cammino contenente la mossa migliore
      */
-    ValutaMosse alphaBeta(int prof, Tavolo tavolo, byte giocatore, double usaSoglia, double passaSoglia, Euristica euristica) {
+    ValutaMosse alphaBeta(int prof, Tavolo tavolo, byte giocatore, double usaSoglia, double passaSoglia, Euristica euristica, String partita) {
         Stack<Mossa> cammino_migliore = new Stack<Mossa>();
         ValutaMosse ris_succ;
         double nuovo_valore;
@@ -53,14 +47,14 @@ public class MinMaxAB extends Strategia {
 
         int profondita = 4;
         if (prof == profondita)
-            return new ValutaMosse(valuta_tavolo(tavolo, giocatore, euristica), new Stack<Mossa>());
+            return new ValutaMosse(valuta_tavolo(tavolo, giocatore, euristica, partita), new Stack<Mossa>());
 
         //altrimenti si genera un altro stadio dell'albero invocando la funzione generaMosse e associando a successori la lista che essa restituisce
         Vector<Mossa> successori = generaMosse(tavolo, giocatore);
 
         //se succesori e vuoto allora non ci sono mosse da fare e quindi si restituisce la stessa struttura che si restituirebbe nel caso base
         if (successori.isEmpty())
-            return new ValutaMosse(valuta_tavolo(tavolo, giocatore, euristica), new Stack<Mossa>());
+            return new ValutaMosse(valuta_tavolo(tavolo, giocatore, euristica, partita), new Stack<Mossa>());
 
         //altrimenti se esistono successori si esamina a turno ogni elemento tenendo traccia del migliore
 
@@ -72,7 +66,7 @@ public class MinMaxAB extends Strategia {
             //effettuo la ValutaMosse sul nuovo tavolo
             nuovo_tavolo.muoviPezzo(successore.getPartenza(), successore.getArrivo());
             //si attribuisce a ris_succ il valore della funzione Alphabeta
-            ris_succ = alphaBeta(prof + 1, nuovo_tavolo, getAvversario(giocatore), -passaSoglia, -usaSoglia, euristica);
+            ris_succ = alphaBeta(prof + 1, nuovo_tavolo, getAvversario(giocatore), -passaSoglia, -usaSoglia, euristica, partita);
             //si assegna a nuovo valore il valore di ris_succ cambiato di segno
             nuovo_valore = -(ris_succ.getValore());
             //se nuovo_valore>passaSoglia trovo un successore migliore di quelli esaminati fino ad ora e lo memorizzo
@@ -159,10 +153,11 @@ public class MinMaxAB extends Strategia {
      * @param giocatore byte Giocatore di cui si vuole valutare il tavolo
      * @param tavolo    Tavolo Tavolo da valutare
      * @param euristica L'euristica da utilizzare per valutare il tavolo
+     * @param partita   Il codice identificativo della partita in corso
      * @return La valutazione del tavolo
      */
-    private double valuta_tavolo(Tavolo tavolo, byte giocatore, Euristica euristica) {
-        return euristica.valuta(tavolo, giocatore);
+    private double valuta_tavolo(Tavolo tavolo, byte giocatore, Euristica euristica, String partita) {
+        return euristica.valuta(tavolo, giocatore, partita);
     }
 
     /**

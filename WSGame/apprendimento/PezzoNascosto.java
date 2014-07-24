@@ -172,4 +172,13 @@ public class PezzoNascosto extends Pezzo implements Cloneable {
     public boolean isBuono() {
         return bonta <= 0;
     }
+
+    /**
+     * Fornisce il tipo effettivo del pezzo, senza considerare il parametro di bonta
+     *
+     * @return true se il pezzo e buono, false altrimenti
+     */
+    public boolean isReallyBuono() {
+        return super.isBuono();
+    }
 }
