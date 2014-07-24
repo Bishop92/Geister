@@ -15,14 +15,15 @@ package data;
 
 
 import javax.xml.namespace.QName;
+import java.util.HashMap;
 
 public class WSDataStub extends org.apache.axis2.client.Stub {
     private org.apache.axis2.description.AxisOperation[] _operations;
 
     //hashmaps to keep the fault mapping
-    private java.util.HashMap faultExceptionNameMap = new java.util.HashMap();
-    private java.util.HashMap faultExceptionClassNameMap = new java.util.HashMap();
-    private java.util.HashMap faultMessageMap = new java.util.HashMap();
+    private HashMap faultExceptionNameMap = new HashMap();
+    private HashMap faultExceptionClassNameMap = new HashMap();
+    private HashMap faultMessageMap = new HashMap();
 
     private static int counter = 0;
 
@@ -603,7 +604,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -717,7 +718,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorgetListaAmici();
@@ -862,7 +863,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -976,7 +977,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorgetUtentePerse();
@@ -1121,7 +1122,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -1235,7 +1236,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorgetUtenteNome();
@@ -1380,7 +1381,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -1494,7 +1495,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorsetUtentePareggiate();
@@ -1639,7 +1640,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -1753,7 +1754,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorinsertPartita();
@@ -1898,7 +1899,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -2012,7 +2013,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorgetListaUtentiOnline();
@@ -2157,7 +2158,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -2271,7 +2272,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrornuovoAmico();
@@ -2416,7 +2417,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -2530,7 +2531,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorinsertPosizioneIniziale();
@@ -2675,7 +2676,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -2789,7 +2790,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorinsertMossa();
@@ -2934,7 +2935,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -3048,7 +3049,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorgetUtenteIA();
@@ -3193,7 +3194,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -3307,7 +3308,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorgetPartite();
@@ -3452,7 +3453,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -3566,7 +3567,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorupdateTipo();
@@ -3711,7 +3712,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -3825,7 +3826,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorgetUtente();
@@ -3970,7 +3971,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -4084,7 +4085,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorsetUtenteVinte();
@@ -4229,7 +4230,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -4343,7 +4344,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorsetUtentePerse();
@@ -4488,7 +4489,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -4602,7 +4603,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorsetUtenteAdmin();
@@ -4747,7 +4748,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -4861,7 +4862,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorgetUtenteOnline();
@@ -5006,7 +5007,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -5120,7 +5121,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorgetNomePartita();
@@ -5265,7 +5266,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -5379,7 +5380,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorupdatePartita();
@@ -5524,7 +5525,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -5638,7 +5639,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorsetUtenteOnline();
@@ -5783,7 +5784,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -5897,7 +5898,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorsetUtenteIA();
@@ -6042,7 +6043,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -6156,7 +6157,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorsetUtenteEmail();
@@ -6301,7 +6302,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -6415,7 +6416,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorgetMosse();
@@ -6560,7 +6561,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -6674,7 +6675,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorgetPosizioniIniziali();
@@ -6819,7 +6820,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -6933,7 +6934,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorisUtenteIniziale();
@@ -7078,7 +7079,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -7192,7 +7193,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorcancellaUtente();
@@ -7337,7 +7338,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -7451,7 +7452,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorsetUtenteCognome();
@@ -7596,7 +7597,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -7710,7 +7711,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorcancellaAmico();
@@ -7855,7 +7856,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -7969,7 +7970,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorgetUtenteVinte();
@@ -8114,7 +8115,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -8228,7 +8229,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorsetUtentePassword();
@@ -8373,7 +8374,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -8487,7 +8488,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorgetIdtoken();
@@ -8632,7 +8633,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -8746,7 +8747,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrornuovoUtente();
@@ -8891,7 +8892,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -9005,7 +9006,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorsetUtenteNome();
@@ -9150,7 +9151,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -9264,7 +9265,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorinsertLOG();
@@ -9409,7 +9410,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -9523,7 +9524,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorgetUtenteCognome();
@@ -9668,7 +9669,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -9782,7 +9783,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrormodificaUtente();
@@ -9927,7 +9928,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -10041,7 +10042,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorgetUtentePareggiate();
@@ -10186,7 +10187,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -10300,7 +10301,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorgetUtenteAdmin();
@@ -10445,7 +10446,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -10559,7 +10560,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrordeletePartita();
@@ -10704,7 +10705,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -10818,7 +10819,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorcancellaAmici();
@@ -10963,7 +10964,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                         java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                 new java.lang.Class[]{messageClass});
-                        m.invoke(ex, new java.lang.Object[]{messageObject});
+                        m.invoke(ex, messageObject);
 
 
                         throw new java.rmi.RemoteException(ex.getMessage(), ex);
@@ -11077,7 +11078,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
                                 java.lang.Object messageObject = fromOM(faultElt, messageClass, null);
                                 java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                         new java.lang.Class[]{messageClass});
-                                m.invoke(ex, new java.lang.Object[]{messageObject});
+                                m.invoke(ex, messageObject);
 
 
                                 callback.receiveErrorgetUtenteEmail();
@@ -11146,7 +11147,7 @@ public class WSDataStub extends org.apache.axis2.client.Stub {
      * A utility method that copies the namepaces from the SOAPEnvelope
      */
     private java.util.Map getEnvelopeNamespaces(org.apache.axiom.soap.SOAPEnvelope env) {
-        java.util.Map returnMap = new java.util.HashMap();
+        java.util.Map returnMap = new HashMap();
         java.util.Iterator namespaceIterator = env.getAllDeclaredNamespaces();
         while (namespaceIterator.hasNext()) {
             org.apache.axiom.om.OMNamespace ns = (org.apache.axiom.om.OMNamespace) namespaceIterator.next();

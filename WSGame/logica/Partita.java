@@ -351,7 +351,7 @@ public class Partita {
 				int turno_corrente = 0;
 				if(!pari){
 					//System.out.println(temp + "*** *** **** "+ mosse_eseguite + " " + mosse_eseguite/2 + " " + (int)mosse_eseguite/2);
-					turno_corrente= (int)(mosse_eseguite/2)+1;
+					turno_corrente= mosse_eseguite/2 +1;
 					temp += turno_corrente + ".";
 				}
 				if(pari)

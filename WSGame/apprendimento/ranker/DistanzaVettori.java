@@ -7,7 +7,6 @@ import java.util.Vector;
 /**
  * Created by Stefano on 16/07/2014.
  */
-
 /**
  * Determina la bonta di un pezzo confrontando la distanza che c'e tra il vettore del profilo del pezzo
  * e i vettori di riferimento passati come parametri

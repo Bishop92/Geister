@@ -5,7 +5,6 @@ import logica.Tavolo;
 /**
  * Created by Stefano on 15/07/2014.
  */
-
 public class CattiviInGioco implements Euristica {
 
     /**

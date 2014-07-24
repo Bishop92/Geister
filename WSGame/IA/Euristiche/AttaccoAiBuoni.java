@@ -7,7 +7,6 @@ import logica.Tavolo;
 /**
  * Created by Stefano on 15/07/2014.
  */
-
 /**
  * Controlla se un pezzo cattivo del giocatore corrente sta minacciando un pezzo buono avversario.
  */

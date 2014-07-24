@@ -1201,14 +1201,7 @@ public class GestisceFileProfilo extends GestisceFile {
 		 */
 		public boolean fermoSeMinacciato(Pezzo p){
 			//controllo se il pezzo si e' mosso
-			if (tav.getPezzo(p.getCoordinata()) == null || tav.getPezzo(p.getCoordinata()).getNumero()!=p.getNumero()){
-				return false;
-			}
-			else{ //il pezzo e' rimasto fermo
-				//controllo se il pezzo era minacciato
-                //il pezzo non era minacciato
-                return minacciato(p.getNumero());
-			}
+            return !(tav.getPezzo(p.getCoordinata()) == null || tav.getPezzo(p.getCoordinata()).getNumero() != p.getNumero()) && minacciato(p.getNumero());
 		}
 		
 		/**

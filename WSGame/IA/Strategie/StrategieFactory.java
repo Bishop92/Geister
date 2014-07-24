@@ -12,7 +12,7 @@ public class StrategieFactory {
     public enum STRATEGIE{RANDOM, MINMAXAB}
 
     private static StrategieFactory instance = new StrategieFactory();
-    private Map<STRATEGIE, Strategia> strategie = new HashMap<STRATEGIE, Strategia>();
+    private Map<STRATEGIE, Strategia> strategie = new HashMap<>();
 
     private StrategieFactory() {
         strategie.put(STRATEGIE.RANDOM, new Strategia());

@@ -8,7 +8,6 @@ import java.util.Vector;
 /**
  * Created by Stefano on 23/07/2014.
  */
-
 /**
  * Classe per simulare un'intelligenza artificiale che conosce perfettamente le tipologie delle pedine
  */

@@ -6,7 +6,6 @@ import logica.Tavolo;
 /**
  * Created by Stefano on 15/07/2014.
  */
-
 /**
  * Determina se qualche pezzo buono del giocatore corrente e sotto minaccia.
  */

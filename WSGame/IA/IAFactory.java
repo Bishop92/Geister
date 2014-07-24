@@ -15,7 +15,7 @@ import java.util.Map;
 public class IAFactory {
 
     private static IAFactory instance = new IAFactory();
-    private Map<String, IntelligenzaArtificiale> ia = new HashMap<String, IntelligenzaArtificiale>();
+    private Map<String, IntelligenzaArtificiale> ia = new HashMap<>();
 
     private IAFactory() {
     }
