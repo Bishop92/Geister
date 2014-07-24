@@ -40,7 +40,8 @@ public class IAFactory {
     public IntelligenzaArtificiale getIA(Tavolo tavolo, Giocatore giocatoreCorrente, Giocatore avversario, double livelloGiocatoreCorrente, String idPartita, EuristicheFactory.EURISTICHE euristica, StrategieFactory.STRATEGIE strategia, RankerFactory.RANKERS ranker) {
         IntelligenzaArtificiale intelligenzaArtificiale = ia.get(idPartita);
         if (intelligenzaArtificiale == null)
-            intelligenzaArtificiale = new IntelligenzaArtificiale(tavolo, giocatoreCorrente, avversario, livelloGiocatoreCorrente, idPartita, euristica, strategia, ranker);
+            intelligenzaArtificiale = new IntelligenzaArtificiale( giocatoreCorrente, avversario, livelloGiocatoreCorrente, idPartita, euristica, strategia, ranker);
+        intelligenzaArtificiale.setTavolo(tavolo);
         return intelligenzaArtificiale;
     }
 
@@ -49,7 +50,7 @@ public class IAFactory {
      *
      * @param idPartita L'identificativo della partita in corso
      */
-    public void deleteIA(String idPartita, boolean esito) {
+    public void deleteIA(String idPartita) {
         ia.get(idPartita).terminaPartita();
         ia.remove(idPartita);
     }

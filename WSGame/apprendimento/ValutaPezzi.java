@@ -62,15 +62,13 @@ public class ValutaPezzi {
     private Ranker ranker;
 
     /**
-     * @param t           Il tavolo da analizzare
      * @param gCorrente   Il giocatore corrente
      * @param a           L'avversario del giocatore corrente
      * @param lAvversario Livello dell'avversario
      * @param nPartita    Nome della partita
      * @param r           L'algoritmo per la valutazione della tipologia dei pezzi
      */
-    public ValutaPezzi(Tavolo t, Giocatore gCorrente, Giocatore a, double lAvversario, String nPartita, RankerFactory.RANKERS r) {
-        tavolo = t;
+    public ValutaPezzi(Giocatore gCorrente, Giocatore a, double lAvversario, String nPartita, RankerFactory.RANKERS r) {
         giocatoreCorrente = gCorrente;
         avversario = a;
         livelloAvversario = lAvversario;
@@ -79,6 +77,14 @@ public class ValutaPezzi {
         RankerFactory rankerFactory = RankerFactory.getInstance();
         ranker = rankerFactory.getRanker(r);
         featureCollector = new FeatureCollector();
+    }
+
+    /**
+     * Imposta il tavolo dopo una mossa da parte dell'avversario
+     * @param t Il tavolo
+     */
+    public void setTavolo(Tavolo t) {
+        tavolo = t;
     }
 
     /**

@@ -323,11 +323,9 @@ class MySkeleton {
         String idtoken = getTurno.getIdtoken();
         String username = getTurno.getUsername();
         String nomePartita = getTurno.getNomePartita();
-        String mosse = "";
-
         //controllo le mosse per la partita dei due giocatori
         //e decido il turno a chi tocca
-        mosse = mossePartita(idtoken, username, nomePartita);
+        String mosse = mossePartita(idtoken, username, nomePartita);
         resp.set_return(getTurno(idtoken, username, nomePartita, mosse));
         return resp;
     }
@@ -383,10 +381,9 @@ class MySkeleton {
         String idtoken = listaMosse.getIdtoken();
         String username = listaMosse.getUsername();
         String nomePartita = listaMosse.getNomePartita();
-        String mosse = "";
-        //controllo se esiste una partita per questi due giocatori
 
-        mosse = mossePartita(idtoken, username, nomePartita);
+        //controllo se esiste una partita per questi due giocatori
+        String mosse = mossePartita(idtoken, username, nomePartita);
         if (!mosse.startsWith("ERR")) {//non c'e errore nel recupero della lista mosse in DB
             resp.set_return(mosse);
             return resp;
@@ -403,13 +400,10 @@ class MySkeleton {
             String tavolo = "";
             String CHAR_SEPARATE = "|";
             Pezzo[][] pezzo = tavoloLogico.getBaseLogica();
-            for (int i = 0; i < pezzo.length; i++) {
-                for (int j = 0; j < pezzo[i].length; j++) {
+            for (int i = 0; i < pezzo.length; i++)
+                for (int j = 0; j < pezzo[i].length; j++)
                     if (pezzo[i][j] != null)
                         tavolo += "" + i + j + ";" + pezzo[i][j].getNumero() + ";" + pezzo[i][j].getGiocatore() + "|";
-                }
-                //tavolo+="\n";
-            }
             if (tavolo.endsWith(CHAR_SEPARATE)) tavolo = tavolo.substring(0, tavolo.length() - 1);
             return tavolo;
         } catch (Exception e) {
@@ -467,8 +461,7 @@ class MySkeleton {
         String idtoken = generaMossaIA.getIdtoken();
         String username = generaMossaIA.getUsername();
         String data = generaMossaIA.getUsername_sfidato();
-        String username_sfidato = "";
-        String nomePartita = "";
+        String username_sfidato, nomePartita;
 
         String temp[] = data.split("TAVOLO:");
         username_sfidato = temp[0].substring(2);//tolgo IA davanti
@@ -478,12 +471,10 @@ class MySkeleton {
         nomePartita = getNomePartita(idtoken, username, username_sfidato);
         new ValutaPezziLog(nomePartita);
         Tavolo t = preparaTavoloLogico(temp[1]);
-        int id_sfidato = getUtenteIDDB(username_sfidato);
         double liv1 = getLivelloDB(nomePartita, 1);
-        double liv2 = getLivelloDB(nomePartita, 2);
 
 
-        String mossa = getMossaIntelligenzaArtificiale(t, liv1, liv2, giocatore_correnteIA, giocatore_avversarioIO, nomePartita);
+        String mossa = getMossaIntelligenzaArtificiale(t, liv1, giocatore_correnteIA, giocatore_avversarioIO, nomePartita);
         resp.set_return(mossa);
         return resp;
     }
@@ -554,7 +545,7 @@ class MySkeleton {
 
             }
 
-            // chiudere le risorse DB � obbligatorio
+            // chiudere le risorse DB e obbligatorio
             rsID.close();
             s.close();
             con.close();
@@ -573,7 +564,7 @@ class MySkeleton {
     /**
      * Chiama l'intelligenza artificiale e restituisce la mossa calcolata in base ai profili
      */
-    String getMossaIntelligenzaArtificiale(Tavolo t, double liv, double livAvv, Giocatore gioc_corr, Giocatore avv, String nomePar) {
+    String getMossaIntelligenzaArtificiale(Tavolo t, double liv, Giocatore gioc_corr, Giocatore avv, String nomePar) {
         try {
 
             IntelligenzaArtificiale IA = IAFactory.getInstance().getIA(t, gioc_corr, avv, liv, nomePar, EuristicheFactory.EURISTICHE.ATTACCOAIBUONI, StrategieFactory.STRATEGIE.MINMAXAB, RankerFactory.RANKERS.DISTANZAVETTORI);
