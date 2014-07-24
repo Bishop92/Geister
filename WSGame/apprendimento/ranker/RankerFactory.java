@@ -11,7 +11,7 @@ public class RankerFactory {
 
     public enum RANKERS{DISTANZAVETTORI}
 
-    private static RankerFactory instance = null;
+    private static RankerFactory instance = new RankerFactory();
     private Map<RANKERS, Ranker> rankers = new HashMap<RANKERS, Ranker>();
 
     private RankerFactory() {
@@ -19,10 +19,6 @@ public class RankerFactory {
     }
 
     public static RankerFactory getInstance() {
-        synchronized (RankerFactory.class) {
-            if (instance == null)
-                instance = new RankerFactory();
-        }
         return instance;
     }
 

@@ -11,7 +11,7 @@ public class StrategieFactory {
 
     public enum STRATEGIE{RANDOM, MINMAXAB}
 
-    private static StrategieFactory instance = null;
+    private static StrategieFactory instance = new StrategieFactory();
     private Map<STRATEGIE, Strategia> strategie = new HashMap<STRATEGIE, Strategia>();
 
     private StrategieFactory() {
@@ -20,10 +20,6 @@ public class StrategieFactory {
     }
 
     public static StrategieFactory getInstance() {
-        synchronized (StrategieFactory.class) {
-            if (instance == null)
-                instance = new StrategieFactory();
-        }
         return instance;
     }
 

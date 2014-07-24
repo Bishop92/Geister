@@ -10,9 +10,10 @@ import java.util.Map;
 public class EuristicheFactory {
 
     public enum EURISTICHE{ATTACCOAIBUONI, BUONIINGIOCO, BUONIMANGIATI, BUONISOTTOMINACCIA, CATTIVIINGIOCO, CATTIVIMANGIATI,
-        DISTANZABUONIUSCITA, DISTANZABUONIUSCITAAVVERSARIO}
+        DISTANZABUONIUSCITA, DISTANZABUONIUSCITAAVVERSARIO, NNEURISTICA
+    }
 
-    private static EuristicheFactory instance = null;
+    private static EuristicheFactory instance = new EuristicheFactory();
     private Map<EURISTICHE, Euristica> euristiche = new HashMap<EURISTICHE, Euristica>();
 
     private EuristicheFactory() {
@@ -24,13 +25,10 @@ public class EuristicheFactory {
         euristiche.put(EURISTICHE.CATTIVIMANGIATI, new CattiviMangiati());
         euristiche.put(EURISTICHE.DISTANZABUONIUSCITA, new DistanzaBuoniUscita());
         euristiche.put(EURISTICHE.DISTANZABUONIUSCITAAVVERSARIO, new DistanzaBuoniUscitaAvversario());
+        euristiche.put(EURISTICHE.NNEURISTICA, new NNEuristica());
     }
 
     public static EuristicheFactory getInstance() {
-        synchronized (EuristicheFactory.class) {
-            if (instance == null)
-                instance = new EuristicheFactory();
-        }
         return instance;
     }
 

@@ -14,17 +14,13 @@ import java.util.Map;
  */
 public class IAFactory {
 
-    private static IAFactory instance = null;
+    private static IAFactory instance = new IAFactory();
     private Map<String, IntelligenzaArtificiale> ia = new HashMap<String, IntelligenzaArtificiale>();
 
     private IAFactory() {
     }
 
     public static IAFactory getInstance() {
-        synchronized (IAFactory.class) {
-            if (instance == null)
-                instance = new IAFactory();
-        }
         return instance;
     }
 
@@ -35,7 +31,7 @@ public class IAFactory {
      * @param giocatoreCorrente        Il giocatore corrente
      * @param avversario               L'avversario
      * @param livelloGiocatoreCorrente Il livello del giocatore corrente (IA)
-     * @param idPartita                  La partita in corso
+     * @param idPartita                La partita in corso
      * @param euristica                L'euristica impiegata per valutare il tavolo
      * @param strategia                La strategia per scelgiere le mosse
      * @param ranker                   Il ranker che effettuera la valutazione della tipologia dei pezzi
@@ -51,9 +47,10 @@ public class IAFactory {
     /**
      * Elimina l'intelligenza artificiale richiesta
      *
-     * @param idPartita                  L'identificativo della partita in corso
+     * @param idPartita L'identificativo della partita in corso
      */
-    public void deleteIA(String idPartita) {
+    public void deleteIA(String idPartita, boolean esito) {
+        ia.get(idPartita).terminaPartita();
         ia.remove(idPartita);
     }
 }

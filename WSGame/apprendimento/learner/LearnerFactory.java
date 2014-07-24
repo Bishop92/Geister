@@ -13,7 +13,7 @@ public class LearnerFactory {
 
     public enum LEARNER{MEDIAVETTORI}
 
-    private static LearnerFactory instance = null;
+    private static LearnerFactory instance = new LearnerFactory();
     private Map<LEARNER, Learner> learners = new HashMap<LEARNER, Learner>();
 
     private LearnerFactory() {
@@ -22,10 +22,6 @@ public class LearnerFactory {
     }
 
     public static LearnerFactory getInstance() {
-        synchronized (LearnerFactory.class) {
-            if (instance == null)
-                instance = new LearnerFactory();
-        }
         return instance;
     }
 

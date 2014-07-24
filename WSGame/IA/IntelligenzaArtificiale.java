@@ -22,6 +22,7 @@ package IA;
 import java.util.Vector;
 
 import IA.euristiche.EuristicheFactory;
+import IA.euristiche.LearningHeuristic;
 import IA.strategie.Strategia;
 import IA.strategie.StrategieFactory;
 import apprendimento.ValutaPezzi;
@@ -51,15 +52,23 @@ public class IntelligenzaArtificiale {
     /**
      * Indica il tavolo sul quale si e attivata l'intelligenza artificiale
      */
-    private Tavolo tav;
+    private Tavolo tavolo;
     /**
-     * Indica il giocatore che ha richiesto l'attivazione dell'intelligenza artificiale
+     * Indica il giocatore che viene rappresentato dall'intelligenza artificiale
      */
-    private Giocatore giocatoreCorrente;
+    private Giocatore giocatore;
     /**
      * Livello del giocatore corrente
      */
-    private double livelloGiocatoreCorrente;
+    private double livelloIA;
+    /**
+     * Indica l'avversario contro cui l'intelligenza artificiale sta giocando
+     */
+    private Giocatore avversario;
+    /**
+     * La partita di riferimento
+     */
+    private String partita;
     /**
      * L'euristica selezionata per la valutazione del tavolo
      */
@@ -68,24 +77,30 @@ public class IntelligenzaArtificiale {
      * La strategia da utilizzare per scegliere la mossa
      */
     private Strategia strategia;
+    /**
+     * Indica se l'intelligenza artificiale ha vinto o perso la partita
+     */
+    private double esito = 0;
 
     /**
-     * @param t                  Il Tavolo
-     * @param gCorrente          Il giocatore corrente
-     * @param a                  L'avversario
-     * @param lGiocatoreCorrente Il livello del giocatore corrente (IA)
-     * @param p                  La partita in corso
-     * @param e                  L'euristica impiegata per valutare il tavolo
-     * @param s                  La strategia per scelgiere le mosse
-     * @param r                  Il ranker che effettuera la valutazione della tipologia dei pezzi
+     * @param t   Il Tavolo
+     * @param g   Il giocatore corrente
+     * @param a   L'avversario
+     * @param lIA Il livello del giocatore corrente (IA)
+     * @param p   La partita in corso
+     * @param e   L'euristica impiegata per valutare il tavolo
+     * @param s   La strategia per scelgiere le mosse
+     * @param r   Il ranker che effettuera la valutazione della tipologia dei pezzi
      */
-    public IntelligenzaArtificiale(Tavolo t, Giocatore gCorrente, Giocatore a, double lGiocatoreCorrente, String p, EuristicheFactory.EURISTICHE e, StrategieFactory.STRATEGIE s, RankerFactory.RANKERS r) {
-        tav = t;
-        giocatoreCorrente = gCorrente;
-        livelloGiocatoreCorrente = lGiocatoreCorrente;
+    public IntelligenzaArtificiale(Tavolo t, Giocatore g, Giocatore a, double lIA, String p, EuristicheFactory.EURISTICHE e, StrategieFactory.STRATEGIE s, RankerFactory.RANKERS r) {
+        tavolo = t;
+        giocatore = g;
+        livelloIA = lIA;
+        avversario = a;
+        partita = p;
         euristica = e;
         strategia = StrategieFactory.getInstance().getStrategia(s);
-        valutaPezzi = new ValutaPezzi(t, giocatoreCorrente, a, livelloGiocatoreCorrente, p, r);
+        valutaPezzi = new ValutaPezzi(t, giocatore, a, livelloIA, partita, r);
     }
 
     /**
@@ -115,33 +130,37 @@ public class IntelligenzaArtificiale {
         il prorpio valutaPezzi grazie all'algoritmo di apprendimento*/
         attivaProfilo(true);
         //cancello i valori precedenti
-        tav.aggiornaMosseLegali();
+        tavolo.aggiornaMosseLegali();
 
         //contiene il vettore dei pezzi buoni del giocatore corrente.
         Vector<Pezzo> pezziBuoni;
 
-        if (giocatoreCorrente.getNumero() == (byte) 1) {
+        if (giocatore.getNumero() == (byte) 1) {
             //assegno apez_buoni i pezzi buoni del giocatore 1
-            pezziBuoni = tav.vettorePezzi((byte) 1);
-            //controllo se un pezzo buono o in una casella da cui puo uscire dal tavoliere e vincere la partita
+            pezziBuoni = tavolo.vettorePezzi((byte) 1);
+            //controllo se un pezzo buono e in una casella da cui puo uscire dal tavoliere e vincere la partita
             for (Pezzo pezzo : pezziBuoni)
                 if ((pezzo.getCoordinata().getRiga() == 5 && pezzo.getCoordinata().getColonna() == 0) ||
-                        (pezzo.getCoordinata().getRiga() == 5 && pezzo.getCoordinata().getColonna() == 5))
+                        (pezzo.getCoordinata().getRiga() == 5 && pezzo.getCoordinata().getColonna() == 5)) {
+                    esito = 1;
                     return new Mossa(pezzo.getCoordinata(), null);
+                }
         }
 
-        if (giocatoreCorrente.getNumero() == (byte) 2) {
-            pezziBuoni = tav.vettorePezzi((byte) 3);
-            //controllo se un pezzo buono o in una casella da cui puo uscire dal tavoliere e vincere la partita
+        if (giocatore.getNumero() == (byte) 2) {
+            pezziBuoni = tavolo.vettorePezzi((byte) 3);
+            //controllo se un pezzo buono e in una casella da cui puo uscire dal tavoliere e vincere la partita
             for (Pezzo pezzo : pezziBuoni)
                 if ((pezzo.getCoordinata().getRiga() == 0 && pezzo.getCoordinata().getColonna() == 0) ||
-                        (pezzo.getCoordinata().getRiga() == 0 && pezzo.getCoordinata().getColonna() == 5))
+                        (pezzo.getCoordinata().getRiga() == 0 && pezzo.getCoordinata().getColonna() == 5)) {
+                    esito = 1;
                     return new Mossa(pezzo.getCoordinata(), null);
+                }
         }
         //se il livello del giocatore o 1 attivo la modalita random in quanto la componente di apprendimento viene annullata
 
         Mossa mossa;
-        if (livelloGiocatoreCorrente == -1)
+        if (livelloIA == -1)
             mossa = mossaRandom();
         else
             //la modalita non e random allora calcola tutte le possibili mosse richiamando l'algoritmo di ricerca in MinMaxAB
@@ -157,14 +176,30 @@ public class IntelligenzaArtificiale {
      */
     private Mossa mossaRandom() {
         StrategieFactory strategieFactory = StrategieFactory.getInstance();
-        return strategieFactory.getStrategia(StrategieFactory.STRATEGIE.RANDOM).getMossa(tav, giocatoreCorrente, euristica);
+        return strategieFactory.getStrategia(StrategieFactory.STRATEGIE.RANDOM).getMossa(tavolo, giocatore, euristica, partita);
     }
 
     /**
      * Determina la mossa migliore da eseguire
      */
     private Mossa getMossa() {
-        return strategia.getMossa(tav, giocatoreCorrente, euristica);
+        return strategia.getMossa(tavolo, giocatore, euristica, partita);
+    }
+
+    /**
+     * Conclude la partita controllando se devono essere avviati eventuali apprendimenti
+     */
+    public void terminaPartita() {
+
+        if (tavolo.getNumeroPezziBuoni(avversario.getNumero()) < 1)
+            esito = 1;
+        if (tavolo.getNumeroPezziCattivi(giocatore.getNumero()) < 1)
+            esito = 1;
+
+            //ottengo l'euristica e controllo se devo eseguire dell'apprendimento
+            LearningHeuristic learningHeuristic = (LearningHeuristic) EuristicheFactory.getInstance().getEuristica(euristica);
+        if (learningHeuristic != null)
+            learningHeuristic.learn(partita, esito);
     }
 }
 

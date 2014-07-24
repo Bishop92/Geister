@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/WSData" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/WSGame" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/WSUtenti" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Libraries" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -100,18 +100,17 @@ class MySkeleton {
             partitaStub.setNomePartita(modificaTipo.getNomePartita());
             partitaStub.setTipo_nuovo(modificaTipo.getTipo_nuovo());
 
-            if(modificaTipo.getTipo_nuovo().equals("100"))
+            if (modificaTipo.getTipo_nuovo().equals("100"))
                 IAFactory.getInstance().deleteIA(modificaTipo.getNomePartita());
 
             WSDataStub.UpdateTipoResponse dataResp = stub.updateTipo(partitaStub);
 
             resp.set_return(dataResp.get_return());
-            return resp;
         } catch (RemoteException e) {
             insertLog("ERR:" + e.toString(), "WSGame/modificaTipo");
             resp.set_return("ERR:" + e.toString());
-            return resp;
         }
+        return resp;
     }
 
     /**
@@ -209,7 +208,6 @@ class MySkeleton {
      * @return boolean: conferma inserimento log
      */
     boolean insertLog(String message, String function) {
-        boolean resp = false;
         try {
             WSDataStub stub = new WSDataStub();
             WSDataStub.InsertLOG log = new WSDataStub.InsertLOG();
@@ -217,16 +215,10 @@ class MySkeleton {
             log.setFunzione(function);
             log.setIdtoken("");
 
-            WSDataStub.InsertLOGResponse logResp = stub.insertLOG(log);
-            if (logResp.get_return()) {
-                resp = true;
-                return resp;
-            } else {
-                resp = true;
-                return resp;
-            }
+            stub.insertLOG(log);
+            return true;
         } catch (RemoteException e) {
-            return resp;
+            return false;
         }
     }
 
@@ -259,10 +251,10 @@ class MySkeleton {
     /**
      * Metodo interno di getTurno, separato per essere usato in piu punti del servizio.
      *
-     * @param idtoken Token della partita generata
-     * @param username Username del giocatore che ha avviato la partita
+     * @param idtoken     Token della partita generata
+     * @param username    Username del giocatore che ha avviato la partita
      * @param nomePartita Nome della partita in analisi.
-     * @param mosse Elenco delle mosse che identificano il turno
+     * @param mosse       Elenco delle mosse che identificano il turno
      * @return int (int turno. 1=chiamante, 2=avversario. -1=ERRORE)
      */
     int getTurno(String idtoken, String username, String nomePartita, String mosse) {
@@ -395,7 +387,7 @@ class MySkeleton {
         //controllo se esiste una partita per questi due giocatori
 
         mosse = mossePartita(idtoken, username, nomePartita);
-        if (!mosse.startsWith("ERR")) {//non c'� errore nel recupero della lista mosse in DB
+        if (!mosse.startsWith("ERR")) {//non c'e errore nel recupero della lista mosse in DB
             resp.set_return(mosse);
             return resp;
         } else {
@@ -594,12 +586,14 @@ class MySkeleton {
                         " " + String.valueOf(arrivo.getRiga() + String.valueOf(arrivo.getColonna()));
             } else {
                 String partenza1 = String.valueOf(partenza.getRiga()) + String.valueOf(partenza.getColonna());
-                if (partenza1.equals("00"))
-                    return partenza1 + " " + "99"; //mossa di uscita in basso a sinistra
-                else if (partenza1.equals("05"))
-                    return partenza1 + " " + "06"; //mossa di uscita in basso a sinistra
-                else
-                    return partenza1 + " " + "99"; //mossa di uscita in basso a sinistra default test
+                switch (partenza1) {
+                    case "00":
+                        return partenza1 + " " + "99"; //mossa di uscita in basso a sinistra
+                    case "05":
+                        return partenza1 + " " + "06"; //mossa di uscita in basso a sinistra
+                    default:
+                        return partenza1 + " " + "99"; //mossa di uscita in basso a sinistra default test
+                }
             }
         } catch (Exception e) {
             return (e.toString());
@@ -628,7 +622,7 @@ class MySkeleton {
             int turno = getTurno(idtoken, "", nomePartita, mosseP);
             if (turno != -1) {
                 if (turno == 1 || (turno == 2 && username.startsWith("IA"))) {
-                    //tocca al chiamante o alla realt� virtuale, inserimento possibile
+                    //tocca al chiamante o alla realta virtuale, inserimento possibile
                     WSDataStub stub = new WSDataStub();
                     WSDataStub.InsertMossa mosse = new WSDataStub.InsertMossa();
                     mosse.setIdtoken(idtoken);
@@ -735,7 +729,7 @@ class MySkeleton {
             partitaStub.setUsername_sfidato(username_sfidato);
             WSDataStub.GetNomePartitaResponse dataResp = stub.getNomePartita(partitaStub);
 
-            if (!dataResp.get_return().equals(nomePartita)) {//non c'� match tra i due utenti con questo nome: posso creare la partita nel db
+            if (!dataResp.get_return().equals(nomePartita)) {//non c'e match tra i due utenti con questo nome: posso creare la partita nel db
                 //gestire qui eventuale XML!!!!!!!
 
                 resp.set_return(insertPartitaDB(idtoken, username, username_sfidato, nomePartita, giocatore_init, livello1, livello2, allenamento1, allenamento2));

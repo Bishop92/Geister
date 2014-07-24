@@ -21,7 +21,7 @@ public class DistanzaBuoniUscita implements Euristica {
     private double[] coeff = {0.8, 0.4, 0.2, 0.1, -0.1, -0.2, -0.3, -0.4};
 
     @Override
-    public double valuta(Tavolo tavolo, byte giocatore) {
+    public double valuta(Tavolo tavolo, byte giocatore, String partita) {
 
         //distanza inizialmente a 7 e' la massima distanza (minima) possibile
         int distanza = 7;

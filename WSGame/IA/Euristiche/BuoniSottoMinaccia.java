@@ -15,7 +15,7 @@ public class BuoniSottoMinaccia implements Euristica {
     private double coeff = 0.05;
 
     @Override
-    public double valuta(Tavolo tavolo, byte giocatore) {
+    public double valuta(Tavolo tavolo, byte giocatore, String partita) {
         //se giocatore 1
         int conta = 0;
 

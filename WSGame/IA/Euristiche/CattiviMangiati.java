@@ -19,7 +19,7 @@ public class CattiviMangiati implements Euristica {
     private double[] coeff = {0, 0.05, 0.1, 0.15, -1000};
 
     @Override
-    public double valuta(Tavolo tavolo, byte giocatore) {
+    public double valuta(Tavolo tavolo, byte giocatore, String partita) {
         // ritorno il coeff corretto corrispondente al numero di pezzi cattivi mangiati
         if (giocatore == 1)
             return coeff[(4 - tavolo.vettorePezzi((byte) 4).size())];

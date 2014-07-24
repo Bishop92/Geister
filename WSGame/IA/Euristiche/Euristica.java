@@ -12,5 +12,5 @@ public interface Euristica {
      * @param giocatore Il giocatore a cui tocca muovere
      * @return double La valutazione del tavolo
      */
-    public double valuta(Tavolo tavolo, byte giocatore);
+    public double valuta(Tavolo tavolo, byte giocatore, String partita);
 }

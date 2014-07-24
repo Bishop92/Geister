@@ -209,9 +209,8 @@ public class Tavolo implements Cloneable {
         if (pezzo_da_eliminare.getGiocatore() == 1) {
 
             //controllo se è buono
-            if (((Pezzo) pezzo_da_eliminare).isBuono()) {
+            if (pezzo_da_eliminare.isBuono()) {
                 temp_s = "b";
-//				System.out.println("Sto eliminando pezzo BUONO giocatore 1 in coordinata: "+cor.getRiga()+" : "+cor.getColonna());
                 //scorro tutti i pezzi buoni del giocatore 1
                 for (int a = 0; a < g1_pezzi_buoni.size(); a++) {
                     //e controllo le coordinate del pezzo che voglio eliminare
@@ -226,7 +225,6 @@ public class Tavolo implements Cloneable {
                         //elimino il pezzo
                         base_logica[cor.getRiga()][cor.getColonna()] = null;
                         g1_pezzi_buoni.removeElementAt(a);
-//						System.out.println("Eliminato Pezzo dalla base logica e da pezzi buoni del giocatore1");
                         return temp_s;
                     }
                 }
@@ -236,8 +234,6 @@ public class Tavolo implements Cloneable {
             //se è cattivo
             else {
                 temp_s = "r";
-//				System.out.println("Sto eliminando pezzo CATTIVO giocatore 1 in coordinata: "+cor.getRiga()+" : "+cor.getColonna());
-
                 //scorro tutti i pezzi cattivi del giocatore 2
                 for (int a = 0; a < g1_pezzi_cattivi.size(); a++) {
                     //e controllo le coordinate del pezzo che voglio eliminare
@@ -252,7 +248,6 @@ public class Tavolo implements Cloneable {
                         //elimino il pezzo
                         base_logica[cor.getRiga()][cor.getColonna()] = null;
                         g1_pezzi_cattivi.removeElementAt(a);
-//						System.out.println("Eliminato Pezzo dalla base logica e da pezzi cattivi del giocatore1");
                         return temp_s;
                     }
                 }
@@ -263,20 +258,14 @@ public class Tavolo implements Cloneable {
         //il pezzo è del giocatore 2
         else {
             //controllo se è buono
-            if (((Pezzo) pezzo_da_eliminare).isBuono()) {
+            if (pezzo_da_eliminare.isBuono()) {
                 temp_s = "b";
-//				System.out.print("PRIMA DI ELIMINARE PEZZO.......");
-//				System.out.println("pezzi buoni giocatore"+2);
                 //scorro tutti i pezzi buoni del giocatore 2
-//				System.out.println("ENTRA PER ELIMINARE UN PEZZO BUONO DEL GIOCATORE 2 totale pezzi "+g2_pezzi_buoni.size());
                 for (int b = 0; b < g2_pezzi_buoni.size(); b++) {
                     //e controllo le coordinate del pezzo che voglio eliminare
-//					System.out.println("pezzo da eliminare" +pezzo_da_eliminare.getCoordinata().getRiga()+pezzo_da_eliminare.getCoordinata().getColonna());
-//					System.out.println("pezzo da g2_buoni" +g2_pezzi_buoni.get(b).getCoordinata().getRiga()+g2_pezzi_buoni.get(b).getCoordinata().getColonna());
                     if (pezzo_da_eliminare.getCoordinata().equals(g2_pezzi_buoni.get(b).getCoordinata())) {
                         //salvo temporaneamente il pezzo da eliminare
                         Pezzo temp = base_logica[cor.getRiga()][cor.getColonna()];
-//						System.out.println("TROVATO PEZZO DA ELIMINARE COORDINATA "+cor.getRiga()+":"+cor.getColonna());
                         //testo se devo aggiungere il pezzo al vettore dei pezzi mangiati
                         if (aggiungere_al_vettore) {
                             //lo aggiungo al vettore dei pezzi mangiati da g1
@@ -284,9 +273,7 @@ public class Tavolo implements Cloneable {
                         }
                         //elimino il pezzo
                         base_logica[cor.getRiga()][cor.getColonna()] = null;
-//						System.out.println("NUMERO PEZZI BUONI G2 PRIMA: "+g2_pezzi_buoni.size());
                         g2_pezzi_buoni.removeElementAt(b);
-//						System.out.println("NUMERO PEZZI BUONI G2 DOPO: "+g2_pezzi_buoni.size());
                         return temp_s;
                     }
                 }
@@ -337,7 +324,7 @@ public class Tavolo implements Cloneable {
         //controllo se il pezzo è del giocatore 1
         if (p.getGiocatore() == 1) {
             //controllo se è buono
-            if (((Pezzo) p).isBuono()) {
+            if (p.isBuono()) {
                 base_logica[cor.getRiga()][cor.getColonna()] = p;
                 //imposto la nuova coordinata del pezzo
                 p.setCoordinata(cor);
@@ -354,7 +341,7 @@ public class Tavolo implements Cloneable {
             }
         } else {//il pezzo è del giocatore 2
             //controllo se è buono
-            if (((Pezzo) p).isBuono()) {
+            if (p.isBuono()) {
                 base_logica[cor.getRiga()][cor.getColonna()] = p;
                 //imposto la nuova coordinata del pezzo
                 p.setCoordinata(cor);
@@ -382,20 +369,11 @@ public class Tavolo implements Cloneable {
     public boolean muoviPezzo(Coordinata partenza, Coordinata arrivo) {
 
         Pezzo pezzo_temporaneo = getPezzo(partenza);
-//		System.out.println("Sto muovendo il pezzo in coordinata -> "+pezzo_temporaneo.getCoordinata().getRiga()+" : "+pezzo_temporaneo.getCoordinata().getColonna());
-//		System.out.println(" pezzi G1 == "+this.getNumeroPezziBuoni((byte)1)+this.getNumeroPezziCattivi((byte)1)+
-//					" pezzi G2== "+this.getNumeroPezziBuoni((byte)2)+this.getNumeroPezziCattivi((byte)2));
         //elimino dalla scacchiera il pezzo che si sta muovendo
         eliminaPezzo(partenza, false);
-//		System.out.println("eliminato partenza "+partenza.getRiga()+" : "+partenza.getColonna());
-//		System.out.println(" pezzi G1 == "+this.getNumeroPezziBuoni((byte)1)+this.getNumeroPezziCattivi((byte)1)+
-//				" pezzi G2== "+this.getNumeroPezziBuoni((byte)2)+this.getNumeroPezziCattivi((byte)2));
 
         //elimino il pezzo di arrivo
         eliminaPezzo(arrivo, true);
-//		System.out.println("eliminato arrivo "+arrivo.getRiga()+" : "+arrivo.getColonna());
-//		System.out.println(" pezzi G1 == "+this.getNumeroPezziBuoni((byte)1)+this.getNumeroPezziCattivi((byte)1)+
-//				" pezzi G2== "+this.getNumeroPezziBuoni((byte)2)+this.getNumeroPezziCattivi((byte)2));
 
         //inserisco nella coordinata di arrivo il pezzo che ho mosso
         aggiungiPezzo(arrivo, pezzo_temporaneo);
@@ -577,15 +555,11 @@ public class Tavolo implements Cloneable {
         if (giocatore == 1) {
             System.out.println("reimpostaDisposizionePezzi");
             //se i pezzi del giocatore non sono pezzi nascosto, esco dal metodo
-            if (g1_pezzi_buoni.size() != 0 && !(g1_pezzi_buoni.get(0) instanceof PezzoNascosto)) {
-                //System.out.println("QUI NON DEVE ENTRARE");
+            if (g1_pezzi_buoni.size() != 0 && !(g1_pezzi_buoni.get(0) instanceof PezzoNascosto))
                 return;
-            }
-            if (g1_pezzi_cattivi.size() != 0 && !(g1_pezzi_cattivi.get(0) instanceof PezzoNascosto)) {
-                //System.out.println("QUI NON DEVE ENTRARE");
+            if (g1_pezzi_cattivi.size() != 0 && !(g1_pezzi_cattivi.get(0) instanceof PezzoNascosto))
                 return;
-            }
-            // � indice del while
+            // e indice del while
             int i = 0;
             //scorro tutto il vettore dei pezzi buoni cercando i pezzi
             //che dovrebbero stare nel vettore dei pezzi cattivi
@@ -606,13 +580,9 @@ public class Tavolo implements Cloneable {
                     g1_pezzi_buoni.addElement(g1_pezzi_cattivi.remove(i));
                 } else i++;
             }
-            /*
             //controllo che il numero di pezzi buoni/cattivi sia giusto
-			if(g1_pezzi_buoni.size()>4 || g1_pezzi_cattivi.size()>)*/
             ridistribuzioneBuoniCattivi(giocatore);
         } else { //giocatore == 2
-
-//			System.out.println("TAVOLO: Sto REIMPOSTANDO I PEZZI del giocatore "+giocatore);	
 
             //se i pezzi del giocatore non sono pezzi nascosto, esco dal metodo
             if (g2_pezzi_buoni.size() != 0 && !(g2_pezzi_buoni.get(0) instanceof PezzoNascosto))
@@ -623,7 +593,6 @@ public class Tavolo implements Cloneable {
             //che dovrebbero stare nel vettore dei pezzi cattivi
             int i = 0;
             while (i < g2_pezzi_buoni.size())
-//			for (int i=0; i<g2_pezzi_buoni.size(); i++){
                 //se il pezzo è cattivo
                 if (!g2_pezzi_buoni.get(i).isBuono())
                     //sposto il pezzo da un vettore all'altro
@@ -735,7 +704,6 @@ public class Tavolo implements Cloneable {
      * @param giocatore giocatore del quale si vogliono ridistribuire i pezzi
      */
     private void ridistribuzioneBuoniCattivi(byte giocatore) {
-        System.out.println("TAVOLO: Sto RIDISTRIBUENDO BUONI/CATTIVI del giocatore " + giocatore);
 
         if (giocatore == 1) {
             int num_buoni_teorico = 4 - g2_pezzi_buoni_mangiati.size();
@@ -764,7 +732,6 @@ public class Tavolo implements Cloneable {
                     double valore_da_aggiungere = -valore_max + 0.001;
                     //aggiungo alla bonta' di tutti i pezzi cattivi il valore del pezzo che
                     //sto per inserire
-//					incrementaDecrementaValore(g1_pezzi_cattivi, valore_da_aggiungere);
                     //reimposto la bonta' del pezzo che devo spostare
                     ((PezzoNascosto) g1_pezzi_buoni.get(indice_max)).aggiungiBonta(valore_da_aggiungere);
                     //ora so qual'e' il pezzo di valore massimo e lo sposto nel vettore dei pezzi cattivi
@@ -793,7 +760,6 @@ public class Tavolo implements Cloneable {
                     double valore_da_aggiungere = -valore_min - 0.001;
                     //aggiungo alla bonta' di tutti i pezzi buoni il valore del pezzo che
                     //sto per inserire
-//					incrementaDecrementaValore(g1_pezzi_buoni, valore_da_aggiungere);
                     //reimposto la bonta' del pezzo che devo spostare
                     System.out.println("sono qui:" + g1_pezzi_cattivi.size());
                     if (g1_pezzi_cattivi.size() > 0) { //solo se indice=0 e il minimo, e non il default
@@ -829,13 +795,11 @@ public class Tavolo implements Cloneable {
                             indice_max = indice;
                         }
                     }
-//					System.out.println("HO TROVATO UN PEZZO DA REDISTRIBUIRE CON BONTA' "+valore_max);
                     //memorizzo il valore che devo aggiungere al pezzo che voglio spostare
                     //(quindi devo fare -valore_max, visto che valore_max e' sempre negativo)
                     double valore_da_aggiungere = -valore_max + 0.001;
                     //aggiungo alla bonta' di tutti i pezzi cattivi il valore del pezzo che
                     //sto per inserire
-//					incrementaDecrementaValore(g2_pezzi_cattivi, valore_da_aggiungere);
                     //reimposto la bonta' del pezzo che devo spostare
                     ((PezzoNascosto) g2_pezzi_buoni.get(indice_max)).aggiungiBonta(valore_da_aggiungere);
                     //ora so qual'e' il pezzo di valore massimo e lo sposto nel vettore dei pezzi cattivi
@@ -858,13 +822,11 @@ public class Tavolo implements Cloneable {
                             indice_min = indice;
                         }
                     }
-//					System.out.println("HO TROVATO UN PEZZO DA REDISTRIBUIRE CON BONTA' "+valore_min);
                     //memorizzo il valore che devo aggiungere al pezzo che voglio spostare
                     //(quindi devo fare -valore_min, visto che valore_min e' sempre positivo)
                     double valore_da_aggiungere = -valore_min - 0.001;
                     //aggiungo alla bonta' di tutti i pezzi buoni il valore del pezzo che
                     //sto per inserire (quindi devo fare -valore_min, visto che valore_min e' sempre positivo)
-//					incrementaDecrementaValore(g2_pezzi_buoni, valore_da_aggiungere);					
                     //reimposto la bonta' del pezzo che devo spostare
                     ((PezzoNascosto) g2_pezzi_cattivi.get(indice_min)).aggiungiBonta(valore_da_aggiungere);
                     //ora so qual'e' il pezzo di valore massimo e lo sposto nel vettore dei pezzi cattivi
