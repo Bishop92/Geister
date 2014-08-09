@@ -7,6 +7,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Arrays;
 
 import data.CancellaAmiciResponse;
 import data.CancellaAmicoResponse;
@@ -1372,7 +1373,7 @@ public class MySkeleton {
     	  int ID_Utente=0;
     	  String pass="";
     	  
-		  String token=user+password+currentTime;
+		  String token=user+ Arrays.toString(password) +currentTime;
 		  token=hashCode(token, "SHA-1");
     	  setupDB();
     	  try
@@ -1384,8 +1385,8 @@ public class MySkeleton {
     		  String where=" username like '"+user+"'";
 	   		//			" and password like '"+password+"';";
     		  // ci sono utenti validi?
-    		   if (contaTabella("utenti", where)==-1) {insertLOG("ERR:notoken;Exception in contaTabella in getIdToken:"+user+" "+password,"WSData/getIdtoken/contaTabella");resp.set_return("ERR:notoken");}
-    		   if (contaTabella("utenti", where)==0) {insertLOG("ERR:notoken;Nessun utente con login  passata:"+user+" "+password,"WSData/getIdtoken");resp.set_return("ERR:notoken");}
+    		   if (contaTabella("utenti", where)==-1) {insertLOG("ERR:notoken;Exception in contaTabella in getIdToken:"+user+" "+ Arrays.toString(password),"WSData/getIdtoken/contaTabella");resp.set_return("ERR:notoken");}
+    		   if (contaTabella("utenti", where)==0) {insertLOG("ERR:notoken;Nessun utente con login  passata:"+user+" "+ Arrays.toString(password),"WSData/getIdtoken");resp.set_return("ERR:notoken");}
     		   else
     		   { 
     			   s.executeQuery ("SELECT id,password FROM utenti where " +

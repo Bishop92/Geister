@@ -7,7 +7,9 @@
  */
         package data;
 
-        /**
+import java.util.HashMap;
+
+/**
         *  WSDataMessageReceiverInOut message receiver
         */
 
@@ -3319,7 +3321,7 @@
         *  A utility method that copies the namepaces from the SOAPEnvelope
         */
         private java.util.Map getEnvelopeNamespaces(org.apache.axiom.soap.SOAPEnvelope env){
-        java.util.Map returnMap = new java.util.HashMap();
+        java.util.Map returnMap = new HashMap();
         java.util.Iterator namespaceIterator = env.getAllDeclaredNamespaces();
         while (namespaceIterator.hasNext()) {
         org.apache.axiom.om.OMNamespace ns = (org.apache.axiom.om.OMNamespace) namespaceIterator.next();

@@ -33,7 +33,16 @@ public class TranspositionTable {
                 else
                     hash += pezzo.getNumero() % 4;
             }
-        return hash;
+
+        String minimumKey = hash;
+
+        for(Symmetry symmetry : SymmetryFactory.getInstance().getSymmetries()) {
+            String key = symmetry.transform(hash);
+            if(key.compareTo(minimumKey) < 0)
+                minimumKey = key;
+        }
+
+        return minimumKey;
     }
 
     /**

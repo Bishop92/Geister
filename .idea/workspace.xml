@@ -4,11 +4,13 @@
     <option name="ANALYSIS_IN_BACKGROUND" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6279669f-56c7-4672-8abb-2d18aff14ae2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/IA/IAFactory.java" afterPath="$PROJECT_DIR$/WSGame/IA/IAFactory.java" />
+    <list default="true" id="6279669f-56c7-4672-8abb-2d18aff14ae2" name="Default" comment="Added learning from selected tables for LearningHeuristic">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/IA/IntelligenzaArtificiale.java" afterPath="$PROJECT_DIR$/WSGame/IA/IntelligenzaArtificiale.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/skeleton/MySkeleton.java" afterPath="$PROJECT_DIR$/WSGame/skeleton/MySkeleton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/apprendimento/ValutaPezzi.java" afterPath="$PROJECT_DIR$/WSGame/apprendimento/ValutaPezzi.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/skeleton/MySkeleton.java" afterPath="$PROJECT_DIR$/WSData/skeleton/MySkeleton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSGame/IA/traspositiontables/TranspositionTable.java" afterPath="$PROJECT_DIR$/WSGame/IA/traspositiontables/TranspositionTable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSData/data/WSDataMessageReceiverInOut.java" afterPath="$PROJECT_DIR$/WSData/data/WSDataMessageReceiverInOut.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/WSUtentiMessageReceiverInOnly.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/WSUtentiMessageReceiverInOnly.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WSUtenti/geister/WSUtentiMessageReceiverInOut.java" afterPath="$PROJECT_DIR$/WSUtenti/geister/WSUtentiMessageReceiverInOut.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Geister.iws" />
@@ -32,83 +34,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="NNEuristica.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WSGame/IA/euristiche/NNEuristica.java">
+      <file leaf-file-name="HeuristicOperation.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WSGame/IA/euristiche/operations/HeuristicOperation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1122" max-vertical-offset="1785">
-              <caret line="97" column="40" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.52307695" vertical-offset="0" max-vertical-offset="585">
+              <caret line="18" column="74" selection-start-line="18" selection-start-column="74" selection-end-line="18" selection-end-column="74" />
               <folding>
-                <element signature="e#4109#4120#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IntelligenzaArtificiale.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AddEvaluationOperation.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WSGame/IA/euristiche/operations/AddEvaluationOperation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="367" max-vertical-offset="952">
+              <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IntelligenzaArtificiale.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WSGame/IA/IntelligenzaArtificiale.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.16240875" vertical-offset="3022" max-vertical-offset="3570">
-              <caret line="209" column="54" selection-start-line="209" selection-start-column="54" selection-end-line="209" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2930" max-vertical-offset="3502">
+              <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LearningHeuristic.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WSGame/IA/euristiche/LearningHeuristic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="629">
-              <caret line="29" column="66" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ValutaPezzi.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WSGame/apprendimento/ValutaPezzi.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="668" max-vertical-offset="5457">
-              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-              <folding>
-                <element signature="e#2376#2377#0" expanded="true" />
-                <element signature="e#2402#2403#0" expanded="true" />
-                <marker date="1406211463565" expanded="true" signature="3178:3761" placeholder="SELECT learn..profili_u_l_r..." />
-                <marker date="1406211463565" expanded="true" signature="4763:5002" placeholder="SELECT ranke..rankers..." />
-                <marker date="1406211463565" expanded="true" signature="6749:7212" placeholder="SELECT profi..profili_u_l_r..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MinMaxAB.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WSGame/IA/strategie/MinMaxAB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="942" max-vertical-offset="3196">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DistanzaVettori.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WSGame/apprendimento/ranker/DistanzaVettori.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="935">
-              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IAFactory.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WSGame/IA/IAFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="347" max-vertical-offset="935">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-              <folding>
-                <element signature="e#537#538#0" expanded="true" />
-                <element signature="e#568#569#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -132,33 +85,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/WSGame/apprendimento/features/Controllore.java" />
-        <option value="$PROJECT_DIR$/WSGame/logica/Partita.java" />
-        <option value="$PROJECT_DIR$/WSGame/apprendimento/GestisceFileProfilo.java" />
-        <option value="$PROJECT_DIR$/WSGame/apprendimento/Ranker.java" />
-        <option value="$PROJECT_DIR$/WSGame/IA/Strategie/Strategia.java" />
-        <option value="$PROJECT_DIR$/WSGame/IA/Strategie/MinMaxAB.java" />
-        <option value="$PROJECT_DIR$/WSGame/apprendimento/Profilo.java" />
-        <option value="$PROJECT_DIR$/WSGame/logica/Coordinata.java" />
-        <option value="$PROJECT_DIR$/WSGame/IA/Strategie/StrategieFactory.java" />
-        <option value="$PROJECT_DIR$/WSGame/apprendimento/ValutaTavolo.java" />
-        <option value="$PROJECT_DIR$/WSGame/game/ModificaTipo.java" />
-        <option value="$PROJECT_DIR$/WSGame/game/ModificaTipoResponse.java" />
-        <option value="$PROJECT_DIR$/WSGame/game/NuovaPartita.java" />
-        <option value="$PROJECT_DIR$/WSGame/game/WSGameMessageReceiverInOut.java" />
-        <option value="$PROJECT_DIR$/WSGame/IA/IntelligenzaArtificialeFactory.java" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/WSGame/apprendimento/GestisceLogPartita.java" />
-        <option value="$PROJECT_DIR$/WSGame/logica/Pezzo.java" />
-        <option value="$PROJECT_DIR$/WSGame/apprendimento/features/FeatureCollector.java" />
-        <option value="$PROJECT_DIR$/WSGame/apprendimento/ranker/Ranker.java" />
-        <option value="$PROJECT_DIR$/WSGame/apprendimento/ranker/DistanzaVettori.java" />
-        <option value="$PROJECT_DIR$/WSGame/IA/strategie/StrategieFactory.java" />
-        <option value="$PROJECT_DIR$/WSGame/apprendimento/learner/LearnerFactory.java" />
-        <option value="$PROJECT_DIR$/Libraries/org/neuroph/core/Connection.java" />
         <option value="$PROJECT_DIR$/org/neuroph/core/Connection.java" />
         <option value="$PROJECT_DIR$/Libraries/org/neuroph/core/NeuralNetwork.java" />
-        <option value="$PROJECT_DIR$/WSGame/IA/euristiche/Euristica.java" />
         <option value="$PROJECT_DIR$/WSGame/IA/euristiche/AttaccoAiBuoni.java" />
         <option value="$PROJECT_DIR$/WSGame/IA/euristiche/BuoniInGioco.java" />
         <option value="$PROJECT_DIR$/WSGame/IA/euristiche/BuoniMangiati.java" />
@@ -178,13 +106,41 @@
         <option value="$PROJECT_DIR$/WSGame/apprendimento/PezzoNascosto.java" />
         <option value="$PROJECT_DIR$/WSGame/apprendimento/ranker/InformazionePerfetta.java" />
         <option value="$PROJECT_DIR$/WSGame/skeleton/MySkeleton.java" />
-        <option value="$PROJECT_DIR$/WSGame/IA/IAFactory.java" />
         <option value="$PROJECT_DIR$/WSGame/apprendimento/ValutaPezzi.java" />
-        <option value="$PROJECT_DIR$/WSGame/IA/euristiche/LearningHeuristic.java" />
         <option value="$PROJECT_DIR$/WSGame/IA/euristiche/NNEuristica.java" />
+        <option value="$PROJECT_DIR$/WSGame/IA/transpositiontables/TraspositionTable.java" />
+        <option value="$PROJECT_DIR$/WSGame/IA/transpositiontables/TranspositionTable.java" />
+        <option value="$PROJECT_DIR$/WSGame/IA/traspositiontables/symmetries/Symmetry.java" />
+        <option value="$PROJECT_DIR$/WSGame/IA/traspositiontables/symmetries/AxialSymmetry.java" />
+        <option value="$PROJECT_DIR$/WSGame/IA/HashMaps/symmetries/HorizontalSymmetry.java" />
+        <option value="$PROJECT_DIR$/WSGame/IA/strategie/StrategieFactory.java" />
+        <option value="$PROJECT_DIR$/WSGame/IA/HashMaps/symmetries/VerticalHorizontalSymmetry.java" />
+        <option value="$PROJECT_DIR$/WSGame/IA/HashMaps/symmetries/VerticalSymmetry.java" />
+        <option value="$PROJECT_DIR$/WSGame/IA/HashMaps/symmetries/IdentitySymmetry.java" />
+        <option value="$PROJECT_DIR$/WSGame/IA/HashMaps/symmetries/SymmetryFactory.java" />
+        <option value="$PROJECT_DIR$/WSGame/IA/HashMaps/TranspositionTable.java" />
+        <option value="$PROJECT_DIR$/WSGame/IA/IAFactory.java" />
+        <option value="$PROJECT_DIR$/WSGame/apprendimento/GestisceFileProfilo.java" />
+        <option value="$PROJECT_DIR$/Libraries/org/neuroph/core/Layer.java" />
+        <option value="$PROJECT_DIR$/Libraries/org/neuroph/core/transfer/Step.java" />
+        <option value="$PROJECT_DIR$/WSGame/logica/Partita.java" />
+        <option value="$PROJECT_DIR$/WSGame/data/WSDataStub.java" />
+        <option value="$PROJECT_DIR$/Libraries/org/neuroph/util/Neuroph.java" />
+        <option value="$PROJECT_DIR$/Libraries/org/neuroph/nnet/learning/LMS.java" />
+        <option value="$PROJECT_DIR$/Libraries/org/neuroph/core/data/DataSetRow.java" />
+        <option value="$PROJECT_DIR$/WSGame/IA/traspositiontables/TranspositionTable.java" />
+        <option value="$PROJECT_DIR$/WSGame/IA/euristiche/LearnOperation.java" />
+        <option value="$PROJECT_DIR$/WSGame/IA/euristiche/AddEvaluationOperation.java" />
+        <option value="$PROJECT_DIR$/WSGame/IA/euristiche/HeuristicOperation.java" />
+        <option value="$PROJECT_DIR$/WSGame/IA/euristiche/Euristica.java" />
+        <option value="$PROJECT_DIR$/WSGame/IA/euristiche/LearningHeuristic.java" />
         <option value="$PROJECT_DIR$/WSGame/IA/IntelligenzaArtificiale.java" />
+        <option value="$PROJECT_DIR$/WSGame/IA/euristiche/operations/HeuristicOperation.java" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
@@ -392,7 +348,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="2" />
+    <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -407,6 +363,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -414,15 +372,9 @@
               <option name="myItemId" value="Geister" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Geister" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Geister" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -432,28 +384,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Geister" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WSUtenti" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Geister" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Geister" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WSGame" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skeleton" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -468,10 +398,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="WSGame" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logica" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -490,28 +416,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="IA" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Geister" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Geister" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WSGame" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IA" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="strategie" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -550,11 +454,21 @@
               <option name="myItemId" value="WSGame" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IA" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="euristiche" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="operations" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -565,7 +479,7 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="appearance" />
+    <property name="options.lastSelected" value="preferences.updates" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -597,10 +511,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="IA.euristiche" />
+      <recent name="IA.HashMaps.symmetries" />
       <recent name="IA" />
       <recent name="apprendimento.ranker" />
       <recent name="apprendimento.learner" />
-      <recent name="apprendimento.features" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Geister" />
@@ -864,7 +779,14 @@
       <workItem from="1406183094529" duration="40000" />
       <workItem from="1406183209499" duration="6265000" />
       <workItem from="1406189840570" duration="2696000" />
-      <workItem from="1406192540112" duration="11386000" />
+      <workItem from="1406192540112" duration="11467000" />
+      <workItem from="1406219617320" duration="9875000" />
+      <workItem from="1406229720754" duration="395000" />
+      <workItem from="1406234021654" duration="516000" />
+      <workItem from="1406648191392" duration="461000" />
+      <workItem from="1406648693758" duration="6000" />
+      <workItem from="1406649096053" duration="405000" />
+      <workItem from="1407591392446" duration="2308000" />
     </task>
     <task id="LOCAL-00001" summary="Realizzata gerarchia delle euristiche">
       <created>1405494145306</created>
@@ -938,11 +860,19 @@
       <created>1406205473411</created>
       <updated>1406205473411</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added learning from selected tables for LearningHeuristic">
+      <created>1406213496159</created>
+      <updated>1406213496159</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Added trasposition tables with symmetry check">
+      <created>1406229803014</created>
+      <updated>1406229803014</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117746000" />
+    <option name="totallyTimeSpent" value="131793000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -966,14 +896,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49509802" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32026145" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -982,20 +911,21 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32789558" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="92" y="92" width="1178" height="544" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32026145" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32789558" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6633987" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39869282" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3980424" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1027,11 +957,13 @@
     <MESSAGE value="Added class InformazionePerfetta" />
     <MESSAGE value="Added LearningHeuristic" />
     <MESSAGE value="Added PerfectInformation ranking" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added PerfectInformation ranking" />
+    <MESSAGE value="Added learning from selected tables for LearningHeuristic" />
+    <MESSAGE value="Added trasposition tables with symmetry check" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added trasposition tables with symmetry check" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1039,253 +971,17 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WSGame/apprendimento/features/Controllore.java">
+    <entry file="file://$PROJECT_DIR$/WSGame/logica/Giocatore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5719178" vertical-offset="1105" max-vertical-offset="2567">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2482" max-vertical-offset="2805">
+          <caret line="146" column="19" selection-start-line="146" selection-start-column="19" selection-end-line="146" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Images/learner.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Diagrams/learner.uml">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>apprendimento.learner</OriginalElement>
-          <nodes>
-            <node x="" y="">apprendimento.learner.Learner</node>
-            <node x="" y="">apprendimento.learner.MediaVettori</node>
-            <node x="" y="">apprendimento.learner.LearnerFactory</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="225.0" y="214.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Methods</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Diagrams/ranker.uml">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>apprendimento.ranker</OriginalElement>
-          <nodes>
-            <node x="" y="">apprendimento.ValutaPezzi</node>
-            <node x="" y="">apprendimento.ranker.Ranker</node>
-            <node x="" y="">apprendimento.PezzoNascosto</node>
-            <node x="" y="">apprendimento.ranker.DistanzaVettori</node>
-            <node x="" y="">apprendimento.ranker.RankerFactory</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="230.0" y="112.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Methods</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WSGame/apprendimento/learner/LearnerFactory.java">
+    <entry file="file://$PROJECT_DIR$/Libraries/org/neuroph/nnet/learning/BackPropagation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55308217" vertical-offset="0" max-vertical-offset="714">
-          <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WSGame/IA/strategie/StrategieFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4760274" vertical-offset="45" max-vertical-offset="714">
-          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/neuroph-2.8/neuroph-2.8/sources/Neuroph-2.8/Core/src/main/java/org/neuroph/core/NeuralNetwork.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="11679">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Libraries/org/neuroph/core/data/norm/Normalizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="584">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Libraries/org/neuroph/core/Connection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3321918" vertical-offset="265" max-vertical-offset="3638">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Libraries/org/neuroph/core/Weight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3321918" vertical-offset="10" max-vertical-offset="2091">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/Program Files/Java/jdk1.7.0_51/src.zip!/java/util/Vector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33274958" vertical-offset="11166" max-vertical-offset="19431">
-          <caret line="713" column="32" selection-start-line="713" selection-start-column="32" selection-end-line="713" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Libraries/org/neuroph/core/Neuron.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3992995" vertical-offset="1122" max-vertical-offset="9350">
-          <caret line="134" column="16" selection-start-line="134" selection-start-column="16" selection-end-line="134" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Libraries/org/neuroph/core/Layer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36130136" vertical-offset="3954" max-vertical-offset="5678">
-          <caret line="276" column="37" selection-start-line="276" selection-start-column="37" selection-end-line="276" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Libraries/org/neuroph/core/NeuralNetwork.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33274958" vertical-offset="99" max-vertical-offset="11679">
-          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/Program Files/Java/jdk1.7.0_51/src.zip!/java/lang/Exception.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3321918" vertical-offset="163" max-vertical-offset="1649">
-          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WSGame/IA/euristiche/AttaccoAiBuoni.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2846975" vertical-offset="112" max-vertical-offset="782">
-          <caret line="18" column="70" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WSGame/IA/euristiche/BuoniInGioco.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6352313" vertical-offset="0" max-vertical-offset="562">
-          <caret line="21" column="70" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WSGame/IA/euristiche/BuoniMangiati.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5811966" vertical-offset="0" max-vertical-offset="585">
-          <caret line="20" column="70" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WSGame/IA/euristiche/BuoniSottoMinaccia.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46495727" vertical-offset="0" max-vertical-offset="629">
-          <caret line="17" column="70" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WSGame/IA/euristiche/CattiviInGioco.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
-          <caret line="21" column="70" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WSGame/IA/euristiche/CattiviMangiati.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61025643" vertical-offset="0" max-vertical-offset="585">
-          <caret line="21" column="70" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WSGame/IA/euristiche/DistanzaBuoniUscita.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61025643" vertical-offset="0" max-vertical-offset="1666">
-          <caret line="23" column="70" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WSGame/IA/euristiche/DistanzaBuoniUscitaAvversario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63931626" vertical-offset="0" max-vertical-offset="1666">
-          <caret line="24" column="70" selection-start-line="24" selection-start-column="70" selection-end-line="24" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WSGame/IA/euristiche/Euristica.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21174377" vertical-offset="0" max-vertical-offset="562">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Libraries/org/neuroph/core/data/DataSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="4820" max-vertical-offset="9180">
-          <caret line="357" column="26" selection-start-line="357" selection-start-column="26" selection-end-line="357" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/IA.euristiche">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>IA.euristiche</OriginalElement>
-          <nodes>
-            <node x="" y="">IA.euristiche.CattiviInGioco</node>
-            <node x="" y="">IA.euristiche.BuoniMangiati</node>
-            <node x="" y="">IA.euristiche.BuoniSottoMinaccia</node>
-            <node x="" y="">IA.euristiche.LearningHeuristic</node>
-            <node x="" y="">IA.euristiche.Euristica</node>
-            <node x="" y="">IA.euristiche.NNHeuristic</node>
-            <node x="" y="">IA.euristiche.CattiviMangiati</node>
-            <node x="" y="">IA.euristiche.BuoniInGioco</node>
-            <node x="" y="">IA.euristiche.AttaccoAiBuoni</node>
-            <node x="" y="">IA.euristiche.EuristicheFactory</node>
-            <node x="" y="">IA.euristiche.DistanzaBuoniUscita</node>
-            <node x="" y="">IA.euristiche.DistanzaBuoniUscitaAvversario</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.7481146304675717" x="653.0" y="140.5" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
+        <state vertical-scroll-proportion="0.0" vertical-offset="1547" max-vertical-offset="1734">
+          <caret line="91" column="15" selection-start-line="91" selection-start-column="15" selection-end-line="91" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -1293,7 +989,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5811966" vertical-offset="0" max-vertical-offset="833">
           <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1301,15 +996,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.55944055" vertical-offset="575" max-vertical-offset="11645">
           <caret line="20" column="54" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Users/Stefano/Desktop/Geister.old/Geister/Geister/src/client/android/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4335">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1317,7 +1003,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15384616" vertical-offset="116" max-vertical-offset="7361">
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1325,7 +1010,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23776224" vertical-offset="0" max-vertical-offset="9486">
           <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1333,7 +1017,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23776224" vertical-offset="0" max-vertical-offset="17408">
           <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1341,17 +1024,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33272058" vertical-offset="22106" max-vertical-offset="35751">
           <caret line="1311" column="105" selection-start-line="1311" selection-start-column="91" selection-end-line="1311" selection-end-column="105" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WSGame/data/WSDataStub.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="792442" max-vertical-offset="930682">
-          <caret line="47407" column="24" selection-start-line="47407" selection-start-column="24" selection-end-line="47407" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1359,17 +1031,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-19.214285" vertical-offset="8761" max-vertical-offset="11594">
           <caret line="592" column="44" selection-start-line="592" selection-start-column="44" selection-end-line="592" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Users/Stefano/Desktop/Geister.old/Geister/Geister/src/client/android/SfidaActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3916084" vertical-offset="24698" max-vertical-offset="44200">
-          <caret line="1466" column="58" selection-start-line="1466" selection-start-column="58" selection-end-line="1466" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1377,7 +1038,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.05811966" vertical-offset="272" max-vertical-offset="1394">
           <caret line="18" column="71" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1385,15 +1045,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7132867" vertical-offset="2040" max-vertical-offset="2703">
           <caret line="153" column="25" selection-start-line="153" selection-start-column="25" selection-end-line="153" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WSGame/logica/Pezzo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.027397" vertical-offset="928" max-vertical-offset="5287">
-          <caret line="327" column="63" selection-start-line="327" selection-start-column="63" selection-end-line="327" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1401,7 +1052,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.43664384" vertical-offset="17" max-vertical-offset="680">
           <caret line="18" column="78" selection-start-line="18" selection-start-column="78" selection-end-line="18" selection-end-column="78" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1409,10 +1059,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8835617" vertical-offset="2017" max-vertical-offset="2737">
           <caret line="178" column="57" selection-start-line="178" selection-start-column="57" selection-end-line="178" selection-end-column="57" />
-          <folding>
-            <element signature="e#6296#6297#0" expanded="true" />
-            <element signature="e#6334#6335#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1420,7 +1066,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46575344" vertical-offset="0" max-vertical-offset="584">
           <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1428,29 +1073,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="935">
           <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WSGame/IA/IAFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="347" max-vertical-offset="935">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding>
-            <element signature="e#537#538#0" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WSGame/skeleton/MySkeleton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.470803" vertical-offset="8970" max-vertical-offset="12189">
-          <caret line="476" column="23" selection-start-line="476" selection-start-column="23" selection-end-line="476" selection-end-column="23" />
-          <folding>
-            <marker date="1406211032548" expanded="true" signature="-1:-1" placeholder="select livel..partite..." />
-            <marker date="1406211032548" expanded="true" signature="-1:-1" placeholder="select id fr..utenti..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1458,7 +1080,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="942" max-vertical-offset="3196">
           <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1466,30 +1087,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="668" max-vertical-offset="5457">
           <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding>
-            <element signature="e#2376#2377#0" expanded="true" />
-            <element signature="e#2402#2403#0" expanded="true" />
-            <marker date="1406211463565" expanded="true" signature="3178:3761" placeholder="SELECT learn..profili_u_l_r..." />
-            <marker date="1406211463565" expanded="true" signature="4763:5002" placeholder="SELECT ranke..rankers..." />
-            <marker date="1406211463565" expanded="true" signature="6749:7212" placeholder="SELECT profi..profili_u_l_r..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WSGame/IA/euristiche/NNEuristica.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1122" max-vertical-offset="1785">
-          <caret line="97" column="40" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
-          <folding>
-            <element signature="e#4109#4120#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WSGame/IA/euristiche/LearningHeuristic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="629">
-          <caret line="29" column="66" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
           <folding />
         </state>
       </provider>
@@ -1498,15 +1095,254 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24242425" vertical-offset="5712" max-vertical-offset="16847">
           <caret line="365" column="55" selection-start-line="365" selection-start-column="55" selection-end-line="365" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WSGame/logica/Pezzo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1921" max-vertical-offset="5287">
+          <caret line="135" column="16" selection-start-line="135" selection-start-column="16" selection-end-line="135" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Program Files/Java/jdk1.7.0_51/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42348754" vertical-offset="5270" max-vertical-offset="7837">
+          <caret line="347" column="25" selection-start-line="347" selection-start-column="25" selection-end-line="347" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Program Files/Java/jdk1.7.0_51/src.zip!/java/lang/ProcessEnvironment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.05516" vertical-offset="0" max-vertical-offset="4386">
+          <caret line="177" column="23" selection-start-line="177" selection-start-column="23" selection-end-line="177" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Program Files/Java/jdk1.7.0_51/src.zip!/java/util/AbstractMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.841637" vertical-offset="6698" max-vertical-offset="12801">
+          <caret line="298" column="37" selection-start-line="298" selection-start-column="37" selection-end-line="298" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Program Files/Java/jdk1.7.0_51/src.zip!/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42348754" vertical-offset="5627" max-vertical-offset="11577">
+          <caret line="489" column="13" selection-start-line="489" selection-start-column="13" selection-end-line="489" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WSGame/IA/strategie/StrategieFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.93950176" vertical-offset="186" max-vertical-offset="816">
+          <caret line="42" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WSGame/IA/IAFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26748252" vertical-offset="0" max-vertical-offset="1020">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WSGame/data/WSDataStub.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33114755" vertical-offset="10201" max-vertical-offset="946237">
+          <caret line="606" column="37" selection-start-line="606" selection-start-column="37" selection-end-line="606" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libraries/org/neuroph/nnet/learning/KohonenLearning.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17295597" vertical-offset="1645" max-vertical-offset="2839">
+          <caret line="126" column="49" selection-start-line="126" selection-start-column="49" selection-end-line="126" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WSGame/game/CancellaPartita.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33114755" vertical-offset="6274" max-vertical-offset="9248">
+          <caret line="388" column="37" selection-start-line="388" selection-start-column="37" selection-end-line="388" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libraries/org/neuroph/core/data/DataSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="6558" max-vertical-offset="9180">
+          <caret line="454" column="16" selection-start-line="454" selection-start-column="16" selection-end-line="454" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WSGame/logica/Partita.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30792683" vertical-offset="5475" max-vertical-offset="11492">
+          <caret line="353" column="37" selection-start-line="353" selection-start-column="37" selection-end-line="353" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libraries/org/neuroph/core/transfer/Step.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40175954" vertical-offset="1376" max-vertical-offset="1717">
+          <caret line="112" column="57" selection-start-line="112" selection-start-column="57" selection-end-line="112" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libraries/org/neuroph/core/NeuralNetwork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33231708" vertical-offset="180" max-vertical-offset="11679">
+          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libraries/org/neuroph/core/Layer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3313783" vertical-offset="2080" max-vertical-offset="5678">
+          <caret line="156" column="16" selection-start-line="156" selection-start-column="16" selection-end-line="156" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libraries/org/neuroph/util/io/JDBCInputAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="482" max-vertical-offset="1139">
+          <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libraries/org/neuroph/nnet/learning/LMS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1302" max-vertical-offset="1666">
+          <caret line="101" column="16" selection-start-line="101" selection-start-column="16" selection-end-line="101" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libraries/org/neuroph/core/data/BufferedDataSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="137" max-vertical-offset="3740">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libraries/org/neuroph/core/data/DataSetRow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1832" max-vertical-offset="2397">
+          <caret line="147" column="16" selection-start-line="147" selection-start-column="16" selection-end-line="147" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WSGame/logica/Giocatore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1951" max-vertical-offset="2346">
+          <caret line="146" column="19" selection-start-line="146" selection-start-column="19" selection-end-line="146" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libraries/org/neuroph/nnet/learning/BackPropagation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1093" max-vertical-offset="1411">
+          <caret line="91" column="15" selection-start-line="91" selection-start-column="15" selection-end-line="91" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WSGame/skeleton/MySkeleton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8032787" vertical-offset="6682" max-vertical-offset="12189">
+          <caret line="447" column="18" selection-start-line="447" selection-start-column="18" selection-end-line="447" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libraries/org/neuroph/util/Neuroph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="2567">
+          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WSGame/apprendimento/GestisceFileProfilo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="19968" max-vertical-offset="21726">
+          <caret line="1203" column="12" selection-start-line="1203" selection-start-column="12" selection-end-line="1203" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Program Files/Java/jdk1.7.0_51/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="17524" max-vertical-offset="51085">
+          <caret line="1136" column="15" selection-start-line="1136" selection-start-column="15" selection-end-line="1136" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WSGame/IA/traspositiontables/TranspositionTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.94188035" vertical-offset="61" max-vertical-offset="2295">
+          <caret line="44" column="26" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WSGame/IA/euristiche/NNEuristica.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50598294" vertical-offset="945" max-vertical-offset="1785">
+          <caret line="83" column="23" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WSGame/IA/euristiche/operations/LearnOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07008547" vertical-offset="163" max-vertical-offset="748">
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+          <folding>
+            <element signature="e#1003#1004#0" expanded="true" />
+            <element signature="e#1050#1051#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WSGame/IA/euristiche/Euristica.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52307695" vertical-offset="0" max-vertical-offset="585">
+          <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+          <folding>
+            <element signature="e#645#646#0" expanded="true" />
+            <element signature="e#706#707#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WSGame/IA/euristiche/LearningHeuristic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.84273505" vertical-offset="0" max-vertical-offset="680">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WSGame/IA/IntelligenzaArtificiale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16240875" vertical-offset="3022" max-vertical-offset="3570">
-          <caret line="209" column="54" selection-start-line="209" selection-start-column="54" selection-end-line="209" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2930" max-vertical-offset="3502">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WSGame/IA/euristiche/operations/AddEvaluationOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="367" max-vertical-offset="952">
+          <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WSGame/IA/euristiche/operations/HeuristicOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52307695" vertical-offset="0" max-vertical-offset="585">
+          <caret line="18" column="74" selection-start-line="18" selection-start-column="74" selection-end-line="18" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1586,6 +1422,17 @@
         </settings>
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
         <settings>
           <splitter-proportions>
             <option name="proportions">

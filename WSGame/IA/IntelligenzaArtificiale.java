@@ -21,9 +21,9 @@ package IA;
 
 import java.util.Vector;
 
-import IA.euristiche.Euristica;
-import IA.euristiche.EuristicheFactory;
-import IA.euristiche.LearningHeuristic;
+import IA.euristiche.*;
+import IA.euristiche.operations.AddEvaluationOperation;
+import IA.euristiche.operations.LearnOperation;
 import IA.strategie.Strategia;
 import IA.strategie.StrategieFactory;
 import apprendimento.ValutaPezzi;
@@ -178,18 +178,15 @@ public class IntelligenzaArtificiale {
         attivaProfilo(false);
 
         //ottengo l'euristica implementata per aggiungere il tavolo selezionato all'eventuale training set
-        LearningHeuristic learningHeuristic = (LearningHeuristic) EuristicheFactory.getInstance().getEuristica(euristica);
+        Euristica e = EuristicheFactory.getInstance().getEuristica(euristica);
 
-        //controllo che l'euristica selezionata sia in grado di apprendere
-        if (learningHeuristic != null) {
-            //ottengo una copia del tavolo su cui effettuare la mossa
-            Tavolo tavoloValutabile = (Tavolo) tavolo.clone();
-            //effettuo la mossa
-            tavoloValutabile.muoviPezzo(mossa.getPartenza(), mossa.getArrivo());
-            //fornisco all'euristica il tavolo da valutare che effettivamente è stato selezionato tra tutti quelli generati
-            //la valutazione del tavolo finirà nel training set
-            learningHeuristic.addValutazioneAlTrainingSet(partita, giocatore.getNumero(), tavoloValutabile);
-        }
+        //ottengo una copia del tavolo su cui effettuare la mossa
+        Tavolo tavoloValutabile = (Tavolo) tavolo.clone();
+        //effettuo la mossa
+        tavoloValutabile.muoviPezzo(mossa.getPartenza(), mossa.getArrivo());
+        //fornisco all'euristica il tavolo da valutare che effettivamente è stato selezionato tra tutti quelli generati
+        //la valutazione del tavolo finirà nel training set
+        e.doOperation(new AddEvaluationOperation(partita, giocatore.getNumero(), tavoloValutabile));
 
         return mossa;
     }
@@ -223,10 +220,9 @@ public class IntelligenzaArtificiale {
         if (tavolo.getNumeroPezziCattivi(giocatore.getNumero()) < 1)
             esito = 1;
 
-        //ottengo l'euristica e controllo se devo eseguire dell'apprendimento
-        LearningHeuristic learningHeuristic = (LearningHeuristic) EuristicheFactory.getInstance().getEuristica(euristica);
-        if (learningHeuristic != null)
-            learningHeuristic.learn(partita, esito);
+        //ottengo l'euristica ed eseguo l'apprendimento
+        Euristica e = EuristicheFactory.getInstance().getEuristica(euristica);
+        e.doOperation(new LearnOperation(partita, esito));
     }
 }
 
